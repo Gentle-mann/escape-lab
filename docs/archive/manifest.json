@@ -1,0 +1,383 @@
+{
+  "scope": "Curated aggregate-only publication; no row outcomes, traces, or credentials",
+  "artifacts": [
+    {
+      "source": "docs/escape-lab-project-plan.md",
+      "source_sha256": "7032edfc9153b77e816fe50efb2bd0ecdf3196dbe0e5df646a5456615d8b478c",
+      "public_path": "docs/archive/docs/escape-lab-project-plan.md",
+      "public_sha256": "d3a029221234b0f716f85ccfdceee77c22fdfe9f42020d0fae7dc88a130065d8",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "docs/mechanistic-data-to-model-map.md",
+      "source_sha256": "b8e7f29081854a964982de7720c0e6707851aef84b47920e6e30292eab9a9612",
+      "public_path": "docs/archive/docs/mechanistic-data-to-model-map.md",
+      "public_sha256": "80ed022fb25306f121e5a2a85d008e911a4218fb360df5c05d401184e6469cea",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "docs/model-swap-v2-protocol.md",
+      "source_sha256": "e680b4cc66bf7e267d03587e54e7b8acb50e78609087fd9d74af1bff2de47fcb",
+      "public_path": "docs/archive/docs/model-swap-v2-protocol.md",
+      "public_sha256": "7a60efc3bd45a27f2cab86cafbea58e9f9c4195c8f908145d8d380aeb9bfb01c",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "docs/repeated-research-protocol.md",
+      "source_sha256": "f67cfe406222a2d19e60c63513b7077991808bca2ec1da97c3e3cd20ca572261",
+      "public_path": "docs/archive/docs/repeated-research-protocol.md",
+      "public_sha256": "44f241d16eb9be7d485e0a4bb50fec0b4c2b52c2ad15936baf548b71b1d83f5c",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "docs/revised-prediction-protocol.md",
+      "source_sha256": "b8d73a020619ae302c625d0d70b9e10f4882e9696926619c32f584a1fd5e01ba",
+      "public_path": "docs/archive/docs/revised-prediction-protocol.md",
+      "public_sha256": "d80deb9e9232ebb8a9f9003d87b733ab7f6feb2d704405a8a6008e1953245542",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "docs/revision-v2-research.md",
+      "source_sha256": "7adcbaadad20021400817382c796f8e567243206ba982ba55676f915e3cb5994",
+      "public_path": "docs/archive/docs/revision-v2-research.md",
+      "public_sha256": "99ce8ff5f295b7219b589774997c4de3f42d85553bceda1a0801b12b9ebc9519",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "docs/you-research-pilot-protocol.md",
+      "source_sha256": "2349a2b655c3138cb14ed9995b96a72aae7899d877d98a2899885bdb1cef48ef",
+      "public_path": "docs/archive/docs/you-research-pilot-protocol.md",
+      "public_sha256": "8b001609caec9b7c93d5d26ea15fee5c63ea7a6d0d85c0fb97fd2cb68e1ae056",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "docs/you-research-usage.md",
+      "source_sha256": "65f36dcb40e42469df8c020acc1d69e7134ebc0bf0005a81019b93cd7bfddf84",
+      "public_path": "docs/archive/docs/you-research-usage.md",
+      "public_sha256": "73cfa328737e150df2c7dba3be2b39d1cd678155fb1c86ee23164f0b9a5944ae",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/improvement/20261017T193042Z-7992cb52/report.md",
+      "source_sha256": "0bf1688fb2b6d04294d1d221186e1e3827e204ecbdd6e182718566d98028887f",
+      "public_path": "docs/archive/reports/improvement/20261017T193042Z-7992cb52/report.md",
+      "public_sha256": "d6f641d5bc52ffc4a17d5eb5012c568497c03b725a0d924eb80be78c80310786",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/improvement/20261017T193621Z-d6e64c8c/report.md",
+      "source_sha256": "32d4a8cc6602376837311d8eb97d0b4914e5f4baeabd6342e8db2a348f5666dc",
+      "public_path": "docs/archive/reports/improvement/20261017T193621Z-d6e64c8c/report.md",
+      "public_sha256": "7e0bc8c92c9135d45aaf65f2255cb2720d23fdda19d31956c16eb678f5c553a1",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/improvement/20261017T193915Z-ee008058/report.md",
+      "source_sha256": "f3adf6d3354e13851ac1693783858c3d5a98d558a8ac49b123bef365d7270f80",
+      "public_path": "docs/archive/reports/improvement/20261017T193915Z-ee008058/report.md",
+      "public_sha256": "29ac802adbd6c190f174bd651ddfecbd9de69a241ca5e46702ff69d1bdc2ee76",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/improvement/20261017T194348Z-5e66cbab/final-results.json",
+      "source_sha256": "af9b7b338ffb0e346dcc1026bd1f48994f02a7e7166b5e881912784c5f43a449",
+      "public_path": "docs/archive/reports/improvement/20261017T194348Z-5e66cbab/final-results.json",
+      "public_sha256": "af9b7b338ffb0e346dcc1026bd1f48994f02a7e7166b5e881912784c5f43a449",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/improvement/20261017T194348Z-5e66cbab/report.md",
+      "source_sha256": "4fa8c75d73bd113882d7ae8ee477e01ddcbd5db00d834e1d5afffc4ee4a51e85",
+      "public_path": "docs/archive/reports/improvement/20261017T194348Z-5e66cbab/report.md",
+      "public_sha256": "bbb1de2749ad89ac8fd5e6378b8dad782b8ef91ffde1e0e68cbf6fe6c32aec42",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/improvement/inference-retry-note.md",
+      "source_sha256": "ccdca74ba571b21a6adffb0e102811e4d6ea8b7890ca9b609565978d620d36d9",
+      "public_path": "docs/archive/reports/improvement/inference-retry-note.md",
+      "public_sha256": "a62ea7e708d18e760b971b47ae3da523312123ffb60208c0fc07299a15856b99",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/improvement/results-summary.md",
+      "source_sha256": "1bee69554dfa75c8667729b6a6af22f6129e85a0269a1e5b864efa5d3456bb22",
+      "public_path": "docs/archive/reports/improvement/results-summary.md",
+      "public_sha256": "8a131159e62f7c538cfe9c36b03691346677f2a4ba82de61a756b0a358f1e3e9",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/activation-revision-v2/interpretation.md",
+      "source_sha256": "523b5686a112d09995ba97aa0701b7ddb87c5e4ddc4ed8adca4442f490bf7550",
+      "public_path": "docs/archive/reports/mechanistic-pilot/activation-revision-v2/interpretation.md",
+      "public_sha256": "1fd3e03292c66be1a154027859749ddf60497fb0ead54d11516f961630ea6537",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/activation-revision-v2/report.md",
+      "source_sha256": "5c2b8eee4a9bf0493795c7ef4efde4ecc508c65ca059464a98d1aaab78e55964",
+      "public_path": "docs/archive/reports/mechanistic-pilot/activation-revision-v2/report.md",
+      "public_sha256": "ae5af382ac618fb23920abec2ef2ee2b2df93efd41de2e1e19e27b4b0c3aff3e",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/activation-revision-v2/results.json",
+      "source_sha256": "a8eeba3a360d97d5c7766e830f8a75fbd3e04d4900709611182d363fb987059b",
+      "public_path": "docs/archive/reports/mechanistic-pilot/activation-revision-v2/results.json",
+      "public_sha256": "59636106db281c1364ef28f45cd44f41a16155145c1d0a83a9198707e8a7dfc7",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/mechanistic-pilot/activation-transfer-v1/interpretation.md",
+      "source_sha256": "5c0f83c16619431ac1cabacebcccfdbf4662a81b714ac4a2d76859abcc09e281",
+      "public_path": "docs/archive/reports/mechanistic-pilot/activation-transfer-v1/interpretation.md",
+      "public_sha256": "38e5be0d0547a09018ca8d1d7a7c79518437a76795af77b1ebeec0a6b0070e6c",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/activation-transfer-v1/report.md",
+      "source_sha256": "2a1c9ef6ddc963748f88fab2004c18cbfeb52f9aed9b98b9c5569d49ff919604",
+      "public_path": "docs/archive/reports/mechanistic-pilot/activation-transfer-v1/report.md",
+      "public_sha256": "d1061102a7579c02af58fdd4289e136416c4a30ed8136b4dfc02b6ea1b6001f3",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/activation-transfer-v1/results.json",
+      "source_sha256": "3bb6b6f2190a6b80c85a5cdf511404b5b18965498acd33ba839f45a9cd2f998a",
+      "public_path": "docs/archive/reports/mechanistic-pilot/activation-transfer-v1/results.json",
+      "public_sha256": "b23801334ca62228fb8ee4ea7d9ff5297dabcdfbcf2b18f0f2b531e74e2a5509",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-sequence-ap-v1/decision.md",
+      "source_sha256": "ac4f99e3a226f0d53736bcd3ec9ea3875d4ea8d31caec99bd6076dc3e8115732",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-sequence-ap-v1/decision.md",
+      "public_sha256": "1b277be5fabd385be2ad430ea1b5fb7f0711e6e2431ebeff275da6a0378887be",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-sequence-ap-v1/report.md",
+      "source_sha256": "4afd1b5f49ae8e18fa07f34fde0021f52d8f3e549259d7eeb54f9f86aa9a6805",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-sequence-ap-v1/report.md",
+      "public_sha256": "9e472b4d14728307a19a45be9fa39b9a3f68e6fa91549a83aa3e017ee06e9177",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-sequence-ap-v1/results.json",
+      "source_sha256": "99443516cfb9a7cb1ca4cae99851c5ddf9f752d5e9705e653b931ba49b5021d6",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-sequence-ap-v1/results.json",
+      "public_sha256": "6ac3e0ac3e64e37de459c9a4dadde41875c919d4998c9d668cc2ce04cdd05597",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-sequence-v1/interpretation.md",
+      "source_sha256": "e40b3f9ec145941d485e5672c2f2f6a419caa21c1b28b24e520af1f6525a6bdf",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-sequence-v1/interpretation.md",
+      "public_sha256": "8309b4146d36a870e38e657c80241d0412a0a2c1c92589ce817a0a9d710c7787",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-sequence-v1/report.md",
+      "source_sha256": "2607aeb99e9133773a46df34cf44e2098fa668e738201f7ddeb8dc4601c732ae",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-sequence-v1/report.md",
+      "public_sha256": "12cbf0272b2ee8dcd5cf5736e72fa9ce3e0f82ef90e2c81248d231c6d7322026",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-sequence-v1/results.json",
+      "source_sha256": "3cc1e22651bf6d7787df0e3d9e562efc758665f841583e5d98bcb6e0a400aaf0",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-sequence-v1/results.json",
+      "public_sha256": "f6acde8e4d93b09706368e47da29be03209b4af929080f30c468ea5b3cd24114",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-state-bounded-v1/report.md",
+      "source_sha256": "06f6230ba62a983fb0991983b443aa637a790fe8f824f037f6b8447fb6bd37f0",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-state-bounded-v1/report.md",
+      "public_sha256": "b4cb9fbf2ca941419285af0cdbcf71bc4dcaa98c396d327b2db08819b544d28e",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-state-bounded-v1/results.json",
+      "source_sha256": "9a81ff6bb6fa31363acdd58b631d159c37f57ac4e299891d809624850134a949",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-state-bounded-v1/results.json",
+      "public_sha256": "b7849cad915a2b2468f356d2f9a9db3fc670504eb9e75f038a1a215cc1365353",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-state-bounded-v1/summary.md",
+      "source_sha256": "e503cf874a70b31ccb8ff2ed20bfac6727ba76a6d4ad49dbacae7ec7322d0aea",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-state-bounded-v1/summary.md",
+      "public_sha256": "61354cf14719ec62d7194f8fe5a14d4ba9553197bd678208add6d250e50ca1a5",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-state-tree-v1/decision.md",
+      "source_sha256": "b9c6a8e4136ad56483c5d8833db35baab8490e5e6570b9a4c742599400fd163f",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-state-tree-v1/decision.md",
+      "public_sha256": "f01ef60624524d7b4c232b2becac0df01f94dc2b5b27967b06dbaaac2abac290",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-state-tree-v1/report.md",
+      "source_sha256": "a7f19ed4d030d15089249ced30d2389c78560e14d8ded6fff44fba25c34f1c08",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-state-tree-v1/report.md",
+      "public_sha256": "435daa326ec218e2e2df0f14d99e7b45ede24d154d0caab769dfbb3af712d18c",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-state-tree-v1/results.json",
+      "source_sha256": "bd3a7c8e5fd448a54e4cfb067b58135b56b8c69be39663357fe0a02736bd310f",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-state-tree-v1/results.json",
+      "public_sha256": "4247cb133f2e6e944992b16cdf37b39ecbc3fcac52c100996474711d739647cd",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-state-v1/report.md",
+      "source_sha256": "27d72111e19024f600384f8d6c60629d31786bbd2683d8c752a1b1f171ad51e2",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-state-v1/report.md",
+      "public_sha256": "52d015296355b7624b7b2ff1db958c2728c3a5e13bb4fbee14aec0d84ac5d9c6",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/mechanistic-pilot/fgfr2-state-v1/results.json",
+      "source_sha256": "07218545aad4d0d8f484e63bb68cdc8ec99c0a1af35d225bcf60890f1eb1aa9a",
+      "public_path": "docs/archive/reports/mechanistic-pilot/fgfr2-state-v1/results.json",
+      "public_sha256": "50a84f2950f3350a4da36119c8ea8c408e4d6b970994560c0883f9112d367679",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/model-swap-v2/20261017T210043Z-a4800896/results-summary.md",
+      "source_sha256": "8679f57aec2e0be4fac1e19d6c5498def94bb77935124d7b7c26d970091edb17",
+      "public_path": "docs/archive/reports/model-swap-v2/20261017T210043Z-a4800896/results-summary.md",
+      "public_sha256": "334ae8dd6c3a2200d4cd1e385ed8af16226f3e6b3f9591cd1aa4979a37409383",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/model-swap-v2/20261017T210043Z-a4800896/results.json",
+      "source_sha256": "94c817bad999c1a96fd73f1c8a6b2b45785604cb62feb4ac9684b4748d0a95fe",
+      "public_path": "docs/archive/reports/model-swap-v2/20261017T210043Z-a4800896/results.json",
+      "public_sha256": "503e9f18d1b3c7c5c076650843f646cb0382be1e70ce8a83e2ecabf324f4d25f",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/model-swap-v2/results-summary.md",
+      "source_sha256": "655532b5ee3e8cd7d45ab98fdcfcf9bb6d3582f47286dcd9076010d7e9c6b845",
+      "public_path": "docs/archive/reports/model-swap-v2/results-summary.md",
+      "public_sha256": "64ed9e7e37ce0d559464ae6edc92caa048538a31df9fdaa955e9848c493a2710",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/research-pilot/you-pilot-20261017/results-summary.md",
+      "source_sha256": "179ad87d19538b18797a7ee0a904166a7b63646e30c2803ea08af2d90922fc3c",
+      "public_path": "docs/archive/reports/research-pilot/you-pilot-20261017/results-summary.md",
+      "public_sha256": "ab6e8ba1451e4cf364c9ea99295f62e6c32cb15131482b49ac1c9b6e5d25c75d",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/research-pilot/you-pilot-20261017/results.json",
+      "source_sha256": "ed9d56138c32c553d1fab13e67c747674af91edb04ccdf7b7fd412ee71fe7f5b",
+      "public_path": "docs/archive/reports/research-pilot/you-pilot-20261017/results.json",
+      "public_sha256": "4ec4b88b06f217aa16a8583c4d968c0bbe68a66ae8306c608815240601f3cc4c",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/research-pilot/you-pilot-20261017-review.md",
+      "source_sha256": "b83063331a42848b02ef0b9069769dc7dfe11192b7f02c72a0db515a61354a84",
+      "public_path": "docs/archive/reports/research-pilot/you-pilot-20261017-review.md",
+      "public_sha256": "99d3366d5a12ad8f8ce15d8c5479ff105e8b35bc52761d158c05bb1b21785636",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/revision-v2/20261017T201321Z-a29b17a8/results.json",
+      "source_sha256": "3f4ddd68be7e78b89a88400af085ed0ad8397841957a8cab9e5c18a85f824c0b",
+      "public_path": "docs/archive/reports/revision-v2/20261017T201321Z-a29b17a8/results.json",
+      "public_sha256": "7e85a1f2744990d4cbc1a371b680cc5568f4218f1b89ccb4ebb12c3dd2acf4f1",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/revision-v2/results-summary.md",
+      "source_sha256": "b12a9ff795758d2d8b96ec55674f7789fd014de9e16af237aa415bde576bd453",
+      "public_path": "docs/archive/reports/revision-v2/results-summary.md",
+      "public_sha256": "f419793a3bb2dda1815d5e2f7617c391043f23171002ef4154803caf0ce09c4c",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "research/activation-v2/diagnostics.md",
+      "source_sha256": "5c3ebb4355c458fd4008f301b911d871462b548f358b1484741517624b036c9a",
+      "public_path": "docs/archive/research/activation-v2/diagnostics.md",
+      "public_sha256": "6961a10835735d61569cea91dee3f5f678d76ac583b9ec2c6669a9e4eb6955b9",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "research/activation-v2/research-and-protocol.md",
+      "source_sha256": "2a035ae8b01ffc19963d1a5597cc5f3f8136b39f0d933b5e101cd71a56580782",
+      "public_path": "docs/archive/research/activation-v2/research-and-protocol.md",
+      "public_sha256": "0da794ef610679793d26f11ec4f59c6138f6824963fb4f2b29e5f28f8af01574",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "research/fgfr2-sequence-ap-pilot/protocol.md",
+      "source_sha256": "ef7e111ba353df802809d8432840077bd54d72b1f5af9dff820c6912b5b39fb1",
+      "public_path": "docs/archive/research/fgfr2-sequence-ap-pilot/protocol.md",
+      "public_sha256": "a7dcb023a3c5618f5d4f84ed52c4b8a740e3fa52c4c2ee0031a8906f5241de1a",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "research/fgfr2-sequence-pilot/interpretation-boundaries.md",
+      "source_sha256": "56c7f7d3ea67dfa843c4be6945b92fc46458d72c2e3c84351b1cc887c5f144bd",
+      "public_path": "docs/archive/research/fgfr2-sequence-pilot/interpretation-boundaries.md",
+      "public_sha256": "2bc33160bb993a577ceaab0d8724df719c706af318e8a5de076e3d4cdb921c42",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "research/fgfr2-sequence-pilot/research-and-protocol.md",
+      "source_sha256": "a3793eea31746f038aaa8b7155c3b934062eafc3aa2ed6da651f7a40b600ada7",
+      "public_path": "docs/archive/research/fgfr2-sequence-pilot/research-and-protocol.md",
+      "public_sha256": "6be04a97093ad4ef7ed9d26a2ef871a373c424861e625bb40dff44909c8fe28b",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "research/fgfr2-sequence-pilot/run-instructions.md",
+      "source_sha256": "e92eb5a8e852229b74c55217ddc64585be7559da706b10e8d97c4ed9c0ea557c",
+      "public_path": "docs/archive/research/fgfr2-sequence-pilot/run-instructions.md",
+      "public_sha256": "5b79cc74b2358641b8a5d27ea3cad60e9443676ee4e482440cd67c31bd188d47",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "research/fgfr2-sequence-pilot/threshold-audit.md",
+      "source_sha256": "3017d72968a34e6471673ade8a990b5919e5feb9a7d346d640492607cadc772f",
+      "public_path": "docs/archive/research/fgfr2-sequence-pilot/threshold-audit.md",
+      "public_sha256": "123bf2eeeb4345f3787eefb28b64954d44b96d4861cde6ce168431f70dbc6856",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "research/fgfr2-state-bounded/protocol.md",
+      "source_sha256": "73ad3c34b84bad9750c8bf98a99622b880a70fb5c025b5322b3fc3271828b18d",
+      "public_path": "docs/archive/research/fgfr2-state-bounded/protocol.md",
+      "public_sha256": "775ed5eb76e42b0444b3a6ab0ffc4381947f3950022121a01a4d24adb3a2350d",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "research/fgfr2-state-pilot/research-and-protocol.md",
+      "source_sha256": "3760f7518809f97f0cd887be78cce54149d9c1d481e57af5b42ea60a79c63a18",
+      "public_path": "docs/archive/research/fgfr2-state-pilot/research-and-protocol.md",
+      "public_sha256": "0a47191e1d88c10b096222dd49c8c420619ac52add6487eef1c6b5eb97c0c811",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "research/fgfr2-state-pilot/structure-audit.md",
+      "source_sha256": "b67d60ea414ea7844e00d5372706a75d333d76eebed986b1c1d9bbcf27218c3f",
+      "public_path": "docs/archive/research/fgfr2-state-pilot/structure-audit.md",
+      "public_sha256": "2034981412d0b1083f06cabdc6972ef42beba1e8384e1c0c2202290becc79cae",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "research/fgfr2-state-tree-pilot/protocol.md",
+      "source_sha256": "4c51a95d7a81c8658733e6b835420986ca89fb1aca21137a0da7e8211001ce7c",
+      "public_path": "docs/archive/research/fgfr2-state-tree-pilot/protocol.md",
+      "public_sha256": "b8f33689ad59432cf6479bd61cbd810c7b09655e7342e70348dfb90f5cf0b2d9",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    }
+  ]
+}

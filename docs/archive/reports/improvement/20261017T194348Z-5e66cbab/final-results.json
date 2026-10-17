@@ -1,0 +1,99 @@
+{
+  "status": "completed",
+  "metrics": {
+    "fixed": {
+      "macro_ap": 0.10923446212528953,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.14194251906576077,
+          "brier": 0.08559949408536102,
+          "n": 1802,
+          "positive_count": 152,
+          "inconclusive_count": 17
+        },
+        "fut": {
+          "average_precision": 0.07652640518481829,
+          "brier": 0.059426469187278015,
+          "n": 1807,
+          "positive_count": 108,
+          "inconclusive_count": 12
+        }
+      }
+    },
+    "random": {
+      "macro_ap": 0.10923446212528953,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.14194251906576077,
+          "brier": 0.08559949408536102,
+          "n": 1802,
+          "positive_count": 152,
+          "inconclusive_count": 17
+        },
+        "fut": {
+          "average_precision": 0.07652640518481829,
+          "brier": 0.059426469187278015,
+          "n": 1807,
+          "positive_count": 108,
+          "inconclusive_count": 12
+        }
+      }
+    },
+    "agent": {
+      "macro_ap": 0.09481324816550957,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.11782931065630334,
+          "brier": 0.12489788588800019,
+          "n": 1802,
+          "positive_count": 152,
+          "inconclusive_count": 17
+        },
+        "fut": {
+          "average_precision": 0.07179718567471578,
+          "brier": 0.06482037701693592,
+          "n": 1807,
+          "positive_count": 108,
+          "inconclusive_count": 12
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "fixed": {
+      "macro_ap_delta": -0.014421213959779966,
+      "per_drug_delta": {
+        "pem": -0.024113208409457437,
+        "fut": -0.004729219510102509
+      },
+      "passes_margin": false
+    },
+    "random": {
+      "macro_ap_delta": -0.014421213959779966,
+      "per_drug_delta": {
+        "pem": -0.024113208409457437,
+        "fut": -0.004729219510102509
+      },
+      "passes_margin": false
+    }
+  },
+  "prototype_margin_passed": false,
+  "uncertainty": {
+    "method": "paired aligned-block bootstrap; descriptive sensitivity only",
+    "groups": 7,
+    "iterations": 500,
+    "percentiles_2_5_50_97_5": {
+      "agent_minus_fixed": [
+        -0.026668360033614707,
+        -0.014325101308889594,
+        -0.0046164901704355814
+      ],
+      "agent_minus_random": [
+        -0.026668360033614707,
+        -0.014325101308889594,
+        -0.0046164901704355814
+      ]
+    }
+  },
+  "interpretation": "Retrospective held-out assay result; not biological superiority"
+}

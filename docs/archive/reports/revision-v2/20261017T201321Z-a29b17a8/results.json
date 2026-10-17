@@ -1,0 +1,735 @@
+{
+  "nested_metrics": {
+    "v1_fixed": {
+      "macro_ap": 0.03441316728987877,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.04851675991785647,
+          "brier": 0.04924546744142224,
+          "n": 3707,
+          "positive_count": 175,
+          "inconclusive_count": 23,
+          "prevalence": 0.04720798489344483
+        },
+        "fut": {
+          "average_precision": 0.02030957466190106,
+          "brier": 0.0215025913123951,
+          "n": 3695,
+          "positive_count": 76,
+          "inconclusive_count": 35,
+          "prevalence": 0.020568335588633288
+        }
+      },
+      "macro_brier": 0.03537402937690867,
+      "by_fold": {
+        "outer-0": {
+          "macro_ap": 0.05492698644966695,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07348375482017948,
+              "brier": 0.0702299078334816,
+              "n": 1390,
+              "positive_count": 98,
+              "inconclusive_count": 8,
+              "prevalence": 0.07050359712230216
+            },
+            "fut": {
+              "average_precision": 0.036370218079154415,
+              "brier": 0.033290634198301305,
+              "n": 1378,
+              "positive_count": 45,
+              "inconclusive_count": 20,
+              "prevalence": 0.03265602322206096
+            }
+          },
+          "macro_brier": 0.05176027101589145
+        },
+        "outer-1": {
+          "macro_ap": 0.04076959771093915,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.06168466258293881,
+              "brier": 0.044138081085187526,
+              "n": 930,
+              "positive_count": 38,
+              "inconclusive_count": 9,
+              "prevalence": 0.04086021505376344
+            },
+            "fut": {
+              "average_precision": 0.0198545328389395,
+              "brier": 0.011052270869930582,
+              "n": 935,
+              "positive_count": 9,
+              "inconclusive_count": 4,
+              "prevalence": 0.009625668449197862
+            }
+          },
+          "macro_brier": 0.027595175977559054
+        },
+        "outer-2": {
+          "macro_ap": 0.02582521994254299,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.03465020834044047,
+              "brier": 0.03164020224051076,
+              "n": 1387,
+              "positive_count": 39,
+              "inconclusive_count": 6,
+              "prevalence": 0.028118240807498196
+            },
+            "fut": {
+              "average_precision": 0.017000231544645514,
+              "brier": 0.016818891252283356,
+              "n": 1382,
+              "positive_count": 22,
+              "inconclusive_count": 11,
+              "prevalence": 0.015918958031837915
+            }
+          },
+          "macro_brier": 0.02422954674639706
+        }
+      },
+      "mean_fold_macro_ap": 0.04050726803438303,
+      "fold_ap_std": 0.011882194413019617
+    },
+    "biology_fixed": {
+      "macro_ap": 0.034627650437151915,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.0492232074422894,
+          "brier": 0.05071672692471004,
+          "n": 3707,
+          "positive_count": 175,
+          "inconclusive_count": 23,
+          "prevalence": 0.04720798489344483
+        },
+        "fut": {
+          "average_precision": 0.020032093432014435,
+          "brier": 0.020844518610230393,
+          "n": 3695,
+          "positive_count": 76,
+          "inconclusive_count": 35,
+          "prevalence": 0.020568335588633288
+        }
+      },
+      "macro_brier": 0.03578062276747022,
+      "by_fold": {
+        "outer-0": {
+          "macro_ap": 0.05591020268306671,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07948944994291816,
+              "brier": 0.07521482428265751,
+              "n": 1390,
+              "positive_count": 98,
+              "inconclusive_count": 8,
+              "prevalence": 0.07050359712230216
+            },
+            "fut": {
+              "average_precision": 0.03233095542321526,
+              "brier": 0.03323559986677903,
+              "n": 1378,
+              "positive_count": 45,
+              "inconclusive_count": 20,
+              "prevalence": 0.03265602322206096
+            }
+          },
+          "macro_brier": 0.05422521207471827
+        },
+        "outer-1": {
+          "macro_ap": 0.0503834216362066,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.047438069068080124,
+              "brier": 0.04138499986297677,
+              "n": 930,
+              "positive_count": 38,
+              "inconclusive_count": 9,
+              "prevalence": 0.04086021505376344
+            },
+            "fut": {
+              "average_precision": 0.053328774204333074,
+              "brier": 0.009696520988641127,
+              "n": 935,
+              "positive_count": 9,
+              "inconclusive_count": 4,
+              "prevalence": 0.009625668449197862
+            }
+          },
+          "macro_brier": 0.02554076042580895
+        },
+        "outer-2": {
+          "macro_ap": 0.018412928075225255,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.02386148600856187,
+              "brier": 0.03242267561963793,
+              "n": 1387,
+              "positive_count": 39,
+              "inconclusive_count": 6,
+              "prevalence": 0.028118240807498196
+            },
+            "fut": {
+              "average_precision": 0.012964370141888639,
+              "brier": 0.01603154307091198,
+              "n": 1382,
+              "positive_count": 22,
+              "inconclusive_count": 11,
+              "prevalence": 0.015918958031837915
+            }
+          },
+          "macro_brier": 0.024227109345274955
+        }
+      },
+      "mean_fold_macro_ap": 0.04156885079816618,
+      "fold_ap_std": 0.01652843801952849
+    },
+    "random": {
+      "macro_ap": 0.03493831047628764,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.04756983300451313,
+          "brier": 0.048630056012625954,
+          "n": 3707,
+          "positive_count": 175,
+          "inconclusive_count": 23,
+          "prevalence": 0.04720798489344483
+        },
+        "fut": {
+          "average_precision": 0.02230678794806215,
+          "brier": 0.020555569183835685,
+          "n": 3695,
+          "positive_count": 76,
+          "inconclusive_count": 35,
+          "prevalence": 0.020568335588633288
+        }
+      },
+      "macro_brier": 0.03459281259823082,
+      "by_fold": {
+        "outer-0": {
+          "macro_ap": 0.05418605566643425,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07273832814625916,
+              "brier": 0.06982696848255204,
+              "n": 1390,
+              "positive_count": 98,
+              "inconclusive_count": 8,
+              "prevalence": 0.07050359712230216
+            },
+            "fut": {
+              "average_precision": 0.03563378318660934,
+              "brier": 0.032859508170844265,
+              "n": 1378,
+              "positive_count": 45,
+              "inconclusive_count": 20,
+              "prevalence": 0.03265602322206096
+            }
+          },
+          "macro_brier": 0.051343238326698154
+        },
+        "outer-1": {
+          "macro_ap": 0.05494703546544609,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.06550224441792081,
+              "brier": 0.0399361161924992,
+              "n": 930,
+              "positive_count": 38,
+              "inconclusive_count": 9,
+              "prevalence": 0.04086021505376344
+            },
+            "fut": {
+              "average_precision": 0.044391826512971376,
+              "brier": 0.009457081586115993,
+              "n": 935,
+              "positive_count": 9,
+              "inconclusive_count": 4,
+              "prevalence": 0.009625668449197862
+            }
+          },
+          "macro_brier": 0.024696598889307596
+        },
+        "outer-2": {
+          "macro_ap": 0.02480734351151815,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.029643854084123216,
+              "brier": 0.033216685932972466,
+              "n": 1387,
+              "positive_count": 39,
+              "inconclusive_count": 6,
+              "prevalence": 0.028118240807498196
+            },
+            "fut": {
+              "average_precision": 0.019970832938913087,
+              "brier": 0.015795987403640396,
+              "n": 1382,
+              "positive_count": 22,
+              "inconclusive_count": 11,
+              "prevalence": 0.015918958031837915
+            }
+          },
+          "macro_brier": 0.02450633666830643
+        }
+      },
+      "mean_fold_macro_ap": 0.0446468115477995,
+      "fold_ap_std": 0.014032061894950864
+    },
+    "grid": {
+      "macro_ap": 0.03493831047628764,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.04756983300451313,
+          "brier": 0.048630056012625954,
+          "n": 3707,
+          "positive_count": 175,
+          "inconclusive_count": 23,
+          "prevalence": 0.04720798489344483
+        },
+        "fut": {
+          "average_precision": 0.02230678794806215,
+          "brier": 0.020555569183835685,
+          "n": 3695,
+          "positive_count": 76,
+          "inconclusive_count": 35,
+          "prevalence": 0.020568335588633288
+        }
+      },
+      "macro_brier": 0.03459281259823082,
+      "by_fold": {
+        "outer-0": {
+          "macro_ap": 0.05418605566643425,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07273832814625916,
+              "brier": 0.06982696848255204,
+              "n": 1390,
+              "positive_count": 98,
+              "inconclusive_count": 8,
+              "prevalence": 0.07050359712230216
+            },
+            "fut": {
+              "average_precision": 0.03563378318660934,
+              "brier": 0.032859508170844265,
+              "n": 1378,
+              "positive_count": 45,
+              "inconclusive_count": 20,
+              "prevalence": 0.03265602322206096
+            }
+          },
+          "macro_brier": 0.051343238326698154
+        },
+        "outer-1": {
+          "macro_ap": 0.05494703546544609,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.06550224441792081,
+              "brier": 0.0399361161924992,
+              "n": 930,
+              "positive_count": 38,
+              "inconclusive_count": 9,
+              "prevalence": 0.04086021505376344
+            },
+            "fut": {
+              "average_precision": 0.044391826512971376,
+              "brier": 0.009457081586115993,
+              "n": 935,
+              "positive_count": 9,
+              "inconclusive_count": 4,
+              "prevalence": 0.009625668449197862
+            }
+          },
+          "macro_brier": 0.024696598889307596
+        },
+        "outer-2": {
+          "macro_ap": 0.02480734351151815,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.029643854084123216,
+              "brier": 0.033216685932972466,
+              "n": 1387,
+              "positive_count": 39,
+              "inconclusive_count": 6,
+              "prevalence": 0.028118240807498196
+            },
+            "fut": {
+              "average_precision": 0.019970832938913087,
+              "brier": 0.015795987403640396,
+              "n": 1382,
+              "positive_count": 22,
+              "inconclusive_count": 11,
+              "prevalence": 0.015918958031837915
+            }
+          },
+          "macro_brier": 0.02450633666830643
+        }
+      },
+      "mean_fold_macro_ap": 0.0446468115477995,
+      "fold_ap_std": 0.014032061894950864
+    },
+    "agent": {
+      "macro_ap": 0.03051602389140539,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.041003027188422365,
+          "brier": 0.04938925371063199,
+          "n": 3707,
+          "positive_count": 175,
+          "inconclusive_count": 23,
+          "prevalence": 0.04720798489344483
+        },
+        "fut": {
+          "average_precision": 0.020029020594388415,
+          "brier": 0.02095901963980582,
+          "n": 3695,
+          "positive_count": 76,
+          "inconclusive_count": 35,
+          "prevalence": 0.020568335588633288
+        }
+      },
+      "macro_brier": 0.0351741366752189,
+      "by_fold": {
+        "outer-0": {
+          "macro_ap": 0.05418605566643425,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07273832814625916,
+              "brier": 0.06982696848255204,
+              "n": 1390,
+              "positive_count": 98,
+              "inconclusive_count": 8,
+              "prevalence": 0.07050359712230216
+            },
+            "fut": {
+              "average_precision": 0.03563378318660934,
+              "brier": 0.032859508170844265,
+              "n": 1378,
+              "positive_count": 45,
+              "inconclusive_count": 20,
+              "prevalence": 0.03265602322206096
+            }
+          },
+          "macro_brier": 0.051343238326698154
+        },
+        "outer-1": {
+          "macro_ap": 0.0503834216362066,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.047438069068080124,
+              "brier": 0.04138499986297677,
+              "n": 930,
+              "positive_count": 38,
+              "inconclusive_count": 9,
+              "prevalence": 0.04086021505376344
+            },
+            "fut": {
+              "average_precision": 0.053328774204333074,
+              "brier": 0.009696520988641127,
+              "n": 935,
+              "positive_count": 9,
+              "inconclusive_count": 4,
+              "prevalence": 0.009625668449197862
+            }
+          },
+          "macro_brier": 0.02554076042580895
+        },
+        "outer-2": {
+          "macro_ap": 0.01826353194025252,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.021717144296924784,
+              "brier": 0.03427428078009884,
+              "n": 1387,
+              "positive_count": 39,
+              "inconclusive_count": 6,
+              "prevalence": 0.028118240807498196
+            },
+            "fut": {
+              "average_precision": 0.014809919583580262,
+              "brier": 0.016712683202083675,
+              "n": 1382,
+              "positive_count": 22,
+              "inconclusive_count": 11,
+              "prevalence": 0.015918958031837915
+            }
+          },
+          "macro_brier": 0.025493481991091256
+        }
+      },
+      "mean_fold_macro_ap": 0.04094433641429779,
+      "fold_ap_std": 0.016112710822708994
+    }
+  },
+  "external": {
+    "status": "completed",
+    "panel_id": "saifudeen2026-fgfr-single-mutants",
+    "primary_metric": "mean_per_drug_spearman",
+    "minimum_n_per_drug": 5,
+    "measurement_coverage": {
+      "pem": {
+        "expected": 25,
+        "observed": 25,
+        "outside_nominal_range": 0
+      },
+      "fut": {
+        "expected": 25,
+        "observed": 25,
+        "outside_nominal_range": 0
+      }
+    },
+    "methods": {
+      "v1_fixed": {
+        "macro_spearman": -0.018063133166149187,
+        "per_drug": {
+          "pem": {
+            "spearman": 0.2542796738708736,
+            "n": 25,
+            "aligned_groups": 9,
+            "reason": null
+          },
+          "fut": {
+            "spearman": -0.29040594020317195,
+            "n": 25,
+            "aligned_groups": 9,
+            "reason": null
+          }
+        }
+      },
+      "biology_fixed": {
+        "macro_spearman": 0.4056809977154603,
+        "per_drug": {
+          "pem": {
+            "spearman": 0.2989036408436744,
+            "n": 25,
+            "aligned_groups": 9,
+            "reason": null
+          },
+          "fut": {
+            "spearman": 0.5124583545872462,
+            "n": 25,
+            "aligned_groups": 9,
+            "reason": null
+          }
+        }
+      },
+      "random": {
+        "macro_spearman": 0.28374021501356517,
+        "per_drug": {
+          "pem": {
+            "spearman": 0.4739173071252179,
+            "n": 25,
+            "aligned_groups": 9,
+            "reason": null
+          },
+          "fut": {
+            "spearman": 0.09356312290191247,
+            "n": 25,
+            "aligned_groups": 9,
+            "reason": null
+          }
+        }
+      },
+      "grid": {
+        "macro_spearman": 0.1825984070800566,
+        "per_drug": {
+          "pem": {
+            "spearman": 0.41231960676775664,
+            "n": 25,
+            "aligned_groups": 9,
+            "reason": null
+          },
+          "fut": {
+            "spearman": -0.04712279260764347,
+            "n": 25,
+            "aligned_groups": 9,
+            "reason": null
+          }
+        }
+      },
+      "agent": {
+        "macro_spearman": 0.20891521189894896,
+        "per_drug": {
+          "pem": {
+            "spearman": 0.10348144065244325,
+            "n": 25,
+            "aligned_groups": 9,
+            "reason": null
+          },
+          "fut": {
+            "spearman": 0.3143489831454547,
+            "n": 25,
+            "aligned_groups": 9,
+            "reason": null
+          }
+        }
+      }
+    },
+    "primary_evaluable": true,
+    "wt_adjustment_applied": false,
+    "classification_metrics_computed": false,
+    "records_path": "reports/revision-v2/20261017T201321Z-a29b17a8/external/external-records.json",
+    "records_sha256": "583b185410bf963776f1fceaa0e58d197ba121fe7af6b6c816dd801fb807c237",
+    "interpretation": "Descriptive cross-assay biochemical transfer on related FGFR variants; not cellular-resistance accuracy or independent clinical validation."
+  },
+  "full_selections": {
+    "v1_fixed": "v1_fixed",
+    "biology_fixed": "structure-logistic-c0.1",
+    "random": "interactions-hgb-depth2",
+    "grid": "structure-hgb-depth3",
+    "agent": "structure-logistic-c1"
+  },
+  "agent_statuses": [
+    "completed",
+    "completed",
+    "completed",
+    "completed"
+  ],
+  "seconds": 243.55052400000022,
+  "token_accounting": {
+    "budget_charge_tokens": 148958,
+    "usage_records": [
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 5232,
+        "completion_tokens": 1526,
+        "total_tokens": 6758,
+        "budget_charge_tokens": 6758,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 6688,
+        "completion_tokens": 4891,
+        "total_tokens": 11579,
+        "budget_charge_tokens": 11579,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 8199,
+        "completion_tokens": 4763,
+        "total_tokens": 12962,
+        "budget_charge_tokens": 12962,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 5258,
+        "completion_tokens": 2826,
+        "total_tokens": 8084,
+        "budget_charge_tokens": 8084,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 6735,
+        "completion_tokens": 4449,
+        "total_tokens": 11184,
+        "budget_charge_tokens": 11184,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 7373,
+        "completion_tokens": 810,
+        "total_tokens": 8183,
+        "budget_charge_tokens": 8183,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 8216,
+        "completion_tokens": 4172,
+        "total_tokens": 12388,
+        "budget_charge_tokens": 12388,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 5235,
+        "completion_tokens": 6590,
+        "total_tokens": 11825,
+        "budget_charge_tokens": 11825,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 6716,
+        "completion_tokens": 4884,
+        "total_tokens": 11600,
+        "budget_charge_tokens": 11600,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 7306,
+        "completion_tokens": 1323,
+        "total_tokens": 8629,
+        "budget_charge_tokens": 8629,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 8349,
+        "completion_tokens": 5635,
+        "total_tokens": 13984,
+        "budget_charge_tokens": 13984,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 5273,
+        "completion_tokens": 3336,
+        "total_tokens": 8609,
+        "budget_charge_tokens": 8609,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 6749,
+        "completion_tokens": 3298,
+        "total_tokens": 10047,
+        "budget_charge_tokens": 10047,
+        "usage_estimated": false,
+        "request_status": "completed"
+      },
+      {
+        "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "prompt_version": "fgfr-catalog-experiment-planner-v2",
+        "prompt_tokens": 8275,
+        "completion_tokens": 4851,
+        "total_tokens": 13126,
+        "budget_charge_tokens": 13126,
+        "usage_estimated": false,
+        "request_status": "completed"
+      }
+    ]
+  },
+  "interpretation": "Exploratory internal CV and one-shot biochemical assay transfer; no clinical accuracy claim."
+}

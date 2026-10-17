@@ -1,0 +1,483 @@
+{
+  "protocol_sha256": "7fbc256a92e5f32af5e918304ecc5825fa30e405bbb506cc344e113ec3a88c6b",
+  "coverage": {
+    "eligible_nucleotide_rows": 3084,
+    "eligible_protein_variants": 2749,
+    "complete_protein_variants": 2719,
+    "incomplete_protein_variants": 30,
+    "median_within_variant_replicate_sd_log2_1p": 0.14400740084221114,
+    "aggregation": "median across codons within replicate, median of four replicates",
+    "transform": "log2(1 + enrichment)"
+  },
+  "metrics": {
+    "structure": {
+      "macro_ap": 0.06015816702849337,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.06276187688183937,
+          "brier": 0.06032002365609703,
+          "n": 2702,
+          "positive_count": 119,
+          "inconclusive_count": 17,
+          "prevalence": 0.04404145077720207
+        },
+        "fut": {
+          "average_precision": 0.05755445717514738,
+          "brier": 0.03866498086691676,
+          "n": 2690,
+          "positive_count": 53,
+          "inconclusive_count": 29,
+          "prevalence": 0.01970260223048327
+        }
+      },
+      "macro_brier": 0.04949250226150689,
+      "by_fold": {
+        "pilot-0": {
+          "macro_ap": 0.08905039767896047,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07756046319572371,
+              "brier": 0.09081702985528846,
+              "n": 894,
+              "positive_count": 37,
+              "inconclusive_count": 6,
+              "prevalence": 0.04138702460850112
+            },
+            "fut": {
+              "average_precision": 0.10054033216219722,
+              "brier": 0.08629364699178418,
+              "n": 890,
+              "positive_count": 29,
+              "inconclusive_count": 10,
+              "prevalence": 0.03258426966292135
+            }
+          },
+          "macro_brier": 0.08855533842353633
+        },
+        "pilot-1": {
+          "macro_ap": 0.046692432298058265,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.06724321614035275,
+              "brier": 0.0570795728175127,
+              "n": 966,
+              "positive_count": 55,
+              "inconclusive_count": 8,
+              "prevalence": 0.056935817805383024
+            },
+            "fut": {
+              "average_precision": 0.026141648455763774,
+              "brier": 0.01535064630903087,
+              "n": 961,
+              "positive_count": 14,
+              "inconclusive_count": 13,
+              "prevalence": 0.014568158168574402
+            }
+          },
+          "macro_brier": 0.036215109563271786
+        },
+        "pilot-2": {
+          "macro_ap": 0.06845881807852705,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.10875889762427447,
+              "brier": 0.03165725877248104,
+              "n": 842,
+              "positive_count": 27,
+              "inconclusive_count": 3,
+              "prevalence": 0.032066508313539195
+            },
+            "fut": {
+              "average_precision": 0.02815873853277963,
+              "brier": 0.014845627659522633,
+              "n": 839,
+              "positive_count": 10,
+              "inconclusive_count": 6,
+              "prevalence": 0.011918951132300357
+            }
+          },
+          "macro_brier": 0.023251443216001835
+        }
+      },
+      "mean_fold_macro_ap": 0.06806721601851527,
+      "fold_ap_std": 0.01729478383660772
+    },
+    "predicted_activation": {
+      "macro_ap": 0.05961037966672919,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.06219499839655854,
+          "brier": 0.061583365666360995,
+          "n": 2702,
+          "positive_count": 119,
+          "inconclusive_count": 17,
+          "prevalence": 0.04404145077720207
+        },
+        "fut": {
+          "average_precision": 0.05702576093689984,
+          "brier": 0.03938101780694854,
+          "n": 2690,
+          "positive_count": 53,
+          "inconclusive_count": 29,
+          "prevalence": 0.01970260223048327
+        }
+      },
+      "macro_brier": 0.05048219173665477,
+      "by_fold": {
+        "pilot-0": {
+          "macro_ap": 0.0890211669268835,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07927087554904427,
+              "brier": 0.09458100292051606,
+              "n": 894,
+              "positive_count": 37,
+              "inconclusive_count": 6,
+              "prevalence": 0.04138702460850112
+            },
+            "fut": {
+              "average_precision": 0.09877145830472274,
+              "brier": 0.08858376527271776,
+              "n": 890,
+              "positive_count": 29,
+              "inconclusive_count": 10,
+              "prevalence": 0.03258426966292135
+            }
+          },
+          "macro_brier": 0.09158238409661691
+        },
+        "pilot-1": {
+          "macro_ap": 0.04746979091560549,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.06785927225584545,
+              "brier": 0.05675122380665535,
+              "n": 966,
+              "positive_count": 55,
+              "inconclusive_count": 8,
+              "prevalence": 0.056935817805383024
+            },
+            "fut": {
+              "average_precision": 0.027080309575365523,
+              "brier": 0.01511397038892893,
+              "n": 961,
+              "positive_count": 14,
+              "inconclusive_count": 13,
+              "prevalence": 0.014568158168574402
+            }
+          },
+          "macro_brier": 0.03593259709779214
+        },
+        "pilot-2": {
+          "macro_ap": 0.06017769806911342,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.0957261910341461,
+              "brier": 0.03209163328068527,
+              "n": 842,
+              "positive_count": 27,
+              "inconclusive_count": 3,
+              "prevalence": 0.032066508313539195
+            },
+            "fut": {
+              "average_precision": 0.024629205104080735,
+              "brier": 0.014983148109907102,
+              "n": 839,
+              "positive_count": 10,
+              "inconclusive_count": 6,
+              "prevalence": 0.011918951132300357
+            }
+          },
+          "macro_brier": 0.023537390695296187
+        }
+      },
+      "mean_fold_macro_ap": 0.0655562186372008,
+      "fold_ap_std": 0.01738439098221269
+    },
+    "measured_activation": {
+      "macro_ap": 0.11718076982966434,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.15444339200645685,
+          "brier": 0.047754261727151574,
+          "n": 2702,
+          "positive_count": 119,
+          "inconclusive_count": 17,
+          "prevalence": 0.04404145077720207
+        },
+        "fut": {
+          "average_precision": 0.07991814765287183,
+          "brier": 0.03551877532737596,
+          "n": 2690,
+          "positive_count": 53,
+          "inconclusive_count": 29,
+          "prevalence": 0.01970260223048327
+        }
+      },
+      "macro_brier": 0.04163651852726377,
+      "by_fold": {
+        "pilot-0": {
+          "macro_ap": 0.14997888716090424,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.17189410048689527,
+              "brier": 0.06251289008650278,
+              "n": 894,
+              "positive_count": 37,
+              "inconclusive_count": 6,
+              "prevalence": 0.04138702460850112
+            },
+            "fut": {
+              "average_precision": 0.12806367383491324,
+              "brier": 0.07794235130378714,
+              "n": 890,
+              "positive_count": 29,
+              "inconclusive_count": 10,
+              "prevalence": 0.03258426966292135
+            }
+          },
+          "macro_brier": 0.07022762069514496
+        },
+        "pilot-1": {
+          "macro_ap": 0.11906638796909355,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.1910718608364798,
+              "brier": 0.052213444813338346,
+              "n": 966,
+              "positive_count": 55,
+              "inconclusive_count": 8,
+              "prevalence": 0.056935817805383024
+            },
+            "fut": {
+              "average_precision": 0.047060915101707276,
+              "brier": 0.014945045128016053,
+              "n": 961,
+              "positive_count": 14,
+              "inconclusive_count": 13,
+              "prevalence": 0.014568158168574402
+            }
+          },
+          "macro_brier": 0.0335792449706772
+        },
+        "pilot-2": {
+          "macro_ap": 0.1777679095175974,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.2932847575329793,
+              "brier": 0.026968294251478904,
+              "n": 842,
+              "positive_count": 27,
+              "inconclusive_count": 3,
+              "prevalence": 0.032066508313539195
+            },
+            "fut": {
+              "average_precision": 0.06225106150221556,
+              "brier": 0.014081793328065995,
+              "n": 839,
+              "positive_count": 10,
+              "inconclusive_count": 6,
+              "prevalence": 0.011918951132300357
+            }
+          },
+          "macro_brier": 0.02052504378977245
+        }
+      },
+      "mean_fold_macro_ap": 0.14893772821586507,
+      "fold_ap_std": 0.023976101531719623
+    },
+    "shuffled_activation": {
+      "macro_ap": 0.05763387943960463,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.05798893352077247,
+          "brier": 0.059781392759683125,
+          "n": 2702,
+          "positive_count": 119,
+          "inconclusive_count": 17,
+          "prevalence": 0.04404145077720207
+        },
+        "fut": {
+          "average_precision": 0.05727882535843679,
+          "brier": 0.03777580653947571,
+          "n": 2690,
+          "positive_count": 53,
+          "inconclusive_count": 29,
+          "prevalence": 0.01970260223048327
+        }
+      },
+      "macro_brier": 0.04877859964957942,
+      "by_fold": {
+        "pilot-0": {
+          "macro_ap": 0.0887601712392975,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07650864499631431,
+              "brier": 0.08713722737863534,
+              "n": 894,
+              "positive_count": 37,
+              "inconclusive_count": 6,
+              "prevalence": 0.04138702460850112
+            },
+            "fut": {
+              "average_precision": 0.10101169748228067,
+              "brier": 0.08446702095939472,
+              "n": 890,
+              "positive_count": 29,
+              "inconclusive_count": 10,
+              "prevalence": 0.03258426966292135
+            }
+          },
+          "macro_brier": 0.08580212416901503
+        },
+        "pilot-1": {
+          "macro_ap": 0.04750778891077438,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.06573575867579282,
+              "brier": 0.05728277155878165,
+              "n": 966,
+              "positive_count": 55,
+              "inconclusive_count": 8,
+              "prevalence": 0.056935817805383024
+            },
+            "fut": {
+              "average_precision": 0.029279819145755948,
+              "brier": 0.014984841841405302,
+              "n": 961,
+              "positive_count": 14,
+              "inconclusive_count": 13,
+              "prevalence": 0.014568158168574402
+            }
+          },
+          "macro_brier": 0.036133806700093474
+        },
+        "pilot-2": {
+          "macro_ap": 0.035560155557003176,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.04831703997122963,
+              "brier": 0.03360271334249492,
+              "n": 842,
+              "positive_count": 27,
+              "inconclusive_count": 3,
+              "prevalence": 0.032066508313539195
+            },
+            "fut": {
+              "average_precision": 0.022803271142776714,
+              "brier": 0.01435141588526561,
+              "n": 839,
+              "positive_count": 10,
+              "inconclusive_count": 6,
+              "prevalence": 0.011918951132300357
+            }
+          },
+          "macro_brier": 0.023977064613880265
+        }
+      },
+      "mean_fold_macro_ap": 0.057276038569025016,
+      "fold_ap_std": 0.022790706339624867
+    }
+  },
+  "activation_metrics": {
+    "predicted_activation": {
+      "pooled": {
+        "n": 2719,
+        "spearman": 0.37575095872654624,
+        "mae_log2_1p": 0.24705860868650195
+      },
+      "per_gene": {
+        "FGFR1": {
+          "n": 690,
+          "spearman": 0.24011065392493353,
+          "mae_log2_1p": 0.1593890062958789
+        },
+        "FGFR2": {
+          "n": 668,
+          "spearman": 0.19509581979115886,
+          "mae_log2_1p": 0.48810576510903714
+        },
+        "FGFR3": {
+          "n": 686,
+          "spearman": 0.6622701558722969,
+          "mae_log2_1p": 0.18984163348044863
+        },
+        "FGFR4": {
+          "n": 675,
+          "spearman": 0.2586034333286532,
+          "mae_log2_1p": 0.15627841631706355
+        }
+      }
+    },
+    "shuffled_activation": {
+      "pooled": {
+        "n": 2719,
+        "spearman": 0.03520508100314409,
+        "mae_log2_1p": 0.2868817666626317
+      },
+      "per_gene": {
+        "FGFR1": {
+          "n": 690,
+          "spearman": -0.0939086407064077,
+          "mae_log2_1p": 0.1662330239167161
+        },
+        "FGFR2": {
+          "n": 668,
+          "spearman": -0.13673892487793998,
+          "mae_log2_1p": 0.5045679170087429
+        },
+        "FGFR3": {
+          "n": 686,
+          "spearman": -0.2379659766981261,
+          "mae_log2_1p": 0.3167558443632826
+        },
+        "FGFR4": {
+          "n": 675,
+          "spearman": -0.056198061207495195,
+          "mae_log2_1p": 0.1644220137157179
+        }
+      }
+    }
+  },
+  "gate": {
+    "status": "do_not_advance",
+    "failed_guards": [
+      "macro_ap_gain_below_0.005",
+      "gain_in_fewer_than_two_folds"
+    ],
+    "inconclusive_reasons": [],
+    "fold_macro_ap_deltas": {
+      "pilot-0": -2.923075207697523e-05,
+      "pilot-1": 0.0007773586175472275,
+      "pilot-2": -0.008281120009413633
+    },
+    "interpretation": "Development triage only; thresholds are not significance tests."
+  },
+  "uncertainty": {
+    "replicates": 1000,
+    "seed": 17,
+    "aligned_groups": 11,
+    "draws_with_a_zero_positive_drug": 0,
+    "macro_ap_difference_vs_structure": {
+      "predicted_activation": {
+        "percentile_2_5": -0.005131887544667826,
+        "percentile_97_5": 0.0031981065053272146
+      },
+      "measured_activation": {
+        "percentile_2_5": 0.013080903897476095,
+        "percentile_97_5": 0.13811430263058283
+      },
+      "shuffled_activation": {
+        "percentile_2_5": -0.008825647701666918,
+        "percentile_97_5": 0.0009115533161367596
+      }
+    },
+    "interpretation": "Descriptive only: 11 related blocks, no refitting, no biological replicate resampling; not a generalization confidence guarantee."
+  },
+  "fitting_seconds": 9.601543332999427,
+  "elapsed_seconds": 14.257947999998578,
+  "integrity": {
+    "protected_file_count": 475,
+    "changed_files": []
+  }
+}

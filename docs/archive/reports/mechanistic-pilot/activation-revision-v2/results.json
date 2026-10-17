@@ -1,0 +1,2183 @@
+{
+  "n": 2719,
+  "coverage": {
+    "eligible_nucleotide_rows": 3084,
+    "eligible_protein_variants": 2749,
+    "complete_protein_variants": 2719,
+    "incomplete_protein_variants": 30,
+    "median_within_variant_replicate_sd_log2_1p": 0.14400740084221114,
+    "aggregation": "median across codons within replicate, median of four replicates",
+    "transform": "log2(1 + enrichment)",
+    "active_definition": "at least three of four protein replicate medians >= 1.5",
+    "active_definition_scope": "protein-level adaptation, not exact published nucleotide labels"
+  },
+  "activation_metrics": {
+    "original": {
+      "pooled": {
+        "n": 2719,
+        "spearman": 0.37575095872654624,
+        "mae": 0.24705860868650198,
+        "rmse": 0.44196455419706143,
+        "bias": -0.008260727031664835,
+        "truth_sd": 0.4581842725844172,
+        "prediction_sd": 0.20905259738488455,
+        "active_count": 122,
+        "active_prevalence": 0.04486943729312247,
+        "active_ap": 0.08590062671078116,
+        "active_recall_at_10pct": 0.21311475409836064,
+        "top_decile_overlap": 0.22058823529411764,
+        "active_subset_bias": -1.1980843962501053
+      },
+      "per_gene": {
+        "FGFR1": {
+          "n": 690,
+          "spearman": 0.24011065392493353,
+          "mae": 0.1593890062958789,
+          "rmse": 0.2783535893566847,
+          "bias": -0.02151742290152508,
+          "truth_sd": 0.2668235527106637,
+          "prediction_sd": 0.12353142917217358,
+          "active_count": 5,
+          "active_prevalence": 0.007246376811594203,
+          "active_ap": 0.00968915068567945,
+          "active_recall_at_10pct": 0.2,
+          "top_decile_overlap": 0.07246376811594203,
+          "active_subset_bias": -1.6510542581019454
+        },
+        "FGFR2": {
+          "n": 668,
+          "spearman": 0.19509581979115886,
+          "mae": 0.4881057651090371,
+          "rmse": 0.7582115383915229,
+          "bias": -0.0003605433704195808,
+          "truth_sd": 0.7379790268030003,
+          "prediction_sd": 0.2285222247414912,
+          "active_count": 96,
+          "active_prevalence": 0.1437125748502994,
+          "active_ap": 0.13469279354297645,
+          "active_recall_at_10pct": 0.07291666666666667,
+          "top_decile_overlap": 0.08955223880597014,
+          "active_subset_bias": -1.2208168585192543
+        },
+        "FGFR3": {
+          "n": 686,
+          "spearman": 0.6622701558722969,
+          "mae": 0.18984163348044863,
+          "rmse": 0.273435936872036,
+          "bias": -0.0090290845726381,
+          "truth_sd": 0.35563024154681866,
+          "prediction_sd": 0.21328034670404916,
+          "active_count": 2,
+          "active_prevalence": 0.0029154518950437317,
+          "active_ap": 0.004399306892568348,
+          "active_recall_at_10pct": 0.0,
+          "top_decile_overlap": 0.15942028985507245,
+          "active_subset_bias": -2.065720792917857
+        },
+        "FGFR4": {
+          "n": 675,
+          "spearman": 0.2586034333286532,
+          "mae": 0.15627841631706352,
+          "rmse": 0.2504352161837997,
+          "bias": -0.0017468148278138842,
+          "truth_sd": 0.2422850147697672,
+          "prediction_sd": 0.11886142951652623,
+          "active_count": 19,
+          "active_prevalence": 0.028148148148148148,
+          "active_ap": 0.03650541627370494,
+          "active_recall_at_10pct": 0.10526315789473684,
+          "top_decile_overlap": 0.07352941176470588,
+          "active_subset_bias": -0.8726928972799476
+        }
+      },
+      "macro_gene_spearman": 0.33902001572926066,
+      "macro_gene_active_ap": 0.04632166684873229,
+      "macro_gene_active_recall_at_10pct": 0.09454495614035088,
+      "by_fold": {
+        "pilot-0": {
+          "pooled": {
+            "n": 900,
+            "spearman": 0.40040664769684936,
+            "mae": 0.260104266872897,
+            "rmse": 0.40766694808165665,
+            "bias": 0.05604408082379488,
+            "truth_sd": 0.4175944039398603,
+            "prediction_sd": 0.24625906679817547,
+            "active_count": 27,
+            "active_prevalence": 0.03,
+            "active_ap": 0.07653232845134292,
+            "active_recall_at_10pct": 0.25925925925925924,
+            "top_decile_overlap": 0.26666666666666666,
+            "active_subset_bias": -1.1811557401949127
+          },
+          "per_gene": {
+            "FGFR1": {
+              "n": 204,
+              "spearman": 0.3073278316387761,
+              "mae": 0.1812713433803922,
+              "rmse": 0.2789082120353724,
+              "bias": 0.0298237745036535,
+              "truth_sd": 0.273821025990781,
+              "prediction_sd": 0.1369296321554821,
+              "active_count": 1,
+              "active_prevalence": 0.004901960784313725,
+              "active_ap": 0.011363636363636364,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.047619047619047616,
+              "active_subset_bias": -1.3804813193189838
+            },
+            "FGFR2": {
+              "n": 275,
+              "spearman": 0.1653141777814403,
+              "mae": 0.46770313874118724,
+              "rmse": 0.6383356683592346,
+              "bias": 0.13833632406436047,
+              "truth_sd": 0.5945729648507605,
+              "prediction_sd": 0.2474567308487176,
+              "active_count": 23,
+              "active_prevalence": 0.08363636363636363,
+              "active_ap": 0.09411620153942488,
+              "active_recall_at_10pct": 0.043478260869565216,
+              "top_decile_overlap": 0.0,
+              "active_subset_bias": -1.196051777377263
+            },
+            "FGFR3": {
+              "n": 209,
+              "spearman": 0.7443267577526477,
+              "mae": 0.16134024950638806,
+              "rmse": 0.1994359167898717,
+              "bias": 0.009294800415299856,
+              "truth_sd": 0.3092283996849219,
+              "prediction_sd": 0.2035430855777593,
+              "active_count": 0,
+              "active_prevalence": 0.0,
+              "active_ap": null,
+              "active_recall_at_10pct": null,
+              "top_decile_overlap": 0.19047619047619047,
+              "active_subset_bias": null
+            },
+            "FGFR4": {
+              "n": 212,
+              "spearman": 0.3238910657034176,
+              "mae": 0.16403778695917784,
+              "rmse": 0.2508115416076088,
+              "bias": 0.020615661972515464,
+              "truth_sd": 0.24756207188486726,
+              "prediction_sd": 0.13019618103852404,
+              "active_count": 3,
+              "active_prevalence": 0.014150943396226415,
+              "active_ap": 0.046798029556650245,
+              "active_recall_at_10pct": 0.3333333333333333,
+              "top_decile_overlap": 0.18181818181818182,
+              "active_subset_bias": -1.0005109287555352
+            }
+          },
+          "macro_gene_spearman": 0.38521495821907037,
+          "macro_gene_active_ap": null,
+          "macro_gene_active_recall_at_10pct": null
+        },
+        "pilot-1": {
+          "pooled": {
+            "n": 974,
+            "spearman": 0.3658636554230805,
+            "mae": 0.2217321363947947,
+            "rmse": 0.33526786479445086,
+            "bias": -0.027170235855081142,
+            "truth_sd": 0.37080689964159014,
+            "prediction_sd": 0.1643741273416899,
+            "active_count": 49,
+            "active_prevalence": 0.050308008213552365,
+            "active_ap": 0.10882797913081238,
+            "active_recall_at_10pct": 0.16326530612244897,
+            "top_decile_overlap": 0.15306122448979592,
+            "active_subset_bias": -0.9304167073750562
+          },
+          "per_gene": {
+            "FGFR1": {
+              "n": 271,
+              "spearman": 0.1593081182041854,
+              "mae": 0.1420030977779763,
+              "rmse": 0.1922275741893397,
+              "bias": -0.03199311931742438,
+              "truth_sd": 0.18122260620017933,
+              "prediction_sd": 0.10908218376843927,
+              "active_count": 2,
+              "active_prevalence": 0.007380073800738007,
+              "active_ap": 0.031123481781376517,
+              "active_recall_at_10pct": 0.5,
+              "top_decile_overlap": 0.07142857142857142,
+              "active_subset_bias": -0.5668901563374872
+            },
+            "FGFR2": {
+              "n": 180,
+              "spearman": 0.29925387419508515,
+              "mae": 0.48778843256054943,
+              "rmse": 0.6268436284414928,
+              "bias": -0.06013763272490187,
+              "truth_sd": 0.6418871623939013,
+              "prediction_sd": 0.15614958233609838,
+              "active_count": 36,
+              "active_prevalence": 0.2,
+              "active_ap": 0.20483363877253774,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.0,
+              "active_subset_bias": -1.0318747835939943
+            },
+            "FGFR3": {
+              "n": 263,
+              "spearman": 0.6768198873801207,
+              "mae": 0.19348577812331472,
+              "rmse": 0.2424434993641066,
+              "bias": -0.013642687262621063,
+              "truth_sd": 0.33955266141572693,
+              "prediction_sd": 0.18495915803644067,
+              "active_count": 1,
+              "active_prevalence": 0.0038022813688212928,
+              "active_ap": 0.009345794392523364,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.18518518518518517,
+              "active_subset_bias": -0.5639636978087733
+            },
+            "FGFR4": {
+              "n": 260,
+              "spearman": 0.14861497084745662,
+              "mae": 0.14921378401295307,
+              "rmse": 0.22601409855516832,
+              "bias": -0.013003360566443658,
+              "truth_sd": 0.21035262321086093,
+              "prediction_sd": 0.1070355230994673,
+              "active_count": 10,
+              "active_prevalence": 0.038461538461538464,
+              "active_ap": 0.05353971191649264,
+              "active_recall_at_10pct": 0.1,
+              "top_decile_overlap": 0.038461538461538464,
+              "active_subset_bias": -0.6745182441510207
+            }
+          },
+          "macro_gene_spearman": 0.320999212656712,
+          "macro_gene_active_ap": 0.07471065671573257,
+          "macro_gene_active_recall_at_10pct": 0.15
+        },
+        "pilot-2": {
+          "pooled": {
+            "n": 845,
+            "spearman": 0.3444947045351858,
+            "mae": 0.26235670530705507,
+            "rmse": 0.5674133069147718,
+            "bias": -0.05495476901498585,
+            "truth_sd": 0.5675756415777197,
+            "prediction_sd": 0.21153422689267815,
+            "active_count": 46,
+            "active_prevalence": 0.054437869822485205,
+            "active_ap": 0.09981579587152772,
+            "active_recall_at_10pct": 0.21739130434782608,
+            "top_decile_overlap": 0.24705882352941178,
+            "active_subset_bias": -1.4931450586059227
+          },
+          "per_gene": {
+            "FGFR1": {
+              "n": 215,
+              "spearman": 0.2146420037215742,
+              "mae": 0.160540561845232,
+              "rmse": 0.3581524922834242,
+              "bias": -0.057027611468723795,
+              "truth_sd": 0.33089696176047767,
+              "prediction_sd": 0.12514091655616283,
+              "active_count": 2,
+              "active_prevalence": 0.009302325581395349,
+              "active_ap": 0.007519694437813321,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.13636363636363635,
+              "active_subset_bias": -2.870504829257885
+            },
+            "FGFR2": {
+              "n": 213,
+              "spearman": 0.20039029854190576,
+              "mae": 0.5147153524793964,
+              "rmse": 0.9720028184841059,
+              "bias": -0.12891341877303786,
+              "truth_sd": 0.9350744139922601,
+              "prediction_sd": 0.24830992364873214,
+              "active_count": 37,
+              "active_prevalence": 0.17370892018779344,
+              "active_ap": 0.16788952006363583,
+              "active_recall_at_10pct": 0.08108108108108109,
+              "top_decile_overlap": 0.09090909090909091,
+              "active_subset_bias": -1.420046900778042
+            },
+            "FGFR3": {
+              "n": 214,
+              "spearman": 0.5232231161597003,
+              "mae": 0.21319854567439675,
+              "rmse": 0.35859643538562663,
+              "bias": -0.021254853054009645,
+              "truth_sd": 0.39314446316007085,
+              "prediction_sd": 0.22912320940610872,
+              "active_count": 1,
+              "active_prevalence": 0.004672897196261682,
+              "active_ap": 0.006097560975609756,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.13636363636363635,
+              "active_subset_bias": -3.5674778880269407
+            },
+            "FGFR4": {
+              "n": 203,
+              "spearman": 0.2515058879962328,
+              "mae": 0.15722333170100686,
+              "rmse": 0.27825045747663674,
+              "bias": -0.010683480786563044,
+              "truth_sd": 0.26614529187110403,
+              "prediction_sd": 0.11581045981059404,
+              "active_count": 6,
+              "active_prevalence": 0.029556650246305417,
+              "active_ap": 0.0348851667841832,
+              "active_recall_at_10pct": 0.16666666666666666,
+              "top_decile_overlap": 0.14285714285714285,
+              "active_subset_bias": -1.1390749700903648
+            }
+          },
+          "macro_gene_spearman": 0.29744032660485326,
+          "macro_gene_active_ap": 0.05409798556531052,
+          "macro_gene_active_recall_at_10pct": 0.061936936936936936
+        }
+      }
+    },
+    "capacity": {
+      "pooled": {
+        "n": 2719,
+        "spearman": 0.4003370788566861,
+        "mae": 0.26180575957495994,
+        "rmse": 0.4663851359940992,
+        "bias": 0.012075927030009627,
+        "truth_sd": 0.4581842725844172,
+        "prediction_sd": 0.2674288976973223,
+        "active_count": 122,
+        "active_prevalence": 0.04486943729312247,
+        "active_ap": 0.08402454842906713,
+        "active_recall_at_10pct": 0.22131147540983606,
+        "top_decile_overlap": 0.21691176470588236,
+        "active_subset_bias": -1.1662696193556379
+      },
+      "per_gene": {
+        "FGFR1": {
+          "n": 690,
+          "spearman": 0.2702420789120821,
+          "mae": 0.1784384017659084,
+          "rmse": 0.3048252767135455,
+          "bias": 0.006404722541436894,
+          "truth_sd": 0.2668235527106637,
+          "prediction_sd": 0.18065640056287105,
+          "active_count": 5,
+          "active_prevalence": 0.007246376811594203,
+          "active_ap": 0.005903509535070111,
+          "active_recall_at_10pct": 0.0,
+          "top_decile_overlap": 0.07246376811594203,
+          "active_subset_bias": -1.6781928924004368
+        },
+        "FGFR2": {
+          "n": 668,
+          "spearman": 0.24814173302554682,
+          "mae": 0.5116423161994924,
+          "rmse": 0.7932133828720043,
+          "bias": 0.028303349629874706,
+          "truth_sd": 0.7379790268030003,
+          "prediction_sd": 0.33043301185497037,
+          "active_count": 96,
+          "active_prevalence": 0.1437125748502994,
+          "active_ap": 0.14793325711563698,
+          "active_recall_at_10pct": 0.08333333333333333,
+          "top_decile_overlap": 0.04477611940298507,
+          "active_subset_bias": -1.179388340433195
+        },
+        "FGFR3": {
+          "n": 686,
+          "spearman": 0.6508186993955196,
+          "mae": 0.19390587341869012,
+          "rmse": 0.28841116599774175,
+          "bias": 0.0020144191477930616,
+          "truth_sd": 0.35563024154681866,
+          "prediction_sd": 0.25545076364255287,
+          "active_count": 2,
+          "active_prevalence": 0.0029154518950437317,
+          "active_ap": 0.005085895117540687,
+          "active_recall_at_10pct": 0.0,
+          "top_decile_overlap": 0.18840579710144928,
+          "active_subset_bias": -2.0436518936580144
+        },
+        "FGFR4": {
+          "n": 675,
+          "spearman": 0.29999938058023334,
+          "mae": 0.16878646915460285,
+          "rmse": 0.27203054443270186,
+          "bias": 0.012039493263499802,
+          "truth_sd": 0.2422850147697672,
+          "prediction_sd": 0.1613604502464434,
+          "active_count": 19,
+          "active_prevalence": 0.028148148148148148,
+          "active_ap": 0.033769986638354,
+          "active_recall_at_10pct": 0.10526315789473684,
+          "top_decile_overlap": 0.07352941176470588,
+          "active_subset_bias": -0.8729128752885732
+        }
+      },
+      "macro_gene_spearman": 0.36730047297834545,
+      "macro_gene_active_ap": 0.048173162101650444,
+      "macro_gene_active_recall_at_10pct": 0.04714912280701754,
+      "by_fold": {
+        "pilot-0": {
+          "pooled": {
+            "n": 900,
+            "spearman": 0.41755441022171796,
+            "mae": 0.27824317626432693,
+            "rmse": 0.4559740634841673,
+            "bias": 0.060129059059570056,
+            "truth_sd": 0.4175944039398603,
+            "prediction_sd": 0.3195972866202228,
+            "active_count": 27,
+            "active_prevalence": 0.03,
+            "active_ap": 0.06482958769694099,
+            "active_recall_at_10pct": 0.18518518518518517,
+            "top_decile_overlap": 0.16666666666666666,
+            "active_subset_bias": -1.2028776264782925
+          },
+          "per_gene": {
+            "FGFR1": {
+              "n": 204,
+              "spearman": 0.27439625135167606,
+              "mae": 0.21062149744567682,
+              "rmse": 0.3366537481711389,
+              "bias": 0.05117996214712843,
+              "truth_sd": 0.273821025990781,
+              "prediction_sd": 0.22187797232689432,
+              "active_count": 1,
+              "active_prevalence": 0.004901960784313725,
+              "active_ap": 0.009615384615384616,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.14285714285714285,
+              "active_subset_bias": -1.414677115573297
+            },
+            "FGFR2": {
+              "n": 275,
+              "spearman": 0.21325844800474067,
+              "mae": 0.48763916032159177,
+              "rmse": 0.6946608777434232,
+              "bias": 0.12733552957588432,
+              "truth_sd": 0.5945729648507605,
+              "prediction_sd": 0.36642809925216696,
+              "active_count": 23,
+              "active_prevalence": 0.08363636363636363,
+              "active_ap": 0.09300166376169818,
+              "active_recall_at_10pct": 0.043478260869565216,
+              "top_decile_overlap": 0.0,
+              "active_subset_bias": -1.2161608576407938
+            },
+            "FGFR3": {
+              "n": 209,
+              "spearman": 0.7036963036963036,
+              "mae": 0.17315245012027855,
+              "rmse": 0.2527599769667063,
+              "bias": 0.010779639941186067,
+              "truth_sd": 0.3092283996849219,
+              "prediction_sd": 0.27459351676772586,
+              "active_count": 0,
+              "active_prevalence": 0.0,
+              "active_ap": null,
+              "active_recall_at_10pct": null,
+              "top_decile_overlap": 0.09523809523809523,
+              "active_subset_bias": null
+            },
+            "FGFR4": {
+              "n": 212,
+              "spearman": 0.40640282722895543,
+              "mae": 0.17529453771415196,
+              "rmse": 0.2909469972861701,
+              "bias": 0.030213327804352756,
+              "truth_sd": 0.24756207188486726,
+              "prediction_sd": 0.20102127554130292,
+              "active_count": 3,
+              "active_prevalence": 0.014150943396226415,
+              "active_ap": 0.03238726904690124,
+              "active_recall_at_10pct": 0.3333333333333333,
+              "top_decile_overlap": 0.09090909090909091,
+              "active_subset_bias": -1.0304396912007825
+            }
+          },
+          "macro_gene_spearman": 0.39943845757041896,
+          "macro_gene_active_ap": null,
+          "macro_gene_active_recall_at_10pct": null
+        },
+        "pilot-1": {
+          "pooled": {
+            "n": 974,
+            "spearman": 0.45628755674587673,
+            "mae": 0.21655077814038803,
+            "rmse": 0.32908619698917313,
+            "bias": -0.011174318760335611,
+            "truth_sd": 0.37080689964159014,
+            "prediction_sd": 0.19222602963118718,
+            "active_count": 49,
+            "active_prevalence": 0.050308008213552365,
+            "active_ap": 0.12070588880246255,
+            "active_recall_at_10pct": 0.2653061224489796,
+            "top_decile_overlap": 0.22448979591836735,
+            "active_subset_bias": -0.8779472070644455
+          },
+          "per_gene": {
+            "FGFR1": {
+              "n": 271,
+              "spearman": 0.3120160377068262,
+              "mae": 0.13874707426052238,
+              "rmse": 0.18868831353744692,
+              "bias": -0.014499176446427639,
+              "truth_sd": 0.18122260620017933,
+              "prediction_sd": 0.1371346349190484,
+              "active_count": 2,
+              "active_prevalence": 0.007380073800738007,
+              "active_ap": 0.008876364917224374,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.14285714285714285,
+              "active_subset_bias": -0.6077492324880305
+            },
+            "FGFR2": {
+              "n": 180,
+              "spearman": 0.36593760980525847,
+              "mae": 0.48617063200974,
+              "rmse": 0.6151284672332368,
+              "bias": -0.015022080793032118,
+              "truth_sd": 0.6418871623939013,
+              "prediction_sd": 0.2007534758010737,
+              "active_count": 36,
+              "active_prevalence": 0.2,
+              "active_ap": 0.2419322190874963,
+              "active_recall_at_10pct": 0.05555555555555555,
+              "top_decile_overlap": 0.05555555555555555,
+              "active_subset_bias": -0.9588682565515066
+            },
+            "FGFR3": {
+              "n": 263,
+              "spearman": 0.7204952741904758,
+              "mae": 0.18098261354333328,
+              "rmse": 0.23379500730831854,
+              "bias": 0.0070577699874445335,
+              "truth_sd": 0.33955266141572693,
+              "prediction_sd": 0.21710566331879286,
+              "active_count": 1,
+              "active_prevalence": 0.0038022813688212928,
+              "active_ap": 0.0125,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.2222222222222222,
+              "active_subset_bias": -0.5165459535929704
+            },
+            "FGFR4": {
+              "n": 260,
+              "spearman": 0.25520719461562125,
+              "mae": 0.1469648448480252,
+              "rmse": 0.2265879185853344,
+              "bias": -0.02348741776745048,
+              "truth_sd": 0.21035262321086093,
+              "prediction_sd": 0.12070689770228187,
+              "active_count": 10,
+              "active_prevalence": 0.038461538461538464,
+              "active_ap": 0.053475645528338334,
+              "active_recall_at_10pct": 0.1,
+              "top_decile_overlap": 0.07692307692307693,
+              "active_subset_bias": -0.6768111491734565
+            }
+          },
+          "macro_gene_spearman": 0.4134140290795454,
+          "macro_gene_active_ap": 0.07919605738326475,
+          "macro_gene_active_recall_at_10pct": 0.03888888888888889
+        },
+        "pilot-2": {
+          "pooled": {
+            "n": 845,
+            "spearman": 0.31404666622513205,
+            "mae": 0.29646218193808754,
+            "rmse": 0.5946710566051826,
+            "bias": -0.012305232054970416,
+            "truth_sd": 0.5675756415777197,
+            "prediction_sd": 0.2779087097218372,
+            "active_count": 46,
+            "active_prevalence": 0.054437869822485205,
+            "active_ap": 0.09243910309269698,
+            "active_recall_at_10pct": 0.2391304347826087,
+            "top_decile_overlap": 0.24705882352941178,
+            "active_subset_bias": -1.4519083587025234
+          },
+          "per_gene": {
+            "FGFR1": {
+              "n": 215,
+              "spearman": 0.15935786906228114,
+              "mae": 0.19793141681375417,
+              "rmse": 0.3818239520528031,
+              "bias": -0.009731055383445833,
+              "truth_sd": 0.33089696176047767,
+              "prediction_sd": 0.18277584916951423,
+              "active_count": 2,
+              "active_prevalence": 0.009302325581395349,
+              "active_ap": 0.007802025388674939,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.045454545454545456,
+              "active_subset_bias": -2.8803944407264126
+            },
+            "FGFR2": {
+              "n": 213,
+              "spearman": 0.20281839156966128,
+              "mae": 0.5641576731036154,
+              "rmse": 1.0151111960943668,
+              "bias": -0.06294205886322107,
+              "truth_sd": 0.9350744139922601,
+              "prediction_sd": 0.36602673895981436,
+              "active_count": 37,
+              "active_prevalence": 0.17370892018779344,
+              "active_ap": 0.16955654163478276,
+              "active_recall_at_10pct": 0.08108108108108109,
+              "top_decile_overlap": 0.045454545454545456,
+              "active_subset_bias": -1.3710898302701138
+            },
+            "FGFR3": {
+              "n": 214,
+              "spearman": 0.48055505386153036,
+              "mae": 0.23005672770180627,
+              "rmse": 0.37023640518461387,
+              "bias": -0.01274414354682131,
+              "truth_sd": 0.39314446316007085,
+              "prediction_sd": 0.25327100277374787,
+              "active_count": 1,
+              "active_prevalence": 0.004672897196261682,
+              "active_ap": 0.006134969325153374,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.22727272727272727,
+              "active_subset_bias": -3.570757833723058
+            },
+            "FGFR4": {
+              "n": 203,
+              "spearman": 0.229031045671939,
+              "mae": 0.18993874395798116,
+              "rmse": 0.3031496531370578,
+              "bias": 0.03856236984175718,
+              "truth_sd": 0.26614529187110403,
+              "prediction_sd": 0.15382605022132462,
+              "active_count": 6,
+              "active_prevalence": 0.029556650246305417,
+              "active_ap": 0.04290390754537743,
+              "active_recall_at_10pct": 0.16666666666666666,
+              "top_decile_overlap": 0.047619047619047616,
+              "active_subset_bias": -1.1209856775243296
+            }
+          },
+          "macro_gene_spearman": 0.26794059004135296,
+          "macro_gene_active_ap": 0.056599360973497125,
+          "macro_gene_active_recall_at_10pct": 0.061936936936936936
+        }
+      }
+    },
+    "biology": {
+      "pooled": {
+        "n": 2719,
+        "spearman": 0.39248928537099026,
+        "mae": 0.2632918322167684,
+        "rmse": 0.45834899381148814,
+        "bias": 0.047548433033310286,
+        "truth_sd": 0.4581842725844172,
+        "prediction_sd": 0.289919822307573,
+        "active_count": 122,
+        "active_prevalence": 0.04486943729312247,
+        "active_ap": 0.10087957913152362,
+        "active_recall_at_10pct": 0.2540983606557377,
+        "top_decile_overlap": 0.26838235294117646,
+        "active_subset_bias": -1.077298950473014
+      },
+      "per_gene": {
+        "FGFR1": {
+          "n": 690,
+          "spearman": 0.242631469505292,
+          "mae": 0.17521682129862653,
+          "rmse": 0.3078391167790973,
+          "bias": 0.022041691694345247,
+          "truth_sd": 0.2668235527106637,
+          "prediction_sd": 0.1878957733803343,
+          "active_count": 5,
+          "active_prevalence": 0.007246376811594203,
+          "active_ap": 0.006179631171018712,
+          "active_recall_at_10pct": 0.0,
+          "top_decile_overlap": 0.043478260869565216,
+          "active_subset_bias": -1.6253690528654112
+        },
+        "FGFR2": {
+          "n": 668,
+          "spearman": 0.3464501470163927,
+          "mae": 0.4914271658235735,
+          "rmse": 0.752448693271358,
+          "bias": 0.061804555300655956,
+          "truth_sd": 0.7379790268030003,
+          "prediction_sd": 0.3318812736701531,
+          "active_count": 96,
+          "active_prevalence": 0.1437125748502994,
+          "active_ap": 0.18550104618575536,
+          "active_recall_at_10pct": 0.125,
+          "top_decile_overlap": 0.08955223880597014,
+          "active_subset_bias": -1.0721257862411497
+        },
+        "FGFR3": {
+          "n": 686,
+          "spearman": 0.6254456105126663,
+          "mae": 0.19742390690906247,
+          "rmse": 0.30269797525662173,
+          "bias": 0.04400153606532702,
+          "truth_sd": 0.35563024154681866,
+          "prediction_sd": 0.30848134833001123,
+          "active_count": 2,
+          "active_prevalence": 0.0029154518950437317,
+          "active_ap": 0.0037318109030146903,
+          "active_recall_at_10pct": 0.0,
+          "top_decile_overlap": 0.08695652173913043,
+          "active_subset_bias": -2.0932153981671404
+        },
+        "FGFR4": {
+          "n": 675,
+          "spearman": 0.3095168981346588,
+          "mae": 0.1944959084319658,
+          "rmse": 0.30975971663321455,
+          "bias": 0.06311840809899248,
+          "truth_sd": 0.2422850147697672,
+          "prediction_sd": 0.21380074919005534,
+          "active_count": 19,
+          "active_prevalence": 0.028148148148148148,
+          "active_ap": 0.02567860870671526,
+          "active_recall_at_10pct": 0.05263157894736842,
+          "top_decile_overlap": 0.08823529411764706,
+          "active_subset_bias": -0.8522694956787358
+        }
+      },
+      "macro_gene_spearman": 0.38101103129225244,
+      "macro_gene_active_ap": 0.05527277424162601,
+      "macro_gene_active_recall_at_10pct": 0.044407894736842105,
+      "by_fold": {
+        "pilot-0": {
+          "pooled": {
+            "n": 900,
+            "spearman": 0.4305147078824765,
+            "mae": 0.2897677037967233,
+            "rmse": 0.4315304466142053,
+            "bias": 0.10542637082396375,
+            "truth_sd": 0.4175944039398603,
+            "prediction_sd": 0.34172754900402436,
+            "active_count": 27,
+            "active_prevalence": 0.03,
+            "active_ap": 0.09147893211525644,
+            "active_recall_at_10pct": 0.37037037037037035,
+            "top_decile_overlap": 0.4111111111111111,
+            "active_subset_bias": -1.0751769711787633
+          },
+          "per_gene": {
+            "FGFR1": {
+              "n": 204,
+              "spearman": 0.3560099228926221,
+              "mae": 0.1908414986174356,
+              "rmse": 0.30827418295835435,
+              "bias": 0.05252521513911985,
+              "truth_sd": 0.273821025990781,
+              "prediction_sd": 0.21532083566503593,
+              "active_count": 1,
+              "active_prevalence": 0.004901960784313725,
+              "active_ap": 0.009174311926605505,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.047619047619047616,
+              "active_subset_bias": -1.3958651552694357
+            },
+            "FGFR2": {
+              "n": 275,
+              "spearman": 0.4233438158160469,
+              "mae": 0.49385936292164034,
+              "rmse": 0.6417484728795954,
+              "bias": 0.2117142645232884,
+              "truth_sd": 0.5945729648507605,
+              "prediction_sd": 0.36669869987232984,
+              "active_count": 23,
+              "active_prevalence": 0.08363636363636363,
+              "active_ap": 0.14785996378623226,
+              "active_recall_at_10pct": 0.2608695652173913,
+              "top_decile_overlap": 0.14285714285714285,
+              "active_subset_bias": -1.0646501391076553
+            },
+            "FGFR3": {
+              "n": 209,
+              "spearman": 0.6756679753365339,
+              "mae": 0.20046968206732282,
+              "rmse": 0.2612940636772588,
+              "bias": 0.0546686904362652,
+              "truth_sd": 0.3092283996849219,
+              "prediction_sd": 0.343604085080854,
+              "active_count": 0,
+              "active_prevalence": 0.0,
+              "active_ap": null,
+              "active_recall_at_10pct": null,
+              "top_decile_overlap": 0.09523809523809523,
+              "active_subset_bias": null
+            },
+            "FGFR4": {
+              "n": 212,
+              "spearman": 0.23754813882117862,
+              "mae": 0.20825367614892704,
+              "rmse": 0.31235755585538816,
+              "bias": 0.06849722079293939,
+              "truth_sd": 0.24756207188486726,
+              "prediction_sd": 0.210013908477968,
+              "active_count": 3,
+              "active_prevalence": 0.014150943396226415,
+              "active_ap": 0.01671230523862103,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.09090909090909091,
+              "active_subset_bias": -1.048986622360368
+            }
+          },
+          "macro_gene_spearman": 0.4231424632165954,
+          "macro_gene_active_ap": null,
+          "macro_gene_active_recall_at_10pct": null
+        },
+        "pilot-1": {
+          "pooled": {
+            "n": 974,
+            "spearman": 0.33911953932652816,
+            "mae": 0.24643686131431033,
+            "rmse": 0.3870527866968664,
+            "bias": 0.039690830723778256,
+            "truth_sd": 0.37080689964159014,
+            "prediction_sd": 0.26561762775660464,
+            "active_count": 49,
+            "active_prevalence": 0.050308008213552365,
+            "active_ap": 0.11369885490122769,
+            "active_recall_at_10pct": 0.1836734693877551,
+            "top_decile_overlap": 0.1326530612244898,
+            "active_subset_bias": -0.843915793544735
+          },
+          "per_gene": {
+            "FGFR1": {
+              "n": 271,
+              "spearman": 0.16341859006825363,
+              "mae": 0.16888714768779803,
+              "rmse": 0.2633831849058722,
+              "bias": 0.026383669346510968,
+              "truth_sd": 0.18122260620017933,
+              "prediction_sd": 0.19259550406668477,
+              "active_count": 2,
+              "active_prevalence": 0.007380073800738007,
+              "active_ap": 0.007408237462025001,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.0,
+              "active_subset_bias": -0.6461874053006409
+            },
+            "FGFR2": {
+              "n": 180,
+              "spearman": 0.3425928783810199,
+              "mae": 0.4786699976167448,
+              "rmse": 0.6373684104023765,
+              "bias": -0.031188916214715846,
+              "truth_sd": 0.6418871623939013,
+              "prediction_sd": 0.27631087888424183,
+              "active_count": 36,
+              "active_prevalence": 0.2,
+              "active_ap": 0.3348516900473313,
+              "active_recall_at_10pct": 0.16666666666666666,
+              "top_decile_overlap": 0.1111111111111111,
+              "active_subset_bias": -0.9077143771673326
+            },
+            "FGFR3": {
+              "n": 263,
+              "spearman": 0.5203320465561778,
+              "mae": 0.20899743389726458,
+              "rmse": 0.3103682638263252,
+              "bias": 0.066417940611132,
+              "truth_sd": 0.33955266141572693,
+              "prediction_sd": 0.2963413219451902,
+              "active_count": 1,
+              "active_prevalence": 0.0038022813688212928,
+              "active_ap": 0.008130081300813009,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.037037037037037035,
+              "active_subset_bias": -0.5248814933586977
+            },
+            "FGFR4": {
+              "n": 260,
+              "spearman": 0.2887061862612119,
+              "mae": 0.20436215850288608,
+              "rmse": 0.33199878359286944,
+              "bias": 0.07559608180760266,
+              "truth_sd": 0.21035262321086093,
+              "prediction_sd": 0.25393961165827034,
+              "active_count": 10,
+              "active_prevalence": 0.038461538461538464,
+              "active_ap": 0.03332457378842188,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.0,
+              "active_subset_bias": -0.685690000170806
+            }
+          },
+          "macro_gene_spearman": 0.32876242531666583,
+          "macro_gene_active_ap": 0.09592864564964779,
+          "macro_gene_active_recall_at_10pct": 0.041666666666666664
+        },
+        "pilot-2": {
+          "pooled": {
+            "n": 845,
+            "spearman": 0.4201201133112924,
+            "mae": 0.254520775692549,
+            "rmse": 0.5522480956603594,
+            "bias": -0.0050395425431440325,
+            "truth_sd": 0.5675756415777197,
+            "prediction_sd": 0.25349077963306355,
+            "active_count": 46,
+            "active_prevalence": 0.054437869822485205,
+            "active_ap": 0.15841345864003126,
+            "active_recall_at_10pct": 0.41304347826086957,
+            "top_decile_overlap": 0.4117647058823529,
+            "active_subset_bias": -1.3271482576562839
+          },
+          "per_gene": {
+            "FGFR1": {
+              "n": 215,
+              "spearman": 0.17565263590040814,
+              "mae": 0.16836987885907984,
+              "rmse": 0.3556952544968771,
+              "bias": -0.012355120986914894,
+              "truth_sd": 0.33089696176047767,
+              "prediction_sd": 0.14192113307008458,
+              "active_count": 2,
+              "active_prevalence": 0.009302325581395349,
+              "active_ap": 0.009472372247611134,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.0,
+              "active_subset_bias": -2.7193026492281698
+            },
+            "FGFR2": {
+              "n": 213,
+              "spearman": 0.3845497602082251,
+              "mae": 0.4990677107778494,
+              "rmse": 0.9490008696468163,
+              "bias": -0.053154811663930865,
+              "truth_sd": 0.9350744139922601,
+              "prediction_sd": 0.31781294870731697,
+              "active_count": 37,
+              "active_prevalence": 0.17370892018779344,
+              "active_ap": 0.2345423964059993,
+              "active_recall_at_10pct": 0.08108108108108109,
+              "top_decile_overlap": 0.045454545454545456,
+              "active_subset_bias": -1.236740667612171
+            },
+            "FGFR3": {
+              "n": 214,
+              "spearman": 0.6230886733135171,
+              "mae": 0.18022575454470005,
+              "rmse": 0.3296252932040373,
+              "bias": 0.006034481583678489,
+              "truth_sd": 0.39314446316007085,
+              "prediction_sd": 0.25906259436585094,
+              "active_count": 1,
+              "active_prevalence": 0.004672897196261682,
+              "active_ap": 0.005681818181818182,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.09090909090909091,
+              "active_subset_bias": -3.6615493029755832
+            },
+            "FGFR4": {
+              "n": 203,
+              "spearman": 0.37112072551792996,
+              "mae": 0.1674916139766207,
+              "rmse": 0.2756514445273934,
+              "bias": 0.04151986891004963,
+              "truth_sd": 0.26614529187110403,
+              "prediction_sd": 0.13710483802689485,
+              "active_count": 6,
+              "active_prevalence": 0.029556650246305417,
+              "active_ap": 0.0840279574417748,
+              "active_recall_at_10pct": 0.16666666666666666,
+              "top_decile_overlap": 0.09523809523809523,
+              "active_subset_bias": -1.031543424851136
+            }
+          },
+          "macro_gene_spearman": 0.3886029487350201,
+          "macro_gene_active_ap": 0.08343113606930086,
+          "macro_gene_active_recall_at_10pct": 0.061936936936936936
+        }
+      }
+    },
+    "biology_tail": {
+      "pooled": {
+        "n": 2719,
+        "spearman": 0.39248928537099026,
+        "mae": 0.2632918322167684,
+        "rmse": 0.45834899381148814,
+        "bias": 0.047548433033310286,
+        "truth_sd": 0.4581842725844172,
+        "prediction_sd": 0.289919822307573,
+        "active_count": 122,
+        "active_prevalence": 0.04486943729312247,
+        "active_ap": 0.12856271586151344,
+        "active_recall_at_10pct": 0.36065573770491804,
+        "top_decile_overlap": 0.26838235294117646,
+        "active_subset_bias": -1.077298950473014
+      },
+      "per_gene": {
+        "FGFR1": {
+          "n": 690,
+          "spearman": 0.242631469505292,
+          "mae": 0.17521682129862653,
+          "rmse": 0.3078391167790973,
+          "bias": 0.022041691694345247,
+          "truth_sd": 0.2668235527106637,
+          "prediction_sd": 0.1878957733803343,
+          "active_count": 5,
+          "active_prevalence": 0.007246376811594203,
+          "active_ap": 0.009582182162963675,
+          "active_recall_at_10pct": 0.0,
+          "top_decile_overlap": 0.043478260869565216,
+          "active_subset_bias": -1.6253690528654112
+        },
+        "FGFR2": {
+          "n": 668,
+          "spearman": 0.3464501470163927,
+          "mae": 0.4914271658235735,
+          "rmse": 0.752448693271358,
+          "bias": 0.061804555300655956,
+          "truth_sd": 0.7379790268030003,
+          "prediction_sd": 0.3318812736701531,
+          "active_count": 96,
+          "active_prevalence": 0.1437125748502994,
+          "active_ap": 0.15513627655984355,
+          "active_recall_at_10pct": 0.020833333333333332,
+          "top_decile_overlap": 0.08955223880597014,
+          "active_subset_bias": -1.0721257862411497
+        },
+        "FGFR3": {
+          "n": 686,
+          "spearman": 0.6254456105126663,
+          "mae": 0.19742390690906247,
+          "rmse": 0.30269797525662173,
+          "bias": 0.04400153606532702,
+          "truth_sd": 0.35563024154681866,
+          "prediction_sd": 0.30848134833001123,
+          "active_count": 2,
+          "active_prevalence": 0.0029154518950437317,
+          "active_ap": 0.004620279693632588,
+          "active_recall_at_10pct": 0.0,
+          "top_decile_overlap": 0.08695652173913043,
+          "active_subset_bias": -2.0932153981671404
+        },
+        "FGFR4": {
+          "n": 675,
+          "spearman": 0.3095168981346588,
+          "mae": 0.1944959084319658,
+          "rmse": 0.30975971663321455,
+          "bias": 0.06311840809899248,
+          "truth_sd": 0.2422850147697672,
+          "prediction_sd": 0.21380074919005534,
+          "active_count": 19,
+          "active_prevalence": 0.028148148148148148,
+          "active_ap": 0.047769827268540496,
+          "active_recall_at_10pct": 0.21052631578947367,
+          "top_decile_overlap": 0.08823529411764706,
+          "active_subset_bias": -0.8522694956787358
+        }
+      },
+      "macro_gene_spearman": 0.38101103129225244,
+      "macro_gene_active_ap": 0.05427714142124508,
+      "macro_gene_active_recall_at_10pct": 0.057839912280701754,
+      "by_fold": {
+        "pilot-0": {
+          "pooled": {
+            "n": 900,
+            "spearman": 0.4305147078824765,
+            "mae": 0.2897677037967233,
+            "rmse": 0.4315304466142053,
+            "bias": 0.10542637082396375,
+            "truth_sd": 0.4175944039398603,
+            "prediction_sd": 0.34172754900402436,
+            "active_count": 27,
+            "active_prevalence": 0.03,
+            "active_ap": 0.07209792323277757,
+            "active_recall_at_10pct": 0.3333333333333333,
+            "top_decile_overlap": 0.4111111111111111,
+            "active_subset_bias": -1.0751769711787633
+          },
+          "per_gene": {
+            "FGFR1": {
+              "n": 204,
+              "spearman": 0.3560099228926221,
+              "mae": 0.1908414986174356,
+              "rmse": 0.30827418295835435,
+              "bias": 0.05252521513911985,
+              "truth_sd": 0.273821025990781,
+              "prediction_sd": 0.21532083566503593,
+              "active_count": 1,
+              "active_prevalence": 0.004901960784313725,
+              "active_ap": 0.008849557522123894,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.047619047619047616,
+              "active_subset_bias": -1.3958651552694357
+            },
+            "FGFR2": {
+              "n": 275,
+              "spearman": 0.4233438158160469,
+              "mae": 0.49385936292164034,
+              "rmse": 0.6417484728795954,
+              "bias": 0.2117142645232884,
+              "truth_sd": 0.5945729648507605,
+              "prediction_sd": 0.36669869987232984,
+              "active_count": 23,
+              "active_prevalence": 0.08363636363636363,
+              "active_ap": 0.0880103504099422,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.14285714285714285,
+              "active_subset_bias": -1.0646501391076553
+            },
+            "FGFR3": {
+              "n": 209,
+              "spearman": 0.6756679753365339,
+              "mae": 0.20046968206732282,
+              "rmse": 0.2612940636772588,
+              "bias": 0.0546686904362652,
+              "truth_sd": 0.3092283996849219,
+              "prediction_sd": 0.343604085080854,
+              "active_count": 0,
+              "active_prevalence": 0.0,
+              "active_ap": null,
+              "active_recall_at_10pct": null,
+              "top_decile_overlap": 0.09523809523809523,
+              "active_subset_bias": null
+            },
+            "FGFR4": {
+              "n": 212,
+              "spearman": 0.23754813882117862,
+              "mae": 0.20825367614892704,
+              "rmse": 0.31235755585538816,
+              "bias": 0.06849722079293939,
+              "truth_sd": 0.24756207188486726,
+              "prediction_sd": 0.210013908477968,
+              "active_count": 3,
+              "active_prevalence": 0.014150943396226415,
+              "active_ap": 0.03185969281859693,
+              "active_recall_at_10pct": 0.3333333333333333,
+              "top_decile_overlap": 0.09090909090909091,
+              "active_subset_bias": -1.048986622360368
+            }
+          },
+          "macro_gene_spearman": 0.4231424632165954,
+          "macro_gene_active_ap": null,
+          "macro_gene_active_recall_at_10pct": null
+        },
+        "pilot-1": {
+          "pooled": {
+            "n": 974,
+            "spearman": 0.33911953932652816,
+            "mae": 0.24643686131431033,
+            "rmse": 0.3870527866968664,
+            "bias": 0.039690830723778256,
+            "truth_sd": 0.37080689964159014,
+            "prediction_sd": 0.26561762775660464,
+            "active_count": 49,
+            "active_prevalence": 0.050308008213552365,
+            "active_ap": 0.317811776702855,
+            "active_recall_at_10pct": 0.6326530612244898,
+            "top_decile_overlap": 0.1326530612244898,
+            "active_subset_bias": -0.843915793544735
+          },
+          "per_gene": {
+            "FGFR1": {
+              "n": 271,
+              "spearman": 0.16341859006825363,
+              "mae": 0.16888714768779803,
+              "rmse": 0.2633831849058722,
+              "bias": 0.026383669346510968,
+              "truth_sd": 0.18122260620017933,
+              "prediction_sd": 0.19259550406668477,
+              "active_count": 2,
+              "active_prevalence": 0.007380073800738007,
+              "active_ap": 0.010859465737514519,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.0,
+              "active_subset_bias": -0.6461874053006409
+            },
+            "FGFR2": {
+              "n": 180,
+              "spearman": 0.3425928783810199,
+              "mae": 0.4786699976167448,
+              "rmse": 0.6373684104023765,
+              "bias": -0.031188916214715846,
+              "truth_sd": 0.6418871623939013,
+              "prediction_sd": 0.27631087888424183,
+              "active_count": 36,
+              "active_prevalence": 0.2,
+              "active_ap": 0.3881580059725813,
+              "active_recall_at_10pct": 0.19444444444444445,
+              "top_decile_overlap": 0.1111111111111111,
+              "active_subset_bias": -0.9077143771673326
+            },
+            "FGFR3": {
+              "n": 263,
+              "spearman": 0.5203320465561778,
+              "mae": 0.20899743389726458,
+              "rmse": 0.3103682638263252,
+              "bias": 0.066417940611132,
+              "truth_sd": 0.33955266141572693,
+              "prediction_sd": 0.2963413219451902,
+              "active_count": 1,
+              "active_prevalence": 0.0038022813688212928,
+              "active_ap": 0.012987012987012988,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.037037037037037035,
+              "active_subset_bias": -0.5248814933586977
+            },
+            "FGFR4": {
+              "n": 260,
+              "spearman": 0.2887061862612119,
+              "mae": 0.20436215850288608,
+              "rmse": 0.33199878359286944,
+              "bias": 0.07559608180760266,
+              "truth_sd": 0.21035262321086093,
+              "prediction_sd": 0.25393961165827034,
+              "active_count": 10,
+              "active_prevalence": 0.038461538461538464,
+              "active_ap": 0.12546375130442722,
+              "active_recall_at_10pct": 0.2,
+              "top_decile_overlap": 0.0,
+              "active_subset_bias": -0.685690000170806
+            }
+          },
+          "macro_gene_spearman": 0.32876242531666583,
+          "macro_gene_active_ap": 0.134367059000384,
+          "macro_gene_active_recall_at_10pct": 0.09861111111111112
+        },
+        "pilot-2": {
+          "pooled": {
+            "n": 845,
+            "spearman": 0.4201201133112924,
+            "mae": 0.254520775692549,
+            "rmse": 0.5522480956603594,
+            "bias": -0.0050395425431440325,
+            "truth_sd": 0.5675756415777197,
+            "prediction_sd": 0.25349077963306355,
+            "active_count": 46,
+            "active_prevalence": 0.054437869822485205,
+            "active_ap": 0.15548798423862847,
+            "active_recall_at_10pct": 0.3695652173913043,
+            "top_decile_overlap": 0.4117647058823529,
+            "active_subset_bias": -1.3271482576562839
+          },
+          "per_gene": {
+            "FGFR1": {
+              "n": 215,
+              "spearman": 0.17565263590040814,
+              "mae": 0.16836987885907984,
+              "rmse": 0.3556952544968771,
+              "bias": -0.012355120986914894,
+              "truth_sd": 0.33089696176047767,
+              "prediction_sd": 0.14192113307008458,
+              "active_count": 2,
+              "active_prevalence": 0.009302325581395349,
+              "active_ap": 0.030309278350515466,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.0,
+              "active_subset_bias": -2.7193026492281698
+            },
+            "FGFR2": {
+              "n": 213,
+              "spearman": 0.3845497602082251,
+              "mae": 0.4990677107778494,
+              "rmse": 0.9490008696468163,
+              "bias": -0.053154811663930865,
+              "truth_sd": 0.9350744139922601,
+              "prediction_sd": 0.31781294870731697,
+              "active_count": 37,
+              "active_prevalence": 0.17370892018779344,
+              "active_ap": 0.18515422245286428,
+              "active_recall_at_10pct": 0.05405405405405406,
+              "top_decile_overlap": 0.045454545454545456,
+              "active_subset_bias": -1.236740667612171
+            },
+            "FGFR3": {
+              "n": 214,
+              "spearman": 0.6230886733135171,
+              "mae": 0.18022575454470005,
+              "rmse": 0.3296252932040373,
+              "bias": 0.006034481583678489,
+              "truth_sd": 0.39314446316007085,
+              "prediction_sd": 0.25906259436585094,
+              "active_count": 1,
+              "active_prevalence": 0.004672897196261682,
+              "active_ap": 0.008333333333333333,
+              "active_recall_at_10pct": 0.0,
+              "top_decile_overlap": 0.09090909090909091,
+              "active_subset_bias": -3.6615493029755832
+            },
+            "FGFR4": {
+              "n": 203,
+              "spearman": 0.37112072551792996,
+              "mae": 0.1674916139766207,
+              "rmse": 0.2756514445273934,
+              "bias": 0.04151986891004963,
+              "truth_sd": 0.26614529187110403,
+              "prediction_sd": 0.13710483802689485,
+              "active_count": 6,
+              "active_prevalence": 0.029556650246305417,
+              "active_ap": 0.057741003991003986,
+              "active_recall_at_10pct": 0.16666666666666666,
+              "top_decile_overlap": 0.09523809523809523,
+              "active_subset_bias": -1.031543424851136
+            }
+          },
+          "macro_gene_spearman": 0.3886029487350201,
+          "macro_gene_active_ap": 0.07038445953192926,
+          "macro_gene_active_recall_at_10pct": 0.05518018018018018
+        }
+      }
+    }
+  },
+  "resistance_metrics": {
+    "structure": {
+      "macro_ap": 0.06015816702849337,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.06276187688183937,
+          "brier": 0.06032002365609703,
+          "n": 2702,
+          "positive_count": 119,
+          "inconclusive_count": 17,
+          "prevalence": 0.04404145077720207
+        },
+        "fut": {
+          "average_precision": 0.05755445717514738,
+          "brier": 0.03866498086691676,
+          "n": 2690,
+          "positive_count": 53,
+          "inconclusive_count": 29,
+          "prevalence": 0.01970260223048327
+        }
+      },
+      "macro_brier": 0.04949250226150689,
+      "by_fold": {
+        "pilot-0": {
+          "macro_ap": 0.08905039767896047,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07756046319572371,
+              "brier": 0.09081702985528846,
+              "n": 894,
+              "positive_count": 37,
+              "inconclusive_count": 6,
+              "prevalence": 0.04138702460850112
+            },
+            "fut": {
+              "average_precision": 0.10054033216219722,
+              "brier": 0.08629364699178418,
+              "n": 890,
+              "positive_count": 29,
+              "inconclusive_count": 10,
+              "prevalence": 0.03258426966292135
+            }
+          },
+          "macro_brier": 0.08855533842353633
+        },
+        "pilot-1": {
+          "macro_ap": 0.046692432298058265,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.06724321614035275,
+              "brier": 0.0570795728175127,
+              "n": 966,
+              "positive_count": 55,
+              "inconclusive_count": 8,
+              "prevalence": 0.056935817805383024
+            },
+            "fut": {
+              "average_precision": 0.026141648455763774,
+              "brier": 0.01535064630903087,
+              "n": 961,
+              "positive_count": 14,
+              "inconclusive_count": 13,
+              "prevalence": 0.014568158168574402
+            }
+          },
+          "macro_brier": 0.036215109563271786
+        },
+        "pilot-2": {
+          "macro_ap": 0.06845881807852705,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.10875889762427447,
+              "brier": 0.03165725877248104,
+              "n": 842,
+              "positive_count": 27,
+              "inconclusive_count": 3,
+              "prevalence": 0.032066508313539195
+            },
+            "fut": {
+              "average_precision": 0.02815873853277963,
+              "brier": 0.014845627659522633,
+              "n": 839,
+              "positive_count": 10,
+              "inconclusive_count": 6,
+              "prevalence": 0.011918951132300357
+            }
+          },
+          "macro_brier": 0.023251443216001835
+        }
+      },
+      "mean_fold_macro_ap": 0.06806721601851527,
+      "fold_ap_std": 0.01729478383660772
+    },
+    "original": {
+      "macro_ap": 0.05961037966672919,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.06219499839655854,
+          "brier": 0.061583365666360995,
+          "n": 2702,
+          "positive_count": 119,
+          "inconclusive_count": 17,
+          "prevalence": 0.04404145077720207
+        },
+        "fut": {
+          "average_precision": 0.05702576093689984,
+          "brier": 0.03938101780694854,
+          "n": 2690,
+          "positive_count": 53,
+          "inconclusive_count": 29,
+          "prevalence": 0.01970260223048327
+        }
+      },
+      "macro_brier": 0.05048219173665477,
+      "by_fold": {
+        "pilot-0": {
+          "macro_ap": 0.0890211669268835,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07927087554904427,
+              "brier": 0.09458100292051606,
+              "n": 894,
+              "positive_count": 37,
+              "inconclusive_count": 6,
+              "prevalence": 0.04138702460850112
+            },
+            "fut": {
+              "average_precision": 0.09877145830472274,
+              "brier": 0.08858376527271776,
+              "n": 890,
+              "positive_count": 29,
+              "inconclusive_count": 10,
+              "prevalence": 0.03258426966292135
+            }
+          },
+          "macro_brier": 0.09158238409661691
+        },
+        "pilot-1": {
+          "macro_ap": 0.04746979091560549,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.06785927225584545,
+              "brier": 0.05675122380665535,
+              "n": 966,
+              "positive_count": 55,
+              "inconclusive_count": 8,
+              "prevalence": 0.056935817805383024
+            },
+            "fut": {
+              "average_precision": 0.027080309575365523,
+              "brier": 0.01511397038892893,
+              "n": 961,
+              "positive_count": 14,
+              "inconclusive_count": 13,
+              "prevalence": 0.014568158168574402
+            }
+          },
+          "macro_brier": 0.03593259709779214
+        },
+        "pilot-2": {
+          "macro_ap": 0.06017769806911342,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.0957261910341461,
+              "brier": 0.03209163328068527,
+              "n": 842,
+              "positive_count": 27,
+              "inconclusive_count": 3,
+              "prevalence": 0.032066508313539195
+            },
+            "fut": {
+              "average_precision": 0.024629205104080735,
+              "brier": 0.014983148109907102,
+              "n": 839,
+              "positive_count": 10,
+              "inconclusive_count": 6,
+              "prevalence": 0.011918951132300357
+            }
+          },
+          "macro_brier": 0.023537390695296187
+        }
+      },
+      "mean_fold_macro_ap": 0.0655562186372008,
+      "fold_ap_std": 0.01738439098221269
+    },
+    "capacity": {
+      "macro_ap": 0.05816888859651888,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.06035521804057274,
+          "brier": 0.06268116098186005,
+          "n": 2702,
+          "positive_count": 119,
+          "inconclusive_count": 17,
+          "prevalence": 0.04404145077720207
+        },
+        "fut": {
+          "average_precision": 0.05598255915246502,
+          "brier": 0.040402941394516396,
+          "n": 2690,
+          "positive_count": 53,
+          "inconclusive_count": 29,
+          "prevalence": 0.01970260223048327
+        }
+      },
+      "macro_brier": 0.05154205118818822,
+      "by_fold": {
+        "pilot-0": {
+          "macro_ap": 0.08764701083880466,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07826206163585663,
+              "brier": 0.09676142328252793,
+              "n": 894,
+              "positive_count": 37,
+              "inconclusive_count": 6,
+              "prevalence": 0.04138702460850112
+            },
+            "fut": {
+              "average_precision": 0.0970319600417527,
+              "brier": 0.09133828627381504,
+              "n": 890,
+              "positive_count": 29,
+              "inconclusive_count": 10,
+              "prevalence": 0.03258426966292135
+            }
+          },
+          "macro_brier": 0.09404985477817149
+        },
+        "pilot-1": {
+          "macro_ap": 0.04494774503692055,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.06466288795454764,
+              "brier": 0.05772892828745635,
+              "n": 966,
+              "positive_count": 55,
+              "inconclusive_count": 8,
+              "prevalence": 0.056935817805383024
+            },
+            "fut": {
+              "average_precision": 0.02523260211929345,
+              "brier": 0.015329324194341788,
+              "n": 961,
+              "positive_count": 14,
+              "inconclusive_count": 13,
+              "prevalence": 0.014568158168574402
+            }
+          },
+          "macro_brier": 0.03652912624089907
+        },
+        "pilot-2": {
+          "macro_ap": 0.043653019170316304,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.06495186715987424,
+              "brier": 0.03217771951629822,
+              "n": 842,
+              "positive_count": 27,
+              "inconclusive_count": 3,
+              "prevalence": 0.032066508313539195
+            },
+            "fut": {
+              "average_precision": 0.022354171180758366,
+              "brier": 0.015091009555174327,
+              "n": 839,
+              "positive_count": 10,
+              "inconclusive_count": 6,
+              "prevalence": 0.011918951132300357
+            }
+          },
+          "macro_brier": 0.023634364535736273
+        }
+      },
+      "mean_fold_macro_ap": 0.05874925834868051,
+      "fold_ap_std": 0.020440631970053687
+    },
+    "biology": {
+      "macro_ap": 0.060121097751188346,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.06205742608750346,
+          "brier": 0.058143091906807796,
+          "n": 2702,
+          "positive_count": 119,
+          "inconclusive_count": 17,
+          "prevalence": 0.04404145077720207
+        },
+        "fut": {
+          "average_precision": 0.05818476941487323,
+          "brier": 0.03764868977482555,
+          "n": 2690,
+          "positive_count": 53,
+          "inconclusive_count": 29,
+          "prevalence": 0.01970260223048327
+        }
+      },
+      "macro_brier": 0.04789589084081668,
+      "by_fold": {
+        "pilot-0": {
+          "macro_ap": 0.08956132544639023,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07731373237359812,
+              "brier": 0.08402562108230245,
+              "n": 894,
+              "positive_count": 37,
+              "inconclusive_count": 6,
+              "prevalence": 0.04138702460850112
+            },
+            "fut": {
+              "average_precision": 0.10180891851918232,
+              "brier": 0.08370903323356058,
+              "n": 890,
+              "positive_count": 29,
+              "inconclusive_count": 10,
+              "prevalence": 0.03258426966292135
+            }
+          },
+          "macro_brier": 0.08386732715793152
+        },
+        "pilot-1": {
+          "macro_ap": 0.05034628289619726,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.0757365955388338,
+              "brier": 0.056366129658107555,
+              "n": 966,
+              "positive_count": 55,
+              "inconclusive_count": 8,
+              "prevalence": 0.056935817805383024
+            },
+            "fut": {
+              "average_precision": 0.024955970253560715,
+              "brier": 0.015109311050514055,
+              "n": 961,
+              "positive_count": 14,
+              "inconclusive_count": 13,
+              "prevalence": 0.014568158168574402
+            }
+          },
+          "macro_brier": 0.035737720354310804
+        },
+        "pilot-2": {
+          "macro_ap": 0.04002743250587726,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.05535502060161432,
+              "brier": 0.03270076940010019,
+              "n": 842,
+              "positive_count": 27,
+              "inconclusive_count": 3,
+              "prevalence": 0.032066508313539195
+            },
+            "fut": {
+              "average_precision": 0.0246998444101402,
+              "brier": 0.014605349221534952,
+              "n": 839,
+              "positive_count": 10,
+              "inconclusive_count": 6,
+              "prevalence": 0.011918951132300357
+            }
+          },
+          "macro_brier": 0.02365305931081757
+        }
+      },
+      "mean_fold_macro_ap": 0.05997834694948825,
+      "fold_ap_std": 0.021338293135512276
+    },
+    "biology_tail": {
+      "macro_ap": 0.0606747176549715,
+      "per_drug": {
+        "pem": {
+          "average_precision": 0.06293004698301946,
+          "brier": 0.059073425273808405,
+          "n": 2702,
+          "positive_count": 119,
+          "inconclusive_count": 17,
+          "prevalence": 0.04404145077720207
+        },
+        "fut": {
+          "average_precision": 0.05841938832692353,
+          "brier": 0.03810572295196319,
+          "n": 2690,
+          "positive_count": 53,
+          "inconclusive_count": 29,
+          "prevalence": 0.01970260223048327
+        }
+      },
+      "macro_brier": 0.048589574112885794,
+      "by_fold": {
+        "pilot-0": {
+          "macro_ap": 0.09048609150614567,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.07837031618402338,
+              "brier": 0.0870033810222453,
+              "n": 894,
+              "positive_count": 37,
+              "inconclusive_count": 6,
+              "prevalence": 0.04138702460850112
+            },
+            "fut": {
+              "average_precision": 0.10260186682826798,
+              "brier": 0.0848231993647459,
+              "n": 890,
+              "positive_count": 29,
+              "inconclusive_count": 10,
+              "prevalence": 0.03258426966292135
+            }
+          },
+          "macro_brier": 0.0859132901934956
+        },
+        "pilot-1": {
+          "macro_ap": 0.05200771829911993,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.0787573540026383,
+              "brier": 0.05623733351601186,
+              "n": 966,
+              "positive_count": 55,
+              "inconclusive_count": 8,
+              "prevalence": 0.056935817805383024
+            },
+            "fut": {
+              "average_precision": 0.025258082595601573,
+              "brier": 0.015225055736100529,
+              "n": 961,
+              "positive_count": 14,
+              "inconclusive_count": 13,
+              "prevalence": 0.014568158168574402
+            }
+          },
+          "macro_brier": 0.035731194626056194
+        },
+        "pilot-2": {
+          "macro_ap": 0.041168781492066306,
+          "per_drug": {
+            "pem": {
+              "average_precision": 0.057726497699798596,
+              "brier": 0.03267233762408025,
+              "n": 842,
+              "positive_count": 27,
+              "inconclusive_count": 3,
+              "prevalence": 0.032066508313539195
+            },
+            "fut": {
+              "average_precision": 0.02461106528433401,
+              "brier": 0.01475622019519012,
+              "n": 839,
+              "positive_count": 10,
+              "inconclusive_count": 6,
+              "prevalence": 0.011918951132300357
+            }
+          },
+          "macro_brier": 0.023714278909635185
+        }
+      },
+      "mean_fold_macro_ap": 0.06122086376577731,
+      "fold_ap_std": 0.021161455586333457
+    }
+  },
+  "gene_prior_metrics": {
+    "pooled": {
+      "n": 2719,
+      "spearman": 0.08679548133528198,
+      "mae": 0.27357449800368316,
+      "rmse": 0.45187476615065536,
+      "bias": 0.0006590662651738318,
+      "truth_sd": 0.4581842725844172,
+      "prediction_sd": 0.11748925101235652,
+      "active_count": 122,
+      "active_prevalence": 0.04486943729312247,
+      "active_ap": 0.1134262337104202,
+      "active_recall_at_10pct": 0.18032786885245902,
+      "top_decile_overlap": 0.21691176470588236,
+      "active_subset_bias": -1.2101082101040683
+    },
+    "per_gene": {
+      "FGFR1": {
+        "n": 690,
+        "spearman": -0.17867266539077828,
+        "mae": 0.14852652931868454,
+        "rmse": 0.27098417544807263,
+        "bias": -0.0025058625527286335,
+        "truth_sd": 0.2668235527106637,
+        "prediction_sd": 0.020352336321348606,
+        "active_count": 5,
+        "active_prevalence": 0.007246376811594203,
+        "active_ap": 0.00640525867097411,
+        "active_recall_at_10pct": 0.2,
+        "top_decile_overlap": 0.028985507246376812,
+        "active_subset_bias": -1.5866242319523418
+      },
+      "FGFR2": {
+        "n": 668,
+        "spearman": -0.1404328836235892,
+        "mae": 0.49617474314492,
+        "rmse": 0.7474731418873788,
+        "bias": 0.010869228718908667,
+        "truth_sd": 0.7379790268030003,
+        "prediction_sd": 0.05631063289370128,
+        "active_count": 96,
+        "active_prevalence": 0.1437125748502994,
+        "active_ap": 0.12131738943870826,
+        "active_recall_at_10pct": 0.020833333333333332,
+        "top_decile_overlap": 0.014925373134328358,
+        "active_subset_bias": -1.233134965763527
+      },
+      "FGFR3": {
+        "n": 686,
+        "spearman": -0.19882491614926331,
+        "mae": 0.30164646393515937,
+        "rmse": 0.36361532908619404,
+        "bias": -0.00345980834019946,
+        "truth_sd": 0.35563024154681866,
+        "prediction_sd": 0.03316528514912639,
+        "active_count": 2,
+        "active_prevalence": 0.0029154518950437317,
+        "active_ap": 0.002517047981420171,
+        "active_recall_at_10pct": 0.0,
+        "top_decile_overlap": 0.014492753623188406,
+        "active_subset_bias": -2.092241456073115
+      },
+      "FGFR4": {
+        "n": 675,
+        "spearman": -0.14852763180711553,
+        "mae": 0.15258007727673534,
+        "rmse": 0.24526273623306893,
+        "bias": -0.002023955446612974,
+        "truth_sd": 0.2422850147697672,
+        "prediction_sd": 0.017332981687231536,
+        "active_count": 19,
+        "active_prevalence": 0.028148148148148148,
+        "active_ap": 0.02389762071567745,
+        "active_recall_at_10pct": 0.05263157894736842,
+        "top_decile_overlap": 0.014705882352941176,
+        "active_subset_bias": -0.9018232024994637
+      }
+    },
+    "macro_gene_spearman": -0.16661452424268658,
+    "macro_gene_active_ap": 0.03853432920169499,
+    "macro_gene_active_recall_at_10pct": 0.06836622807017545,
+    "by_fold": {
+      "pilot-0": {
+        "pooled": {
+          "n": 900,
+          "spearman": 0.17028750214473914,
+          "mae": 0.2969700560290417,
+          "rmse": 0.4247663853513047,
+          "bias": 0.1292337773448284,
+          "truth_sd": 0.4175944039398603,
+          "prediction_sd": 0.1200021152441611,
+          "active_count": 27,
+          "active_prevalence": 0.03,
+          "active_ap": 0.07862497928747181,
+          "active_recall_at_10pct": 0.1111111111111111,
+          "top_decile_overlap": 0.16666666666666666,
+          "active_subset_bias": -1.1689631385283958
+        },
+        "per_gene": {
+          "FGFR1": {
+            "n": 204,
+            "spearman": null,
+            "mae": 0.1825871277596594,
+            "rmse": 0.29075388578524547,
+            "bias": 0.09777457657579304,
+            "truth_sd": 0.273821025990781,
+            "prediction_sd": 2.220446049250313e-16,
+            "active_count": 1,
+            "active_prevalence": 0.004901960784313725,
+            "active_ap": 0.004901960784313725,
+            "active_recall_at_10pct": 0.0,
+            "top_decile_overlap": 0.09523809523809523,
+            "active_subset_bias": -1.352024170011437
+          },
+          "FGFR2": {
+            "n": 275,
+            "spearman": null,
+            "mae": 0.48484052751979106,
+            "rmse": 0.6217698072146194,
+            "bias": 0.18188095731076756,
+            "truth_sd": 0.5945729648507605,
+            "prediction_sd": 0.0,
+            "active_count": 23,
+            "active_prevalence": 0.08363636363636363,
+            "active_ap": 0.08363636363636363,
+            "active_recall_at_10pct": 0.0,
+            "top_decile_overlap": 0.03571428571428571,
+            "active_subset_bias": -1.175560659099188
+          },
+          "FGFR3": {
+            "n": 209,
+            "spearman": null,
+            "mae": 0.28424275459988824,
+            "rmse": 0.3447503229583346,
+            "bias": 0.1524158194157621,
+            "truth_sd": 0.3092283996849219,
+            "prediction_sd": 1.1102230246251565e-16,
+            "active_count": 0,
+            "active_prevalence": 0.0,
+            "active_ap": null,
+            "active_recall_at_10pct": null,
+            "top_decile_overlap": 0.0,
+            "active_subset_bias": null
+          },
+          "FGFR4": {
+            "n": 212,
+            "spearman": null,
+            "mae": 0.1758839414332444,
+            "rmse": 0.2568267942980725,
+            "bias": 0.06835951165343605,
+            "truth_sd": 0.24756207188486726,
+            "prediction_sd": 2.220446049250313e-16,
+            "active_count": 3,
+            "active_prevalence": 0.014150943396226415,
+            "active_ap": 0.014150943396226415,
+            "active_recall_at_10pct": 0.3333333333333333,
+            "top_decile_overlap": 0.045454545454545456,
+            "active_subset_bias": -1.057361803657975
+          }
+        },
+        "macro_gene_spearman": null,
+        "macro_gene_active_ap": null,
+        "macro_gene_active_recall_at_10pct": null
+      },
+      "pilot-1": {
+        "pooled": {
+          "n": 974,
+          "spearman": 0.12489309368889619,
+          "mae": 0.24971204036404376,
+          "rmse": 0.3620900865574836,
+          "bias": -0.05143542777522919,
+          "truth_sd": 0.37080689964159014,
+          "prediction_sd": 0.11130191747945983,
+          "active_count": 49,
+          "active_prevalence": 0.050308008213552365,
+          "active_ap": 0.17205680919825533,
+          "active_recall_at_10pct": 0.2653061224489796,
+          "top_decile_overlap": 0.24489795918367346,
+          "active_subset_bias": -0.9521076937372508
+        },
+        "per_gene": {
+          "FGFR1": {
+            "n": 271,
+            "spearman": null,
+            "mae": 0.12879566817948854,
+            "rmse": 0.1855117290265481,
+            "bias": -0.03966066828022611,
+            "truth_sd": 0.18122260620017933,
+            "prediction_sd": 1.1102230246251565e-16,
+            "active_count": 2,
+            "active_prevalence": 0.007380073800738007,
+            "active_ap": 0.007380073800738007,
+            "active_recall_at_10pct": 0.0,
+            "top_decile_overlap": 0.03571428571428571,
+            "active_subset_bias": -0.6229259550388452
+          },
+          "FGFR2": {
+            "n": 180,
+            "spearman": null,
+            "mae": 0.5031471144361638,
+            "rmse": 0.6427920223330998,
+            "bias": -0.0340947903495772,
+            "truth_sd": 0.6418871623939013,
+            "prediction_sd": 0.0,
+            "active_count": 36,
+            "active_prevalence": 0.2,
+            "active_ap": 0.2,
+            "active_recall_at_10pct": 0.0,
+            "top_decile_overlap": 0.0,
+            "active_subset_bias": -1.0372928876133247
+          },
+          "FGFR3": {
+            "n": 263,
+            "spearman": null,
+            "mae": 0.3121775469652829,
+            "rmse": 0.3476444971576173,
+            "bias": -0.07457001092576873,
+            "truth_sd": 0.33955266141572693,
+            "prediction_sd": 1.1102230246251565e-16,
+            "active_count": 1,
+            "active_prevalence": 0.0038022813688212928,
+            "active_ap": 0.0038022813688212928,
+            "active_recall_at_10pct": 0.0,
+            "top_decile_overlap": 0.0,
+            "active_subset_bias": -0.7333849862705204
+          },
+          "FGFR4": {
+            "n": 260,
+            "spearman": null,
+            "mae": 0.13710279149060894,
+            "rmse": 0.21675968151339003,
+            "bias": -0.052311886202811075,
+            "truth_sd": 0.21035262321086093,
+            "prediction_sd": 3.3306690738754696e-16,
+            "active_count": 10,
+            "active_prevalence": 0.038461538461538464,
+            "active_ap": 0.038461538461538464,
+            "active_recall_at_10pct": 0.0,
+            "top_decile_overlap": 0.0,
+            "active_subset_bias": -0.7331496142697398
+          }
+        },
+        "macro_gene_spearman": null,
+        "macro_gene_active_ap": 0.06241097340777445,
+        "macro_gene_active_recall_at_10pct": 0.0
+      },
+      "pilot-2": {
+        "pooled": {
+          "n": 845,
+          "spearman": 0.19744897341831752,
+          "mae": 0.27616151755183255,
+          "rmse": 0.5601252735541158,
+          "bias": -0.07623703169498783,
+          "truth_sd": 0.5675756415777197,
+          "prediction_sd": 0.09991741980341584,
+          "active_count": 46,
+          "active_prevalence": 0.054437869822485205,
+          "active_ap": 0.1574889341154912,
+          "active_recall_at_10pct": 0.3695652173913043,
+          "top_decile_overlap": 0.38823529411764707,
+          "active_subset_bias": -1.5090852152022691
+        },
+        "per_gene": {
+          "FGFR1": {
+            "n": 215,
+            "spearman": null,
+            "mae": 0.14107862832688572,
+            "rmse": 0.33477725578657,
+            "bias": -0.05082333804141053,
+            "truth_sd": 0.33089696176047767,
+            "prediction_sd": 3.3306690738754696e-16,
+            "active_count": 2,
+            "active_prevalence": 0.009302325581395349,
+            "active_ap": 0.009302325581395349,
+            "active_recall_at_10pct": 0.5,
+            "top_decile_overlap": 0.18181818181818182,
+            "active_subset_bias": -2.667622539836291
+          },
+          "FGFR2": {
+            "n": 213,
+            "spearman": null,
+            "mae": 0.5049159753725566,
+            "rmse": 0.9507479206190403,
+            "bias": -0.17192279912350328,
+            "truth_sd": 0.9350744139922601,
+            "prediction_sd": 2.220446049250313e-16,
+            "active_count": 37,
+            "active_prevalence": 0.17370892018779344,
+            "active_ap": 0.17370892018779344,
+            "active_recall_at_10pct": 0.24324324324324326,
+            "top_decile_overlap": 0.4090909090909091,
+            "active_subset_bias": -1.459473448646962
+          },
+          "FGFR3": {
+            "n": 214,
+            "spearman": null,
+            "mae": 0.3057011387676321,
+            "rmse": 0.3990333326439086,
+            "bias": -0.06830103694296231,
+            "truth_sd": 0.39314446316007085,
+            "prediction_sd": 0.0,
+            "active_count": 1,
+            "active_prevalence": 0.004672897196261682,
+            "active_ap": 0.004672897196261682,
+            "active_recall_at_10pct": 1.0,
+            "top_decile_overlap": 0.22727272727272727,
+            "active_subset_bias": -3.451097925875709
+          },
+          "FGFR4": {
+            "n": 203,
+            "spearman": null,
+            "mae": 0.14806616152901578,
+            "rmse": 0.26637748360532404,
+            "bias": -0.011119684651533596,
+            "truth_sd": 0.26614529187110403,
+            "prediction_sd": 3.3306690738754696e-16,
+            "active_count": 6,
+            "active_prevalence": 0.029556650246305417,
+            "active_ap": 0.029556650246305417,
+            "active_recall_at_10pct": 0.5,
+            "top_decile_overlap": 0.19047619047619047,
+            "active_subset_bias": -1.105176548969748
+          }
+        },
+        "macro_gene_spearman": null,
+        "macro_gene_active_ap": 0.05431019830293897,
+        "macro_gene_active_recall_at_10pct": 0.5608108108108107
+      }
+    }
+  },
+  "component_gate": {
+    "status": "inconclusive",
+    "reasons": [
+      "undefined_gene_or_fold_metric"
+    ]
+  },
+  "resistance_gate": {
+    "status": "do_not_advance",
+    "reasons": [
+      "macro_ap_gain_below_0.005"
+    ],
+    "fold_macro_ap_deltas": [
+      0.0014356938271851971,
+      0.005315286001061667,
+      -0.027290036586460745
+    ]
+  },
+  "uncertainty": {
+    "draws": 1000,
+    "seed": 17,
+    "groups": 11,
+    "contrasts": {
+      "macro_gene_spearman": {
+        "percentile_2_5": -0.018395962726819967,
+        "percentile_97_5": 0.11113778517503069,
+        "valid_draws": 1000,
+        "invalid_draws": 0
+      },
+      "macro_gene_active_ap": {
+        "percentile_2_5": -0.004321277111154985,
+        "percentile_97_5": 0.029268915730391015,
+        "valid_draws": 892,
+        "invalid_draws": 108
+      },
+      "resistance_macro_ap": {
+        "percentile_2_5": -0.005528276996093139,
+        "percentile_97_5": 0.006841497195013687,
+        "valid_draws": 1000,
+        "invalid_draws": 0
+      }
+    },
+    "interpretation": "Conditional descriptive percentiles on 11 related development blocks, not independent biological confirmation. No refitting. Activation contrasts versus original; resistance versus structure."
+  },
+  "v1_reproduction": {
+    "matched_variants": 2719,
+    "max_activation_prediction_difference": 0.0,
+    "resistance_predictions_reproduced": true
+  },
+  "fitting_seconds": 69.0783166250003,
+  "elapsed_seconds": 74.99648145899846,
+  "protocol_sha256": "8860e366c7fc58a651f5eca72fedfa175bbf89a5cfd61d702a770bccc17c8a49",
+  "integrity": {
+    "protected_files": 493,
+    "changed": []
+  }
+}

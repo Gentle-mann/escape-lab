@@ -1,0 +1,437 @@
+{
+  "metrics": {
+    "cached_v2_biology": {
+      "by_fold": {
+        "pilot-0": {
+          "n": 275,
+          "budget": 28,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.025454545454545455,
+            "ap": 0.04526780363021639,
+            "hits": 2,
+            "recall": 0.2857142857142857,
+            "precision": 0.07142857142857142
+          },
+          "strong": {
+            "positives": 2,
+            "prevalence": 0.007272727272727273,
+            "ap": 0.006499731574507247,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.4233438158160469
+        },
+        "pilot-1": {
+          "n": 180,
+          "budget": 18,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.03888888888888889,
+            "ap": 0.11325572506023635,
+            "hits": 1,
+            "recall": 0.14285714285714285,
+            "precision": 0.05555555555555555
+          },
+          "strong": {
+            "positives": 0,
+            "prevalence": 0.0,
+            "ap": null,
+            "hits": 0,
+            "recall": null,
+            "precision": 0.0
+          },
+          "spearman": 0.3425928783810199
+        },
+        "pilot-2": {
+          "n": 213,
+          "budget": 22,
+          "high": {
+            "positives": 12,
+            "prevalence": 0.056338028169014086,
+            "ap": 0.05706718459025493,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "strong": {
+            "positives": 5,
+            "prevalence": 0.023474178403755867,
+            "ap": 0.021225237640433523,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.3845497602082251
+        }
+      },
+      "mean_fold_high_ap": 0.07186357109356921,
+      "high_hits": 3,
+      "strong_hits": 0,
+      "budget": 68,
+      "high_recall": 0.11538461538461539,
+      "high_precision": 0.04411764705882353,
+      "random_expected_hits": 2.6521638924455826,
+      "pooled_diagnostic": {
+        "n": 668,
+        "budget": 67,
+        "high": {
+          "positives": 26,
+          "prevalence": 0.038922155688622756,
+          "ap": 0.04305060028429415,
+          "hits": 3,
+          "recall": 0.11538461538461539,
+          "precision": 0.04477611940298507
+        },
+        "strong": {
+          "positives": 7,
+          "prevalence": 0.010479041916167664,
+          "ap": 0.00815959479801453,
+          "hits": 0,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "spearman": 0.3464501470163927
+      }
+    },
+    "biology_logistic": {
+      "by_fold": {
+        "pilot-0": {
+          "n": 275,
+          "budget": 28,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.025454545454545455,
+            "ap": 0.02463543358623959,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "strong": {
+            "positives": 2,
+            "prevalence": 0.007272727272727273,
+            "ap": 0.00558188892819243,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.0966389734034395
+        },
+        "pilot-1": {
+          "n": 180,
+          "budget": 18,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.03888888888888889,
+            "ap": 0.05792265360033513,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "strong": {
+            "positives": 0,
+            "prevalence": 0.0,
+            "ap": null,
+            "hits": 0,
+            "recall": null,
+            "precision": 0.0
+          },
+          "spearman": 0.19654104550551973
+        },
+        "pilot-2": {
+          "n": 213,
+          "budget": 22,
+          "high": {
+            "positives": 12,
+            "prevalence": 0.056338028169014086,
+            "ap": 0.05871830724467178,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "strong": {
+            "positives": 5,
+            "prevalence": 0.023474178403755867,
+            "ap": 0.022254880537324072,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.15464396323275573
+        }
+      },
+      "mean_fold_high_ap": 0.04709213147708217,
+      "high_hits": 0,
+      "strong_hits": 0,
+      "budget": 68,
+      "high_recall": 0.0,
+      "high_precision": 0.0,
+      "random_expected_hits": 2.6521638924455826,
+      "pooled_diagnostic": {
+        "n": 668,
+        "budget": 67,
+        "high": {
+          "positives": 26,
+          "prevalence": 0.038922155688622756,
+          "ap": 0.03591582132788234,
+          "hits": 1,
+          "recall": 0.038461538461538464,
+          "precision": 0.014925373134328358
+        },
+        "strong": {
+          "positives": 7,
+          "prevalence": 0.010479041916167664,
+          "ap": 0.007761560508118813,
+          "hits": 0,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "spearman": 0.06151936316378511
+      }
+    },
+    "esm_biology_logistic": {
+      "by_fold": {
+        "pilot-0": {
+          "n": 275,
+          "budget": 28,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.025454545454545455,
+            "ap": 0.02463336586016015,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "strong": {
+            "positives": 2,
+            "prevalence": 0.007272727272727273,
+            "ap": 0.005565343848756886,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.0663299823865262
+        },
+        "pilot-1": {
+          "n": 180,
+          "budget": 18,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.03888888888888889,
+            "ap": 0.2157009737868462,
+            "hits": 1,
+            "recall": 0.14285714285714285,
+            "precision": 0.05555555555555555
+          },
+          "strong": {
+            "positives": 0,
+            "prevalence": 0.0,
+            "ap": null,
+            "hits": 0,
+            "recall": null,
+            "precision": 0.0
+          },
+          "spearman": 0.27499202650287563
+        },
+        "pilot-2": {
+          "n": 213,
+          "budget": 22,
+          "high": {
+            "positives": 12,
+            "prevalence": 0.056338028169014086,
+            "ap": 0.05162840979543112,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "strong": {
+            "positives": 5,
+            "prevalence": 0.023474178403755867,
+            "ap": 0.01905000313004717,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.07474648632404547
+        }
+      },
+      "mean_fold_high_ap": 0.09732091648081248,
+      "high_hits": 1,
+      "strong_hits": 0,
+      "budget": 68,
+      "high_recall": 0.038461538461538464,
+      "high_precision": 0.014705882352941176,
+      "random_expected_hits": 2.6521638924455826,
+      "pooled_diagnostic": {
+        "n": 668,
+        "budget": 67,
+        "high": {
+          "positives": 26,
+          "prevalence": 0.038922155688622756,
+          "ap": 0.0372272550813595,
+          "hits": 1,
+          "recall": 0.038461538461538464,
+          "precision": 0.014925373134328358
+        },
+        "strong": {
+          "positives": 7,
+          "prevalence": 0.010479041916167664,
+          "ap": 0.007364946340366047,
+          "hits": 0,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "spearman": 0.04774123182956478
+      }
+    },
+    "esm_biology_ridge": {
+      "by_fold": {
+        "pilot-0": {
+          "n": 275,
+          "budget": 28,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.025454545454545455,
+            "ap": 0.07183852052413539,
+            "hits": 3,
+            "recall": 0.42857142857142855,
+            "precision": 0.10714285714285714
+          },
+          "strong": {
+            "positives": 2,
+            "prevalence": 0.007272727272727273,
+            "ap": 0.005646459036470572,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.17357664233576645
+        },
+        "pilot-1": {
+          "n": 180,
+          "budget": 18,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.03888888888888889,
+            "ap": 0.2233707818182916,
+            "hits": 1,
+            "recall": 0.14285714285714285,
+            "precision": 0.05555555555555555
+          },
+          "strong": {
+            "positives": 0,
+            "prevalence": 0.0,
+            "ap": null,
+            "hits": 0,
+            "recall": null,
+            "precision": 0.0
+          },
+          "spearman": 0.21537701780919163
+        },
+        "pilot-2": {
+          "n": 213,
+          "budget": 22,
+          "high": {
+            "positives": 12,
+            "prevalence": 0.056338028169014086,
+            "ap": 0.05604569069311473,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "strong": {
+            "positives": 5,
+            "prevalence": 0.023474178403755867,
+            "ap": 0.023979807635137917,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.198582608328511
+        }
+      },
+      "mean_fold_high_ap": 0.1170849976785139,
+      "high_hits": 4,
+      "strong_hits": 0,
+      "budget": 68,
+      "high_recall": 0.15384615384615385,
+      "high_precision": 0.058823529411764705,
+      "random_expected_hits": 2.6521638924455826,
+      "pooled_diagnostic": {
+        "n": 668,
+        "budget": 67,
+        "high": {
+          "positives": 26,
+          "prevalence": 0.038922155688622756,
+          "ap": 0.0508754135587579,
+          "hits": 3,
+          "recall": 0.11538461538461539,
+          "precision": 0.04477611940298507
+        },
+        "strong": {
+          "positives": 7,
+          "prevalence": 0.010479041916167664,
+          "ap": 0.008229498827601253,
+          "hits": 0,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "spearman": 0.09699527132864919
+      }
+    }
+  },
+  "gate": {
+    "status": "fail",
+    "checks": {
+      "three_extra_hits_vs_v2": false,
+      "ap_gain_003_vs_v2": false,
+      "ap_gain_003_vs_biology": true,
+      "no_hit_loss_vs_biology": true,
+      "ap_improves_two_folds_vs_v2": false
+    },
+    "high_hits_gain_vs_v2": -2,
+    "mean_fold_ap_gain_vs_v2": 0.02545734538724327,
+    "mean_fold_ap_gain_vs_biology": 0.05022878500373031,
+    "fold_wins": 1
+  },
+  "coverage": {
+    "eligible_nucleotide_rows": 758,
+    "eligible_protein_variants": 668,
+    "complete_protein_variants": 668,
+    "incomplete_protein_variants": 0,
+    "median_within_variant_replicate_sd_log2_1p": 0.3859001918892929,
+    "aggregation": "median across codons within replicate, median of four replicates",
+    "transform": "log2(1 + enrichment)",
+    "active_definition": "at least three of four protein replicate medians >= 1.5",
+    "active_definition_scope": "protein-level adaptation, not exact published nucleotide labels"
+  },
+  "uncertainty": {
+    "draws": 1000,
+    "seed": 17,
+    "unit": "aligned block within original fold",
+    "mean_fold_ap_gain": {
+      "cached_v2_biology": {
+        "valid_draws": 1000,
+        "invalid_draws": 0,
+        "percentile_2_5": -0.06871213234708726,
+        "percentile_97_5": 0.2677305338249016
+      },
+      "biology_logistic": {
+        "valid_draws": 1000,
+        "invalid_draws": 0,
+        "percentile_2_5": -0.0026131070709215234,
+        "percentile_97_5": 0.1628516732431853
+      }
+    },
+    "interpretation": "Descriptive fixed-prediction uncertainty on ten reused blocks; not independent validation or a model-selection correction."
+  },
+  "feature_extraction_seconds": 49.619638416999805,
+  "fitting_seconds": 0.6404781669989461,
+  "elapsed_seconds": 4.595443292000709,
+  "integrity": {
+    "protected_files": 518,
+    "changed": []
+  },
+  "protocol_sha256": "93ab6f14033739c8789f91d87770e47e5f9e527e0c1be981dc88c91476ad7e98"
+}

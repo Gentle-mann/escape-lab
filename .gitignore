@@ -1,0 +1,31 @@
+# Secrets, local environments and generated state.
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+*.sqlite*
+*.pkl
+*.pt
+*.safetensors
+.DS_Store
+dist/
+build/
+node_modules/
+.next/
+# All evaluator outcomes, traces, source data and caches stay local.
+/data/
+/reports/
+/research/
+qa/
+# Frozen historical originals stay local; publish sanitized archive copies.
+docs/*
+!docs/EXPERIMENTS.md
+!docs/RESULTS.md
+!docs/REPRODUCING.md
+!docs/HACKATHON.md
+!docs/PUBLICATION.md
+!docs/archive/

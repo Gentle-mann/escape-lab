@@ -1,0 +1,554 @@
+{
+  "status": "completed",
+  "proposal_opportunities": 6,
+  "retrospective_reuse": true,
+  "fresh_blind_validation": false,
+  "arms": {
+    "control": {
+      "run_status": {
+        "status": "degraded",
+        "started_at": "2026-10-17T21:41:48.275872+00:00",
+        "successful_proposals": 2,
+        "failed_opportunities": 1,
+        "proposal_opportunities": 3,
+        "requests": 3,
+        "seconds": 86.25948674999745,
+        "budget_charge_tokens": 33899,
+        "usage_records": [
+          {
+            "model_id": "zai-org/GLM-5.3",
+            "prompt_version": "fgfr-reviewed-research-pilot-v1",
+            "prompt_tokens": 4329,
+            "completion_tokens": 5478,
+            "total_tokens": 9807,
+            "budget_charge_tokens": 9807,
+            "usage_estimated": false,
+            "request_status": "completed"
+          },
+          {
+            "model_id": "zai-org/GLM-5.3",
+            "prompt_version": "fgfr-reviewed-research-pilot-v1",
+            "prompt_tokens": 5615,
+            "completion_tokens": 3324,
+            "total_tokens": 8939,
+            "budget_charge_tokens": 8939,
+            "usage_estimated": false,
+            "request_status": "completed"
+          },
+          {
+            "model_id": "zai-org/GLM-5.3",
+            "prompt_version": "fgfr-reviewed-research-pilot-v1",
+            "prompt_tokens": 6961,
+            "completion_tokens": 8192,
+            "total_tokens": 15153,
+            "budget_charge_tokens": 15153,
+            "usage_estimated": false,
+            "request_status": "completed"
+          }
+        ]
+      },
+      "selections": {
+        "v1_fixed": "v1_fixed",
+        "biology_fixed": "structure-logistic-c0.1",
+        "random": "interactions-hgb-depth2",
+        "grid": "structure-hgb-depth3",
+        "agent": "interactions-logistic-c0.1"
+      },
+      "inference_cost": {
+        "usd": 0.0984406,
+        "prompt_tokens": 16905,
+        "completion_tokens": 16994,
+        "input_usd_per_million": 1.4,
+        "output_usd_per_million": 4.4,
+        "cached_discount_applied": false,
+        "invoice_verified": false,
+        "usage_estimated": false,
+        "source_url": "https://www.crusoe.ai/cloud/pricing",
+        "retrieved_date": "2026-10-17",
+        "basis": "Uncached list-price estimate from recorded request input/output tokens; not an invoice. Provider billing, caching and failed-request charging may differ."
+      },
+      "external": {
+        "status": "completed",
+        "retrospective_reuse": true,
+        "panel_id": "saifudeen2026-fgfr-single-mutants",
+        "primary_metric": "mean_per_drug_spearman",
+        "minimum_n_per_drug": 5,
+        "measurement_coverage": {
+          "pem": {
+            "expected": 25,
+            "observed": 25,
+            "outside_nominal_range": 0
+          },
+          "fut": {
+            "expected": 25,
+            "observed": 25,
+            "outside_nominal_range": 0
+          }
+        },
+        "methods": {
+          "v1_fixed": {
+            "macro_spearman": -0.018063133166149187,
+            "per_drug": {
+              "pem": {
+                "spearman": 0.2542796738708736,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              },
+              "fut": {
+                "spearman": -0.29040594020317195,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              }
+            }
+          },
+          "biology_fixed": {
+            "macro_spearman": 0.4056809977154603,
+            "per_drug": {
+              "pem": {
+                "spearman": 0.2989036408436744,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              },
+              "fut": {
+                "spearman": 0.5124583545872462,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              }
+            }
+          },
+          "random": {
+            "macro_spearman": 0.28374021501356517,
+            "per_drug": {
+              "pem": {
+                "spearman": 0.4739173071252179,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              },
+              "fut": {
+                "spearman": 0.09356312290191247,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              }
+            }
+          },
+          "grid": {
+            "macro_spearman": 0.1825984070800566,
+            "per_drug": {
+              "pem": {
+                "spearman": 0.41231960676775664,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              },
+              "fut": {
+                "spearman": -0.04712279260764347,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              }
+            }
+          },
+          "agent": {
+            "macro_spearman": 0.2969523552438131,
+            "per_drug": {
+              "pem": {
+                "spearman": 0.5085593477417472,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              },
+              "fut": {
+                "spearman": 0.08534536274587898,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              }
+            }
+          }
+        },
+        "primary_evaluable": true,
+        "wt_adjustment_applied": false,
+        "classification_metrics_computed": false,
+        "records_path": "reports/research-pilot/you-pilot-20261017/control/external/external-records.json",
+        "records_sha256": "64cb3fc4a2a14a85e795a8cf6d5f6073151ce4588d593fe8feb193fc878ca73f",
+        "interpretation": "Retrospective reuse of spent S13 biochemical measurements; not fresh blind validation or clinical accuracy."
+      },
+      "inner_selection_macro_ap": {
+        "v1_fixed": null,
+        "biology_fixed": 0.041778667170637725,
+        "random": 0.06026948725906243,
+        "grid": 0.06052586032033516,
+        "agent": 0.042170287197377546
+      }
+    },
+    "research": {
+      "run_status": {
+        "status": "degraded",
+        "started_at": "2026-10-17T21:43:17.905425+00:00",
+        "successful_proposals": 2,
+        "failed_opportunities": 1,
+        "proposal_opportunities": 3,
+        "requests": 3,
+        "seconds": 80.12451254199914,
+        "budget_charge_tokens": 33960,
+        "usage_records": [
+          {
+            "model_id": "zai-org/GLM-5.3",
+            "prompt_version": "fgfr-reviewed-research-pilot-v1",
+            "prompt_tokens": 4444,
+            "completion_tokens": 2903,
+            "total_tokens": 7347,
+            "budget_charge_tokens": 7347,
+            "usage_estimated": false,
+            "request_status": "completed"
+          },
+          {
+            "model_id": "zai-org/GLM-5.3",
+            "prompt_version": "fgfr-reviewed-research-pilot-v1",
+            "prompt_tokens": 5707,
+            "completion_tokens": 5668,
+            "total_tokens": 11375,
+            "budget_charge_tokens": 11375,
+            "usage_estimated": false,
+            "request_status": "completed"
+          },
+          {
+            "model_id": "zai-org/GLM-5.3",
+            "prompt_version": "fgfr-reviewed-research-pilot-v1",
+            "prompt_tokens": 7046,
+            "completion_tokens": 8192,
+            "total_tokens": 15238,
+            "budget_charge_tokens": 15238,
+            "usage_estimated": false,
+            "request_status": "completed"
+          }
+        ]
+      },
+      "selections": {
+        "v1_fixed": "v1_fixed",
+        "biology_fixed": "structure-logistic-c0.1",
+        "random": "interactions-hgb-depth2",
+        "grid": "structure-hgb-depth3",
+        "agent": "interactions-logistic-c0.1"
+      },
+      "inference_cost": {
+        "usd": 0.09783300000000002,
+        "prompt_tokens": 17197,
+        "completion_tokens": 16763,
+        "input_usd_per_million": 1.4,
+        "output_usd_per_million": 4.4,
+        "cached_discount_applied": false,
+        "invoice_verified": false,
+        "usage_estimated": false,
+        "source_url": "https://www.crusoe.ai/cloud/pricing",
+        "retrieved_date": "2026-10-17",
+        "basis": "Uncached list-price estimate from recorded request input/output tokens; not an invoice. Provider billing, caching and failed-request charging may differ."
+      },
+      "external": {
+        "status": "completed",
+        "retrospective_reuse": true,
+        "panel_id": "saifudeen2026-fgfr-single-mutants",
+        "primary_metric": "mean_per_drug_spearman",
+        "minimum_n_per_drug": 5,
+        "measurement_coverage": {
+          "pem": {
+            "expected": 25,
+            "observed": 25,
+            "outside_nominal_range": 0
+          },
+          "fut": {
+            "expected": 25,
+            "observed": 25,
+            "outside_nominal_range": 0
+          }
+        },
+        "methods": {
+          "v1_fixed": {
+            "macro_spearman": -0.018063133166149187,
+            "per_drug": {
+              "pem": {
+                "spearman": 0.2542796738708736,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              },
+              "fut": {
+                "spearman": -0.29040594020317195,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              }
+            }
+          },
+          "biology_fixed": {
+            "macro_spearman": 0.4056809977154603,
+            "per_drug": {
+              "pem": {
+                "spearman": 0.2989036408436744,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              },
+              "fut": {
+                "spearman": 0.5124583545872462,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              }
+            }
+          },
+          "random": {
+            "macro_spearman": 0.28374021501356517,
+            "per_drug": {
+              "pem": {
+                "spearman": 0.4739173071252179,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              },
+              "fut": {
+                "spearman": 0.09356312290191247,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              }
+            }
+          },
+          "grid": {
+            "macro_spearman": 0.1825984070800566,
+            "per_drug": {
+              "pem": {
+                "spearman": 0.41231960676775664,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              },
+              "fut": {
+                "spearman": -0.04712279260764347,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              }
+            }
+          },
+          "agent": {
+            "macro_spearman": 0.2969523552438131,
+            "per_drug": {
+              "pem": {
+                "spearman": 0.5085593477417472,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              },
+              "fut": {
+                "spearman": 0.08534536274587898,
+                "n": 25,
+                "aligned_groups": 9,
+                "reason": null
+              }
+            }
+          }
+        },
+        "primary_evaluable": true,
+        "wt_adjustment_applied": false,
+        "classification_metrics_computed": false,
+        "records_path": "reports/research-pilot/you-pilot-20261017/research/external/external-records.json",
+        "records_sha256": "64cb3fc4a2a14a85e795a8cf6d5f6073151ce4588d593fe8feb193fc878ca73f",
+        "interpretation": "Retrospective reuse of spent S13 biochemical measurements; not fresh blind validation or clinical accuracy."
+      },
+      "inner_selection_macro_ap": {
+        "v1_fixed": null,
+        "biology_fixed": 0.041778667170637725,
+        "random": 0.06026948725906243,
+        "grid": 0.06052586032033516,
+        "agent": 0.042170287197377546
+      }
+    }
+  },
+  "limits": [
+    "Single stochastic pair cannot identify a causal or average evidence effect.",
+    "Search order is control then research; serving and cache behavior may differ.",
+    "Token stop thresholds are checked before calls; last calls may exceed them.",
+    "Existing spent S13 outcomes were known to prior project work.",
+    "No RLY, MANO or other fresh external outcome table is read.",
+    "The finite numerical catalog and biological features are unchanged."
+  ],
+  "uncertainty": {
+    "endpoint": "external",
+    "metric": "mean_per_drug_spearman",
+    "aligned_group_count": 9,
+    "aligned_groups": [
+      "aligned-block-040",
+      "aligned-block-043",
+      "aligned-block-045",
+      "aligned-block-046",
+      "aligned-block-050",
+      "aligned-block-053",
+      "aligned-block-054",
+      "aligned-block-055",
+      "aligned-block-058"
+    ],
+    "observed_pairs_per_drug": {
+      "pem": 25,
+      "fut": 25
+    },
+    "replicates": 2000,
+    "seed": 6100,
+    "point_estimates": {
+      "v1_fixed": -0.018063133166149187,
+      "biology_fixed": 0.4056809977154603,
+      "random": 0.28374021501356517,
+      "grid": 0.1825984070800566,
+      "control": 0.2969523552438131,
+      "research": 0.2969523552438131
+    },
+    "comparisons": {
+      "biology_fixed_minus_v1_fixed": {
+        "method": "biology_fixed",
+        "comparator_method": "v1_fixed",
+        "estimate": 0.4056809977154603,
+        "comparator_estimate": -0.018063133166149187,
+        "delta": 0.42374413088160945,
+        "percentile_2_5": -0.08953130331716405,
+        "percentile_97_5": 0.6989700779443095,
+        "valid_replicates": 2000,
+        "invalid_replicates": 0
+      },
+      "random_minus_v1_fixed": {
+        "method": "random",
+        "comparator_method": "v1_fixed",
+        "estimate": 0.28374021501356517,
+        "comparator_estimate": -0.018063133166149187,
+        "delta": 0.3018033481797143,
+        "percentile_2_5": -0.19939476381116064,
+        "percentile_97_5": 0.5816903372785108,
+        "valid_replicates": 2000,
+        "invalid_replicates": 0
+      },
+      "grid_minus_v1_fixed": {
+        "method": "grid",
+        "comparator_method": "v1_fixed",
+        "estimate": 0.1825984070800566,
+        "comparator_estimate": -0.018063133166149187,
+        "delta": 0.20066154024620578,
+        "percentile_2_5": -0.31082953214511805,
+        "percentile_97_5": 0.48651324200794543,
+        "valid_replicates": 2000,
+        "invalid_replicates": 0
+      },
+      "control_minus_v1_fixed": {
+        "method": "control",
+        "comparator_method": "v1_fixed",
+        "estimate": 0.2969523552438131,
+        "comparator_estimate": -0.018063133166149187,
+        "delta": 0.3150154884099623,
+        "percentile_2_5": -0.18384460113241627,
+        "percentile_97_5": 0.6013153830145909,
+        "valid_replicates": 2000,
+        "invalid_replicates": 0
+      },
+      "control_minus_biology_fixed": {
+        "method": "control",
+        "comparator_method": "biology_fixed",
+        "estimate": 0.2969523552438131,
+        "comparator_estimate": 0.4056809977154603,
+        "delta": -0.10872864247164721,
+        "percentile_2_5": -0.5196051729608977,
+        "percentile_97_5": 0.08264504784855535,
+        "valid_replicates": 2000,
+        "invalid_replicates": 0
+      },
+      "control_minus_random": {
+        "method": "control",
+        "comparator_method": "random",
+        "estimate": 0.2969523552438131,
+        "comparator_estimate": 0.28374021501356517,
+        "delta": 0.013212140230247915,
+        "percentile_2_5": -0.48364173339927385,
+        "percentile_97_5": 0.38700835109437426,
+        "valid_replicates": 2000,
+        "invalid_replicates": 0
+      },
+      "control_minus_grid": {
+        "method": "control",
+        "comparator_method": "grid",
+        "estimate": 0.2969523552438131,
+        "comparator_estimate": 0.1825984070800566,
+        "delta": 0.11435394816375649,
+        "percentile_2_5": -0.30224692218133103,
+        "percentile_97_5": 0.4600937785355153,
+        "valid_replicates": 2000,
+        "invalid_replicates": 0
+      },
+      "research_minus_v1_fixed": {
+        "method": "research",
+        "comparator_method": "v1_fixed",
+        "estimate": 0.2969523552438131,
+        "comparator_estimate": -0.018063133166149187,
+        "delta": 0.3150154884099623,
+        "percentile_2_5": -0.18384460113241627,
+        "percentile_97_5": 0.6013153830145909,
+        "valid_replicates": 2000,
+        "invalid_replicates": 0
+      },
+      "research_minus_biology_fixed": {
+        "method": "research",
+        "comparator_method": "biology_fixed",
+        "estimate": 0.2969523552438131,
+        "comparator_estimate": 0.4056809977154603,
+        "delta": -0.10872864247164721,
+        "percentile_2_5": -0.5196051729608977,
+        "percentile_97_5": 0.08264504784855535,
+        "valid_replicates": 2000,
+        "invalid_replicates": 0
+      },
+      "research_minus_random": {
+        "method": "research",
+        "comparator_method": "random",
+        "estimate": 0.2969523552438131,
+        "comparator_estimate": 0.28374021501356517,
+        "delta": 0.013212140230247915,
+        "percentile_2_5": -0.48364173339927385,
+        "percentile_97_5": 0.38700835109437426,
+        "valid_replicates": 2000,
+        "invalid_replicates": 0
+      },
+      "research_minus_grid": {
+        "method": "research",
+        "comparator_method": "grid",
+        "estimate": 0.2969523552438131,
+        "comparator_estimate": 0.1825984070800566,
+        "delta": 0.11435394816375649,
+        "percentile_2_5": -0.30224692218133103,
+        "percentile_97_5": 0.4600937785355153,
+        "valid_replicates": 2000,
+        "invalid_replicates": 0
+      },
+      "research_minus_control": {
+        "method": "research",
+        "comparator_method": "control",
+        "estimate": 0.2969523552438131,
+        "comparator_estimate": 0.2969523552438131,
+        "delta": 0.0,
+        "percentile_2_5": 0.0,
+        "percentile_97_5": 0.0,
+        "valid_replicates": 2000,
+        "invalid_replicates": 0
+      }
+    },
+    "interpretation": "Descriptive paired block-bootstrap percentiles conditional on committed predictions. Related sequence blocks are not independent biological replicates. No refitting, model selection, p-values, or significance claim."
+  },
+  "numerical_controls_reproduced": true,
+  "joint_commitment_sha256": "449ed69c70fdaf582bae952f7551a590271a08303530fa4ffbb27e4681ed1ad7",
+  "total_wall_seconds": 179.75042450000183,
+  "scientific_arm_seconds": 166.3839992919966,
+  "preserved_artifacts": 394,
+  "total_requests": 6,
+  "budget_charge_tokens": 67859
+}

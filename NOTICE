@@ -1,0 +1,15 @@
+Escape Lab
+
+Code: MIT, Copyright 2026 Escape Lab contributors.
+Documentation and derived aggregate measurement summaries: CC BY-SA 4.0
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Primary FGFR study: Tangermann and colleagues.
+https://doi.org/10.1038/s41588-025-02431-8
+MAVEdb source measurements: CC BY-SA 4.0; retain dataset-author attribution.
+https://api.mavedb.org/api/v1/score-sets/urn:mavedb:00001256-a-9
+
+ESM2 pretrained representations and external structures are attributed in
+archived research protocols. Pretrained weights, original source workbooks,
+full paper text, and raw assay outcomes are not redistributed in this repository.
+The code license grants no additional rights to third-party data or models.
