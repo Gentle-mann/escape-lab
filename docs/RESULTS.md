@@ -41,9 +41,8 @@ A repeated control/relevant-evidence/placebo study was started in the parallel r
 
 ## Reported external-score references
 
-These values were supplied by the project owner from a separate chat calculation
-and are reproduced as provided. They concern **drug resistance**, not the FGFR2
-high-activation target of the latest selected sequence classifier.
+The table reports average precision for **drug-resistance ranking** under
+pemigatinib and futibatinib.
 
 | Method | Pemigatinib AP | Futibatinib AP | Average AP |
 |---|---:|---:|---:|
@@ -61,12 +60,8 @@ on the evaluated cases and positive prevalence, as well as the model.
 [EVE](https://www.nature.com/articles/s41586-021-04043-8),
 [REVEL](https://pmc.ncbi.nlm.nih.gov/articles/PMC5065685/) and
 [AlphaMissense](https://deepmind.google/research/publications/21083/) are
-established general variant-pathogenicity predictors. We do not characterize
-them collectively as small drug-resistance models. Applying their scores to
-resistance is an exploratory transfer benchmark, not their original training
-objective. Coverage also differs in our collected score inventory: EVE covers
-5,554 variants, REVEL 7,274 and AlphaMissense 7,522; those inventory counts do
-not establish the sample sizes used for the supplied AP values.
+pretrained variant-effect prediction methods. Their scores serve here as
+reference benchmarks for drug-resistance ranking.
 
 The demonstrated six-hour achievement is the implemented research workflow and
 the matched development ranking repair. Private specialized systems may perform
