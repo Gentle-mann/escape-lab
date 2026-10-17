@@ -26,6 +26,22 @@ The drug-resistance experiments are a **different endpoint**. Neither Nemotron n
 - [Reproduction and data prerequisites](docs/REPRODUCING.md)
 - [Hackathon demo and submission checklist](docs/HACKATHON.md)
 
+## What we built in six hours
+
+In approximately six hours, we built an auditable research prototype around real
+FGFR data: bounded agents, numerical experiments, independent verification, and
+a record of successful and unsuccessful revisions. We improved our sequence
+classifier's high-activation ranking from **0.0973 to 0.1113 AP** on fixed
+development folds, recovering **four highly activating variants instead of one**
+within the same 68-candidate budget.
+
+Private specialized models may perform better; we have not evaluated them.
+More time would let us investigate stronger biological representations and test
+generalization on untouched datasets. Those are opportunities to establish
+further gains, not a guarantee of them. See the [separate external-score
+references](docs/RESULTS.md#reported-external-score-references) for the supplied
+EVE, REVEL and AlphaMissense resistance scores and their comparison limits.
+
 ## How it works
 
 ```mermaid

@@ -39,6 +39,40 @@ The tested swap was **GLM-5.3**, not GLM-5.2. Under the matched opportunity budg
 
 A repeated control/relevant-evidence/placebo study was started in the parallel research chat. No completed aggregate result was available at this publication snapshot; no benefit is claimed for it.
 
+## Reported external-score references
+
+These values were supplied by the project owner from a separate chat calculation
+and are reproduced as provided. They concern **drug resistance**, not the FGFR2
+high-activation target of the latest selected sequence classifier.
+
+| Method | Pemigatinib AP | Futibatinib AP | Average AP |
+|---|---:|---:|---:|
+| EVE | 0.0894 | 0.0648 | 0.0771 |
+| REVEL | 0.0671 | 0.0499 | 0.0585 |
+| AlphaMissense | 0.0627 | 0.0500 | 0.0564 |
+
+The exact scoring cohort, split, label definitions, score direction and
+missing-score handling for this separate calculation are not archived in this
+release. Our **0.11135 activation AP cannot be placed in this resistance table
+as evidence of superiority**. Even our older resistance results require matching
+those evaluation details before a head-to-head claim is justified. AP depends
+on the evaluated cases and positive prevalence, as well as the model.
+
+[EVE](https://www.nature.com/articles/s41586-021-04043-8),
+[REVEL](https://pmc.ncbi.nlm.nih.gov/articles/PMC5065685/) and
+[AlphaMissense](https://deepmind.google/research/publications/21083/) are
+established general variant-pathogenicity predictors. We do not characterize
+them collectively as small drug-resistance models. Applying their scores to
+resistance is an exploratory transfer benchmark, not their original training
+objective. Coverage also differs in our collected score inventory: EVE covers
+5,554 variants, REVEL 7,274 and AlphaMissense 7,522; those inventory counts do
+not establish the sample sizes used for the supplied AP values.
+
+The demonstrated six-hour achievement is the implemented research workflow and
+the matched development ranking repair. Private specialized systems may perform
+better; they were not evaluated. More time would allow stronger representations
+and independent validation to be tested, without guaranteeing a performance gain.
+
 ## Evaluation status
 
 | Evidence source | Status |
