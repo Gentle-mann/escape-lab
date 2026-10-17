@@ -47,13 +47,19 @@ specialized models may perform better; we have not evaluated them.
 
 ```mermaid
 flowchart LR
-    R[Reviewed literature via You.com] --> A[Nemotron or GLM on Crusoe]
-    A -->|bounded proposal| N[Numerical training engine]
+    A["Nemotron<br/>Experiment planner on Crusoe"] -->|bounded proposal| N[Numerical training engine]
+    G["GLM-5.3<br/>Tested planner alternative"] -.->|comparison and research runs| N
+    R[Reviewed literature via You.com] --> G
     N --> E[Independent evaluator]
     E -->|permitted development feedback| A
+    E -.->|alternative-run feedback| G
     E --> V[Accept or reject and record evidence]
     D[Private assay outcomes] --> E
 ```
+
+Nemotron powered the original v1 and v2 experiment-planning runs. GLM-5.3 was
+tested in the same planner role, then used in the You.com research experiments.
+These are alternative planners, not a chain in which GLM directs Nemotron.
 
 The agent proposes validated model configurations. Numerical tools perform fitting and prediction. The evaluator owns labels, split grouping, metrics, budgets and promotion rules. Commitments precede held-out scoring; rejected proposals and operational failures remain recorded. Raw outcomes do not enter proposal prompts. The separate replay vault enforces authenticated, budgeted measurement reveals.
 
