@@ -268,6 +268,27 @@
       "transformation": "local root removed; private artifact links annotated; banner added"
     },
     {
+      "source": "reports/repeated-research/20261017-experiments-1-2/results.json",
+      "source_sha256": "16e2539ea79649fb0f1945229999b2330165d02c1913e2fd52ab3f15d14a220f",
+      "public_path": "docs/archive/reports/repeated-research/20261017-experiments-1-2/results.json",
+      "public_sha256": "2e57ebd19ff367875051f8318c57540d65e336947ccd92a03f4ee5c418b1da0a",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/repeated-research/20261017-experiments-1-2-audit.json",
+      "source_sha256": "3943cd90906832bc18a1d36b21a209d5e8f3369df77967ffdcc6ee58770deb62",
+      "public_path": "docs/archive/reports/repeated-research/20261017-experiments-1-2-audit.json",
+      "public_sha256": "3943cd90906832bc18a1d36b21a209d5e8f3369df77967ffdcc6ee58770deb62",
+      "transformation": "allowlisted aggregate fields; local root removed"
+    },
+    {
+      "source": "reports/repeated-research/20261017-experiments-1-2-review.md",
+      "source_sha256": "e2abdccc818fc5230d7baecd3cad4bafbd4382663c1ea82b958c9a685ae18661",
+      "public_path": "docs/archive/reports/repeated-research/20261017-experiments-1-2-review.md",
+      "public_sha256": "671599b631cf909563662c1a59d974ee728a1e7a5ddd33e556c2fee84ab3dd25",
+      "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
       "source": "reports/research-pilot/you-pilot-20261017/results-summary.md",
       "source_sha256": "179ad87d19538b18797a7ee0a904166a7b63646e30c2803ea08af2d90922fc3c",
       "public_path": "docs/archive/reports/research-pilot/you-pilot-20261017/results-summary.md",

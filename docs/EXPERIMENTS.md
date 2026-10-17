@@ -1,6 +1,6 @@
 # Experiment ledger
 
-This ledger records completed experiments, failed attempts, and pending work at the 17 October 2026 publication snapshot. It includes the parallel GLM-5.3 and You.com research work. The [results summary](RESULTS.md) is the concise reading path.
+This ledger records completed experiments, failed attempts, and pending work through 17 October 2026, including the completed repeated evidence and selector experiments. It includes the parallel GLM-5.3 and You.com research work. The [results summary](RESULTS.md) is the concise reading path.
 
 AP means average precision, a ranking metric. Higher AP and Spearman correlation are better; lower Brier error and mean absolute error (MAE) are better. Pooled macro AP across the two drugs and mean-fold FGFR2 high-activation AP are different endpoints. No table below measures percentage accuracy, patient outcomes, cancer cures, or mutation emergence.
 
@@ -26,7 +26,7 @@ Source run paths below identify preserved local evidence. The publication exclud
 | Revision v2 `20261017T201321Z-a29b17a8` | Biological/structural features, nested selection, stronger guards | Fixed structural external point estimate improved; agent advantage unproven |
 | Model swap `20261017T210043Z-a4800896` | Same v2 protocol, GLM-5.3 in place of Nemotron | Internal predictions identical; external point estimate higher but uncertain; six proposal failures |
 | `you-pilot-20261017` | Reviewed You.com biological evidence versus empty evidence | Identical selected model and predictions |
-| `20261017-experiments-1-2` | Repeated relevant/control/placebo evidence; budget-matched selectors | Started; no completed aggregate result at snapshot |
+| `20261017-experiments-1-2` | Repeated relevant/control/placebo evidence; budget-matched selectors | Completed 90 searches; both experiments inconclusive under predeclared improvement gates |
 | `activation-transfer-v1` | Measured versus predicted activation for resistance | Measured activation informative; predicted activation failed advancement |
 | `activation-revision-v2` | Capacity, biological features, activation-tail head | Better broad activation correlation, no demonstrated resistance gain |
 | `fgfr2-sequence-v1` | Frozen ESM2 plus supervised FGFR2 heads | Higher classifier AP, insufficient retrieval; primary gate failed |
@@ -103,7 +103,33 @@ Both selected predictions were identical; correlation difference and its conditi
 
 Evidence: [You.com paired summary](archive/reports/research-pilot/you-pilot-20261017/results-summary.md), [execution review](archive/reports/research-pilot/you-pilot-20261017-review.md). Protocol: [You.com pilot](archive/docs/you-research-pilot-protocol.md).
 
-The follow-on [repeated research protocol](archive/docs/repeated-research-protocol.md) was predeclared for 90 isolated searches: ten planner repetitions across three folds and three evidence arms (empty, relevant, truthful unrelated placebo). A second analysis compares the no-evidence selector with numerical controls. Each repetition uses the same biological folds, so repetitions are not new biological evidence. All original final, S13, RLY, and MANO outcome scoring is excluded. The initial recorded status was `started` with zero completed searches; **no aggregate result is claimed at this snapshot**. Incomplete placebo-source acquisition attempts remain recorded. Evidence: `reports/repeated-research/20261017-experiments-1-2`.
+### Completed experiments 1 and 2
+
+The follow-on [repeated research protocol](archive/docs/repeated-research-protocol.md) completed all **90 isolated searches**: ten planner repetitions across three grouped outer folds and three evidence arms (empty, relevant, truthful unrelated placebo). The cohort contains 3,730 variants in 15 aligned groups. The primary score averages ten repeat-level pooled out-of-fold macro AP values, each averaging the two drugs.
+
+| Method | Mean macro AP | Mean macro Brier |
+|---|---:|---:|
+| Agent, no evidence | 0.02897045 | 0.03503282 |
+| Agent + You.com evidence | 0.02914259 | 0.03504838 |
+| Agent + unrelated evidence | 0.02914202 | 0.03504858 |
+| Fixed structural model | 0.03462765 | 0.03578062 |
+| Random selection, three tries | 0.03226587 | 0.03461819 |
+| Numerical selection, three tries | 0.02880030 | 0.03501657 |
+| Full grid, eleven tries | 0.03493831 | 0.03459281 |
+
+**Experiment 1, evidence benefit: inconclusive.** Relevant evidence increased macro AP by only +0.000172143 over no evidence and +0.000000571 over placebo. Both gains missed the predeclared +0.002 minimum, and both adjusted 99% intervals included zero. The two reviewed You.com cards did not demonstrate a useful prediction benefit.
+
+**Experiment 2, agent selection: inconclusive.** The predeclared primary agent was the no-evidence arm. It performed below fixed and random selection in all ten repeats, with mean differences of -0.005657204 and -0.003295420. The agent-minus-random adjusted 99% interval was entirely negative, [-0.010566, -0.000564]; the agent-minus-fixed interval included zero. Its +0.000170146 mean gain over the specified numerical policy also missed the improvement gate. These results do not establish an advantage over simpler selection.
+
+All five primary contrasts failed both the minimum-gain and positive-lower-bound requirements; their per-drug AP and Brier safeguards passed. Intervals use 10,000 paired bootstrap draws over aligned groups and repeat IDs and condition on fitted predictions. Agent, random and numerical selection each had three opportunities beyond a common reference. Fixed selection had no adaptive search cost; full grid is a larger-budget reference. The numerical arm tests one specified policy, not every numerical optimizer.
+
+All 90 searches entered scoring, including failures. **270 requests produced 264 valid proposals and six failed opportunities**: five truncated responses and one connection error. No scientific result triggered a rerun. Models and unlabeled predictions were committed together before evaluator scoring. The independent request audit found no evaluation outcomes, cross-arm history or raw source text in proposal inputs; agents had no filesystem or web tools. The trusted evaluator can parse a monolithic local outcome archive, so this is an input-isolation and delayed-scoring guarantee, not OS-level isolation.
+
+Runtime was 21.58 minutes, with 3,011,005 reported tokens and an estimated $8.75993 in known-usage inference plus $0.024 for new retrieval. One failed request has unknown provider usage; this is not a complete invoice. Cached numerical fits make wall time unsuitable as a standalone optimizer-cost comparison. Incomplete placebo-source acquisition attempts remain recorded locally.
+
+These are reused development data. Ten repetitions measure procedural variability on the same biological folds, not ten independent biological validations. No original final, S13, RLY or MANO outcome was scored. The study tests two fixed evidence cards within a twelve-configuration catalog; it does not establish fresh-study generalization or that literature research can never help.
+
+Evidence: [completed review](archive/reports/repeated-research/20261017-experiments-1-2-review.md), [aggregate results](archive/reports/repeated-research/20261017-experiments-1-2/results.json), and [verification and choice summary](archive/reports/repeated-research/20261017-experiments-1-2-audit.json). Raw outcomes, predictions and request logs remain local.
 
 ## 4. Activation as an intermediate resistance feature
 
@@ -212,4 +238,4 @@ Evidence: [AP repair report](archive/reports/mechanistic-pilot/fgfr2-sequence-ap
 - Structural audits rejected treating 2PSQ as a clean inactive comparator, documented prepared-template limitations, and fixed masks before structural scoring.
 - v3 development-readiness, extraction/runtime probes, schema smoke tests, and artifact-preservation checks are preparation or verification, not additional scientific wins.
 
-The next publication update should add repeated-study results only after its run status and aggregate evidence are complete. Any new external test requires a separately frozen protocol and should remain visibly separate from the reused development results above.
+The completed repeated-study results are included above. Any new external test requires a separately frozen protocol and should remain visibly separate from these reused development results.

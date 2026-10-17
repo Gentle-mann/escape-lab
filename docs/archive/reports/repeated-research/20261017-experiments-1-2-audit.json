@@ -1,0 +1,126 @@
+{
+  "schema_version": "repeated-research-postrun-audit-v1",
+  "verified_at": "2026-10-17T23:01:43.090259+00:00",
+  "run_status": "completed",
+  "scientific_attempts": 1,
+  "experiments": {
+    "research": {
+      "status": "inconclusive",
+      "required_contrasts": [
+        "relevant_minus_control",
+        "relevant_minus_placebo"
+      ],
+      "contrast_directions": {
+        "relevant_minus_control": "higher",
+        "relevant_minus_placebo": "higher"
+      },
+      "interpretation": "Development evidence conditional on frozen predictions and this cohort; not fresh biological generalization."
+    },
+    "agent_selection": {
+      "status": "inconclusive",
+      "required_contrasts": [
+        "control_minus_fixed",
+        "control_minus_random",
+        "control_minus_numerical"
+      ],
+      "contrast_directions": {
+        "control_minus_fixed": "lower",
+        "control_minus_random": "lower",
+        "control_minus_numerical": "higher"
+      },
+      "interpretation": "Development evidence conditional on frozen predictions and this cohort; not fresh biological generalization."
+    }
+  },
+  "verification": {
+    "run_artifact_hashes": 314,
+    "joint_commitment_hashes": 388,
+    "protocol_input_hashes": 77,
+    "preserved_prior_hashes": 292,
+    "all_hashes_valid": true,
+    "protocol_hash_matches": true,
+    "results_hash_matches": true,
+    "joint_freeze_hash_matches": true,
+    "credential_scan_files": 340,
+    "credential_scan_hits": 0
+  },
+  "independent_request_audit": {
+    "source": "Independent read-only review by repeated_design_audit",
+    "searches": 90,
+    "requests": 270,
+    "per_arm_requests": 90,
+    "own_history_checks": 270,
+    "adapter_fingerprint_pairs": 270,
+    "passed": true,
+    "tools": [
+      "propose_experiment"
+    ],
+    "repairs": 0,
+    "outcomes_in_proposal_inputs": false,
+    "cross_arm_history": false,
+    "raw_source_text": false,
+    "all_requests_finished_before_commitment": true,
+    "scored_outcomes_inspected_by_isolation_auditor": false
+  },
+  "independent_results_review": {
+    "source": "Independent read-only review by repeat_analysis_impl",
+    "metric_and_selection_consistency": "passed",
+    "both_experiments": "inconclusive"
+  },
+  "choices_by_method": {
+    "control": {
+      "chemistry-logistic-c0.1": 20,
+      "structure-logistic-c0.1": 1,
+      "interactions-logistic-c0.01": 5,
+      "structure-logistic-c0.01": 4
+    },
+    "relevant": {
+      "chemistry-logistic-c0.1": 20,
+      "interactions-logistic-c0.01": 3,
+      "structure-logistic-c0.01": 5,
+      "structure-logistic-c0.1": 2
+    },
+    "placebo": {
+      "chemistry-logistic-c0.1": 20,
+      "interactions-logistic-c0.01": 5,
+      "structure-logistic-c0.01": 3,
+      "structure-logistic-c0.1": 2
+    },
+    "fixed": {
+      "structure-logistic-c0.1": 30
+    },
+    "random": {
+      "chemistry-logistic-c0.1": 14,
+      "interactions-hgb-depth2": 1,
+      "structure-hgb-depth3": 6,
+      "structure-hgb-depth2": 4,
+      "interactions-logistic-c0.01": 3,
+      "structure-logistic-c0.01": 1,
+      "chemistry-logistic-c1": 1
+    },
+    "numerical": {
+      "chemistry-logistic-c0.1": 20,
+      "structure-logistic-c0.01": 10
+    },
+    "grid": {
+      "chemistry-logistic-c0.1": 10,
+      "structure-hgb-depth3": 20
+    }
+  },
+  "relevant_choice_disagreements": {
+    "control": 9,
+    "placebo": 6
+  },
+  "valid_proposals": 264,
+  "failed_opportunities": 6,
+  "failure_types": {
+    "truncated_response": 5,
+    "connection_error": 1
+  },
+  "known_provider_usage_tokens": 3011005,
+  "unknown_usage_requests": 1,
+  "known_usage_estimated_inference_usd": 8.759927,
+  "new_you_retrieval_estimated_usd": 0.024,
+  "complete_invoice": false,
+  "report_sha256": "e2abdccc818fc5230d7baecd3cad4bafbd4382663c1ea82b958c9a685ae18661",
+  "fresh_external_validation": false
+}

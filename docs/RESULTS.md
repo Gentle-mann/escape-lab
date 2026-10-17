@@ -22,14 +22,18 @@ The verification run took **2.92 seconds with cached features**, reproduced the 
 
 We also tested whether changing the agent or adding literature evidence improved **drug-resistance prediction**.
 
-| Experiment | Numerical reference | Agent result |
+| Experiment | Comparator | Agent result |
 |---|---:|---:|
 | Original final resistance test, macro AP | Fixed model 0.10923 | Nemotron 0.09481 |
 | Revised internal evaluation, macro AP | Fixed structure 0.03463; random/grid 0.03494 | Nemotron and GLM-5.3: 0.03052 |
 | S13 biochemical panel, mean Spearman | Fixed structure 0.40568 | Nemotron 0.20892; GLM-5.3 0.29695 |
 | You.com evidence pilot, reused S13 | GLM without evidence 0.29695 | GLM with evidence 0.29695 |
+| Experiment 1: repeated evidence, mean macro AP | No evidence 0.02897045; placebo 0.02914202 | You.com evidence 0.02914259 |
+| Experiment 2: repeated selection, mean macro AP | Fixed 0.03462765; random 0.03226587; numerical 0.02880030 | No-evidence agent 0.02897045 |
 
-These comparisons did not establish an agent advantage over the numerical controls. A larger repeated evidence/placebo experiment was in progress at this publication snapshot. The [complete experiment ledger](EXPERIMENTS.md) contains every completed experiment, operational failure, runtime and comparison.
+**Experiments 1 and 2 are complete; both are inconclusive under their predeclared improvement gates.** Relevant evidence improved AP by only +0.000172143 over no evidence and essentially tied placebo. The no-evidence agent scored below fixed and random selection in all ten repeats; its small gain over the numerical policy was insufficient. These comparisons did not establish an agent advantage over the numerical controls.
+
+All 90 searches entered scoring, with 264 valid proposals and six failed opportunities across 270 requests. Proposal inputs were isolated from evaluation outcomes, and models and unlabeled predictions were committed before scoring. The study reused 3,730 development variants across fixed folds; its ten repetitions are not independent biological validations. No final or external panel was scored. See the [completed review](archive/reports/repeated-research/20261017-experiments-1-2-review.md) and [complete experiment ledger](EXPERIMENTS.md#3-youcom-evidence-and-repeated-selector-studies) for uncertainty, failures, costs and evaluation limits.
 
 ## Reported external-score references
 
