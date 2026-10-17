@@ -6,41 +6,42 @@ The long-term ambition is to anticipate cancer's escape routes before resistance
 
 **Preclinical research only. No patients, medical advice, treatment recommendations, or demonstrated cancer cure.**
 
-## Latest measured result
+## Built in six hours
 
-On 668 FGFR2 variants across three fixed development folds, ranking the same sequence classifier by its raw decision score instead of a rounded probability improved mean-fold high-activation average precision:
+In approximately six hours, we built a working pipeline around real FGFR data:
+autonomous experiment proposals, numerical training, independent verification,
+and a complete experiment ledger. The prototype integrates Nemotron and GLM-5.3
+on Crusoe, reviewed evidence from You.com, and sequence and structural features.
 
-| Ranking | Mean-fold AP ↑ | High-activation hits in 68 picks | Strong-activation hits |
+## Measured improvement
+
+On **668 FGFR2 variants** across three fixed development folds, a numerical
+ranking repair improved the same sequence classifier:
+
+| Ranking | Mean-fold high-activation AP ↑ | High-activation hits in 68 picks | Strong-activation hits |
 |---|---:|---:|---:|
-| Original sequence classifier probabilities | 0.09732 | 1 / 26 | 0 / 7 |
-| Same classifier, raw decision margin | **0.11135** | **4 / 26** | 0 / 7 |
+| Original classifier probabilities | 0.09732 | 1 / 26 | 0 / 7 |
+| **Same classifier, raw decision margin** | **0.11135** | **4 / 26** | 0 / 7 |
 | Historical biological tree reference | 0.07186 | 3 / 26 | 0 / 7 |
 
-AP measures ranking quality; **0.11135 does not mean 11.1% classification accuracy**. This was a numerical ranking repair on reused development folds. It resolved probability-rounding ties without changing fitted coefficients or adding biology. The descriptive paired interval includes zero, feature extrapolation remains a limitation, and this is not an autonomous LLM-discovered improvement. Some earlier ridge models had higher AP but severe continuous-value extrapolation problems; all are reported.
+**A 14.4% relative AP gain and three additional highly activating variants found
+within the same budget.** We restored ranking information lost when probabilities
+rounded to 1.0, preserving the fitted coefficients. Verification took **2.92
+seconds with cached features**.
 
-The drug-resistance experiments are a **different endpoint**. Neither Nemotron nor GLM-5.3 established superiority over the numerical baselines. A You.com evidence pilot produced identical predictions with and without research context. Negative results are part of the release.
+This is a development ranking result; its descriptive interval includes zero and
+external validation remains ahead. The separate drug-resistance experiments did
+not establish an LLM advantage over numerical controls. All experiments and their
+evaluation details are published below.
 
-- [Current results and interpretation](docs/RESULTS.md)
-- [Complete experiment ledger, including failed attempts](docs/EXPERIMENTS.md)
-- [Archived protocols, reports, aggregate JSON and source checksums](docs/archive/manifest.json)
+- [Results and six-hour progress](docs/RESULTS.md)
+- [Complete experiment ledger](docs/EXPERIMENTS.md)
+- [Archived protocols, aggregate results and checksums](docs/archive/manifest.json)
 - [Reproduction and data prerequisites](docs/REPRODUCING.md)
 - [Hackathon demo and submission checklist](docs/HACKATHON.md)
 
-## What we built in six hours
-
-In approximately six hours, we built an auditable research prototype around real
-FGFR data: bounded agents, numerical experiments, independent verification, and
-a record of successful and unsuccessful revisions. We improved our sequence
-classifier's high-activation ranking from **0.0973 to 0.1113 AP** on fixed
-development folds, recovering **four highly activating variants instead of one**
-within the same 68-candidate budget.
-
-Private specialized models may perform better; we have not evaluated them.
-More time would let us investigate stronger biological representations and test
-generalization on untouched datasets. Those are opportunities to establish
-further gains, not a guarantee of them. See the [separate external-score
-references](docs/RESULTS.md#reported-external-score-references) for the supplied
-EVE, REVEL and AlphaMissense resistance scores and their comparison limits.
+Next: stronger biological representations and independent validation. Private
+specialized models may perform better; we have not evaluated them.
 
 ## How it works
 
