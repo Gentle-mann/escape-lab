@@ -43,4 +43,30 @@ This increment adds canonical ranking/probability APIs, one fixed stability expe
 - The fixed 12-fit development comparison rejected the stability challenger and reported both representation ablations. Historical scores reproduced exactly; 529 protected artifact hashes stayed unchanged.
 - Live Nemotron completed a five-call synthetic diagnostic/policy run and a five-call replay using the retained policy. The synthetic referee evaluated 48 newly generated cases. These are policy mechanism and integration checks, separately reported from biological prediction results. Operational failures and the corrective schema probe are preserved in the [agent records](archive/reports/agent-improvements/README.md).
 - The archive now contains **98 hash-registered artifacts**. All 57 entries from the preceding publication snapshot remain unchanged. CI checks the manifest, public relative links, and headline AP/retrieval figures against the archived measurements.
-- No original final or external biological assay was scored. Local presentation files remain separate from the GitHub source publication; this increment does not replace the submitted Loom video or deploy a new version of the hackathon demo.
+- No original final or external biological assay was scored. The demo and presentation are published separately through an allowlisted Vercel package; the submitted Loom video records the original hackathon delivery.
+
+## Live ambition and results release
+
+PR #1 merged at `7c4e54e092306e43ff54abfd26824ffe22fe7543`. On 17 October 2026,
+the updated [live demo](https://escape-lab-three.vercel.app) and
+[nine-slide presentation](https://escape-lab-three.vercel.app/presentation)
+were published to the existing Vercel project. The
+[latest progress view](https://escape-lab-three.vercel.app/?view=latest) presents
+the retained Nemotron policy, fixed sequence comparisons, and public-source
+reproduction alongside the original six-hour ranking result.
+
+- Production deployment: `dpl_6i1DmXuiMtxcgsUaaTS7D8G6XVBo`, verified Ready and
+  serving the public alias. All eight checked public assets matched the reviewed
+  package byte-for-byte, including the evidence snapshot and presentation.
+- Production health, recorded data digest/replay, and the live synthetic vault
+  contract check passed. Private source/data routes returned 404.
+- Local verification: **659 research software tests** and **89 frontend tests**
+  passed; Ruff and JavaScript syntax checks passed. The updated page and slides
+  were inspected in the in-app browser.
+- Current project copy describes Nemotron's planning and diagnostic roles
+  directly. Four public archive copies received editorial changes, recorded in
+  the manifest; every original source hash and experimental measurement is
+  preserved. The 98-artifact publication check passed.
+
+The previous Ready deployment remains available for rollback. The original
+submission video remains the record of the six-hour hackathon build.

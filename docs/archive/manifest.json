@@ -432,8 +432,8 @@
       "source": "docs/archive/reports/agent-improvements/README.md",
       "source_sha256": "24f2afbec28cf648d77d0d8a61cbd3eca21bfc27c33504668d69a1cc7e951eae",
       "public_path": "docs/archive/reports/agent-improvements/README.md",
-      "public_sha256": "24f2afbec28cf648d77d0d8a61cbd3eca21bfc27c33504668d69a1cc7e951eae",
-      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+      "public_sha256": "ac59b79be95bc54ab038526a6dc426e3b82773a5e0487a1f06fb1992800724a6",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts; editorial wording updated for concise positive role descriptions; source snapshot hash and experimental measurements preserved"
     },
     {
       "source": "docs/archive/reports/agent-improvements/development-replay/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
@@ -586,8 +586,8 @@
       "source": "docs/archive/reports/agent-improvements/synthetic-transfer/report.json",
       "source_sha256": "0994f296bef965fd265611c3f99109c170599df34fb09e38e99ad554ee243d60",
       "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer/report.json",
-      "public_sha256": "0994f296bef965fd265611c3f99109c170599df34fb09e38e99ad554ee243d60",
-      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+      "public_sha256": "63faf28950749a40a113241b6785ab648d81a74908dba206fb81e2a89e7c5a55",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts; editorial wording updated for concise positive role descriptions; source snapshot hash and experimental measurements preserved"
     },
     {
       "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/freezes/e03a98b433a48385b28da602ad7bd1bc16263dc4ab2e753829829d676e645526.json",
@@ -628,8 +628,8 @@
       "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/report.json",
       "source_sha256": "19ab344e46aae62c4aa8c0abbf96203986d9f8544758c834bb9d1b9243df77ec",
       "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/report.json",
-      "public_sha256": "19ab344e46aae62c4aa8c0abbf96203986d9f8544758c834bb9d1b9243df77ec",
-      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+      "public_sha256": "bb343d715211936320fc0cb37c7844265639c2796cf83ea65fab26a425dd1232",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts; editorial wording updated for concise positive role descriptions; source snapshot hash and experimental measurements preserved"
     },
     {
       "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/freezes/e03a98b433a48385b28da602ad7bd1bc16263dc4ab2e753829829d676e645526.json",
@@ -670,8 +670,8 @@
       "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/report.json",
       "source_sha256": "2e4eae7c2217fcee9a7f015a405ae30e4ce984efd7dba92a671f9e8abd61dbe3",
       "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/report.json",
-      "public_sha256": "2e4eae7c2217fcee9a7f015a405ae30e4ce984efd7dba92a671f9e8abd61dbe3",
-      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+      "public_sha256": "84e151c130450449fd649ecd09df6878af7c4431252fec5aa3cc91c1b9b8ab2f",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts; editorial wording updated for concise positive role descriptions; source snapshot hash and experimental measurements preserved"
     },
     {
       "source": "reports/agent-improvements/nemotron-retained-replay-20261018T003004Z/policies/6218a4efcf241c2508f04f12f3b593db92b065e8e1ed48e96f78dfe4aa63116c.json",

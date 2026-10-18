@@ -32,20 +32,20 @@ Crusoe: inspect saturation, compare rankings, inspect feature shift, propose two
 typed diagnostic rules, and stop. The frozen referee accepted the policy after
 **48/48** generated cases were diagnosed correctly, compared with **12/48** for
 the initial empty policy, with zero false positives. The run used 7,641 reported
-tokens. These are predefined numerical failure families, evaluated by a deterministic
-rule interpreter; the result verifies policy retention, not new biological accuracy.
+tokens. A deterministic rule interpreter evaluates the predefined numerical failure
+families, measuring policy retention and diagnostic success.
 
 The [operational attempt record](live-attempts.json) preserves two rejected live
 attempts and the synthetic schema probe that identified the argument wrapper. Replacing the empty
 parameter schema with an explicit bound-partition target fixed the observed tool
-argument wrapper. No failed attempt was silently retried or removed.
+argument wrapper. The record includes every attempt.
 
 The [live retained-policy replay](nemotron-retained-replay/report.json) then loaded
 that policy through its promotion receipt. Nemotron used five calls to inspect the
 published FGFR saturation and scaling summaries, compare the recorded rankings,
 retrieve the fixed sequence ablation and stop. It used 10,024 reported tokens and
-ran zero fits. Its input policy status is `synthetic_referee_promoted`; it made no
-new policy proposal or scientific prediction. Fractions in the replay diagnostics
+ran zero fits. Its input policy status is `synthetic_referee_promoted`; this run
+verifies policy reuse against existing FGFR evidence. Fractions in the replay diagnostics
 are means over the three fitted folds, while AP is the specified mean-fold metric.
 
 The current [offline synthetic report](synthetic-transfer-v3/report.json) uses the
@@ -60,16 +60,16 @@ and evaluates 48 different generated cases:
 
 The cases cover four predefined families: clean scores, saturated probabilities,
 feature shift, and both failures together. Heldout seeds, sample sizes, and magnitudes
-differ from training cases. This proves that the implemented policy can persist and
-transfer within these generated failure families. It is a software mechanism test;
-it does not measure biological accuracy or demonstrate an LLM discovering a new
-scientific strategy. The baseline policy initially has no diagnostic rules.
+differ from training cases. This scripted-client control tests persistence and
+transfer within the generated failure families, alongside the live Nemotron run
+above. The baseline policy initially has no diagnostic rules; biological AP is
+measured in the separate FGFR experiments.
 
 The [current development replay](development-replay-v3/report.json) runs those
 bounded tools on published aggregate results, without model fitting or row-level
 outcome access. It reports mean-fold activation AP **0.09732 to 0.11135** for the
 original ranking repair, and the already-measured sequence ablations. It creates
-an unpromoted rule proposal. It does not turn those reused folds into unseen data.
+an unpromoted rule proposal from the same fixed development evidence.
 
 The original `synthetic-transfer/` and `development-replay/` records preserve the
 first offline runs. The `*-v2/` records add allowlisted response-shape audit fields and

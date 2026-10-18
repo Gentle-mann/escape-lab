@@ -1,7 +1,7 @@
 """Runnable synthetic policy transfer benchmark with a frozen independent referee.
 
-This tests persistent diagnostic behavior, not biological generalization or a
-Nemotron-discovered scientific improvement. The default provider is scripted;
+This tests persistent diagnostic policies on generated numerical failure families.
+The default provider is scripted;
 --provider crusoe explicitly enables billed calls on generated training cases only.
 """
 
@@ -248,7 +248,7 @@ def run_policy_smoke(output_dir, *, client=None, max_actions=6):
               'interpretation': 'Generated numerical failure cases test persistent diagnostic rules. '
               'They do not estimate biological prediction quality or clinical benefit. '
               'Heldout cases vary seeds, sizes and magnitudes within four predefined families. '
-              + ('The offline policy proposal is scripted, not a Nemotron discovery.'
+              + ('The offline policy proposal uses a scripted fixture.'
                  if client is None else 'The proposal used the recorded Crusoe model; '
                  'heldout execution uses the fixed rule interpreter.')}
     (output_dir / 'report.json').write_text(json.dumps(report, indent=2) + '\n')

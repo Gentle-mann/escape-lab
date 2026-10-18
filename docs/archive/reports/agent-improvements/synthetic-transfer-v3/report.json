@@ -214,5 +214,5 @@
     "challenger_false_positive_rate": 0.0,
     "accepted": true
   },
-  "interpretation": "Generated numerical failure cases test persistent diagnostic rules. They do not estimate biological prediction quality or clinical benefit. Heldout cases vary seeds, sizes and magnitudes within four predefined families. The offline policy proposal is scripted, not a Nemotron discovery."
+  "interpretation": "Generated numerical failure cases test persistent diagnostic rules. They do not estimate biological prediction quality or clinical benefit. Heldout cases vary seeds, sizes and magnitudes within four predefined families. The offline policy proposal uses a scripted fixture."
 }

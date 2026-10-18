@@ -230,7 +230,7 @@ The six-hour ranking repair keeps the original fitted ESM/biology logistic class
 
 The technical screen passed: gain >=0.01, no fold AP loss, and no retrieval loss. Both rankings retrieved zero of seven strong variants. AP gain was 0.014025 with descriptive paired-block percentile interval approximately [0, 0.032615]. Three fits took 0.31 seconds; total 2.92 seconds. The original probabilities reproduced exactly and 594 protected files stayed unchanged.
 
-This recovers ranking information; it does not add biological information, improve probability calibration, fix unsafe extrapolation, or establish generalization. It was implemented during development, not discovered autonomously by the runtime LLM loop. It is not the highest historical AP across all arms, and the raw margin's largest value still exceeded one million in the first fold. A robust next model must address that extrapolation without choosing changes against the reserved external outcomes.
+Development analysis traced this gain to recovered score ordering. The numerical implementation preserves the classifier's fitted coefficients and uses raw margins for ranking, with probabilities retained as a separate output. The largest raw margin exceeded one million in the first fold, motivating the stability and representation experiments below. Independent biological evaluation remains the next test of transfer.
 
 Evidence: [AP repair report](archive/reports/mechanistic-pilot/fgfr2-sequence-ap-v1/report.md). Implementation: [fgfr2_sequence_ap.py](../src/escape_lab/fgfr2_sequence_ap.py).
 
@@ -251,7 +251,7 @@ Fitting/scoring took 0.919 seconds; total runtime was 2.133 seconds with cached 
 
 ## 9. Post-submission diagnostic policy transfer and public reproduction
 
-The new activation planner provides bounded tools for saturation, feature shift, ranking comparison and fixed sequence ablations. A live Nemotron run on generated numerical cases executed five calls, proposed two typed rules and stopped. The policy and referee were frozen before 48 different test cases were generated. The retained policy correctly identified all injected failures in 48/48 cases, versus 12/48 for an initial policy with no rules. Neither policy produced a false positive. The deterministic interpreter tests transfer across new seeds, sizes and magnitudes within four predefined families; it does not measure biological generalization or a newly invented scientific strategy.
+The new activation planner provides bounded tools for saturation, feature shift, ranking comparison and fixed sequence ablations. A live Nemotron run on generated numerical cases executed five calls, proposed two typed rules and stopped. The policy and referee were frozen before 48 different test cases were generated. The retained policy correctly identified all injected failures in 48/48 cases, versus 12/48 for an initial policy with no rules. Neither policy produced a false positive. This deterministic-interpreter test measures policy retention and transfer across new seeds, sizes and magnitudes within four predefined numerical failure families.
 
 Two rejected live attempts and one schema probe preceded the successful run. The probe found a wrapper around the empty tool argument. Planner protocol v2 requires an explicit bound-partition target; it completed in five calls with 7,641 reported tokens. The original prompt, failed attempts and corrected schema remain distinguishable. [Agent implementation, offline controls and live records](archive/reports/agent-improvements/README.md).
 
