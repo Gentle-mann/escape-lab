@@ -34,6 +34,9 @@ Source run paths below identify preserved local evidence. The publication exclud
 | `fgfr2-state-bounded-v1` | Training-range bounding sensitivity | Nominal exploratory gate passed; still below historical tree, uncertain |
 | `fgfr2-state-tree-v1` | Same contrast features added to stronger matched tree | Worse all three folds; failed |
 | `fgfr2-sequence-ap-v1` | Raw classifier margin instead of saturated probability | Technical ranking screen passed; AP 0.09732 to 0.11135 |
+| Post-submission `fgfr2-sequence-revision-v1` | Canonical ranking API, variance floor, WT/delta ablations | Exact baseline reproduction; stability challenger rejected; WT-only AP 0.11402 and delta-only 0.11377 are diagnostic results |
+| Post-submission diagnostic policy transfer | Live Nemotron proposes reusable rules; frozen referee tests new generated cases | 12/48 to 48/48 exact synthetic diagnoses; mechanism test, separate from biological AP |
+| Post-submission public reproduction | Rebuild inputs and ESM features without historical prediction artifacts | Exact published AP and hit counts reproduced in about 101 seconds, excluding package installation |
 
 ## 1. Original autonomous resistance experiment
 
@@ -216,7 +219,7 @@ Evidence: [unbounded structure report](archive/reports/mechanistic-pilot/fgfr2-s
 
 ## 7. Targeted AP numerical repair
 
-The most recent change keeps the original fitted ESM/biology logistic classifier and uses raw decision margins for ranking instead of sigmoid probabilities. In pilot-0, 136 probabilities rounded to exactly 1.0; margins retained 275 unique scores. The other folds had no exact-one saturation.
+The six-hour ranking repair keeps the original fitted ESM/biology logistic classifier and uses raw decision margins for ranking instead of sigmoid probabilities. In pilot-0, 136 probabilities rounded to exactly 1.0; margins retained 275 unique scores. The other folds had no exact-one saturation.
 
 | Fold | Probability AP | Margin AP | High hits before / after |
 |---|---:|---:|---:|
@@ -230,6 +233,29 @@ The technical screen passed: gain >=0.01, no fold AP loss, and no retrieval loss
 This recovers ranking information; it does not add biological information, improve probability calibration, fix unsafe extrapolation, or establish generalization. It was implemented during development, not discovered autonomously by the runtime LLM loop. It is not the highest historical AP across all arms, and the raw margin's largest value still exceeded one million in the first fold. A robust next model must address that extrapolation without choosing changes against the reserved external outcomes.
 
 Evidence: [AP repair report](archive/reports/mechanistic-pilot/fgfr2-sequence-ap-v1/report.md). Implementation: [fgfr2_sequence_ap.py](../src/escape_lab/fgfr2_sequence_ap.py).
+
+## 8. Post-submission model stability and sequence ablations
+
+The [fixed 12-fit revision](archive/reports/model-improvements/report.md) reused the same 668 FGFR2 variants and three saved development folds. The new canonical probability/margin API reproduced all historical scores exactly before any challenger was fitted. Training-only imputation, scaling and PCA remain isolated within each fold.
+
+| Arm | Mean-fold AP | High hits / 68 picks | Largest absolute margin |
+|---|---:|---:|---:|
+| Both sequence branches, historical scaling | 0.111346 | 4 | 1,084,487 |
+| Both branches, biology standard-deviation floor 0.01 | 0.059510 | 2 | 20.13 |
+| WT context only, historical scaling | 0.114019 | 4 | 909,400 |
+| Mutation delta only, historical scaling | 0.113766 | 5 | 2,198,000 |
+
+The single predeclared stability challenger failed the AP, no-fold-loss and retrieval gates despite reducing extreme scores. It remains optional; no default was changed. The ablations remove one 16-dimensional PCA branch with the same regularization, so they diagnose feature content rather than provide a matched-capacity comparison. Their small AP gains and retained extreme margins motivate further development without establishing independent generalization.
+
+Fitting/scoring took 0.919 seconds; total runtime was 2.133 seconds with cached inputs. All 529 protected artifact hashes remained unchanged. No final or external evaluation ran. Protocol: [frozen specification](archive/reports/model-improvements/protocol.json). Measurements: [aggregate results](archive/reports/model-improvements/results.json).
+
+## 9. Post-submission diagnostic policy transfer and public reproduction
+
+The new activation planner provides bounded tools for saturation, feature shift, ranking comparison and fixed sequence ablations. A live Nemotron run on generated numerical cases executed five calls, proposed two typed rules and stopped. The policy and referee were frozen before 48 different test cases were generated. The retained policy correctly identified all injected failures in 48/48 cases, versus 12/48 for an initial policy with no rules. Neither policy produced a false positive. The deterministic interpreter tests transfer across new seeds, sizes and magnitudes within four predefined families; it does not measure biological generalization or a newly invented scientific strategy.
+
+Two rejected live attempts and one schema probe preceded the successful run. The probe found a wrapper around the empty tool argument. Planner protocol v2 requires an explicit bound-partition target; it completed in five calls with 7,641 reported tokens. The original prompt, failed attempts and corrected schema remain distinguishable. [Agent implementation, offline controls and live records](archive/reports/agent-improvements/README.md).
+
+The public reproduction runner rebuilt the biological inputs from public downloads, computed new ESM features, and fitted three classifier heads in a source-only temporary workspace. Both the historical feature bytes and the headline aggregate metrics matched exactly. Public preparation took 40.82 seconds; fresh extraction and evaluation took 59.73 seconds, including 0.31 seconds of head fitting. Package installation is excluded. An initial missing-score parser failure was fixed and preserved. [Verification receipt](archive/reports/reproduction/verification.json) · [Reproduction guide](REPRODUCING.md).
 
 ## Research audits that were not predictive experiments
 

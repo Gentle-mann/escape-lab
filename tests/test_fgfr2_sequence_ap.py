@@ -14,13 +14,11 @@ class Model:
     arm = "esm_biology_logistic"
     model = Head()
 
-    def predict(self, candidates):
+    def prediction_outputs(self, candidates):
         if candidates[0].get("split") == "final":
             raise ValueError("final forbidden")
-        return expit([c["margin"] for c in candidates])
-
-    def _predict_matrix(self, candidates, ids):
-        return np.array([[c["margin"]] for c in candidates])
+        margins = np.asarray([c["margin"] for c in candidates])
+        return {"probability": expit(margins), "margin": margins}
 
 
 def test_raw_scores_resolve_probability_saturation_without_changing_model():

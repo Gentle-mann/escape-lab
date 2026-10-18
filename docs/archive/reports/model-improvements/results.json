@@ -1,0 +1,823 @@
+{
+  "version": "fgfr2-sequence-revision-v1",
+  "metrics": {
+    "legacy_both": {
+      "by_fold": {
+        "pilot-0": {
+          "n": 275,
+          "budget": 28,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.025454545454545455,
+            "ap": 0.06670786156233117,
+            "hits": 3,
+            "recall": 0.42857142857142855,
+            "precision": 0.10714285714285714
+          },
+          "strong": {
+            "positives": 2,
+            "prevalence": 0.007272727272727273,
+            "ap": 0.005565343848756886,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.14027466028100746
+        },
+        "pilot-1": {
+          "n": 180,
+          "budget": 18,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.03888888888888889,
+            "ap": 0.2157009737868462,
+            "hits": 1,
+            "recall": 0.14285714285714285,
+            "precision": 0.05555555555555555
+          },
+          "strong": {
+            "positives": 0,
+            "prevalence": 0.0,
+            "ap": null,
+            "hits": 0,
+            "recall": null,
+            "precision": 0.0
+          },
+          "spearman": 0.27499202650287563
+        },
+        "pilot-2": {
+          "n": 213,
+          "budget": 22,
+          "high": {
+            "positives": 12,
+            "prevalence": 0.056338028169014086,
+            "ap": 0.05162840979543112,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "strong": {
+            "positives": 5,
+            "prevalence": 0.023474178403755867,
+            "ap": 0.01905000313004717,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.07474648632404547
+        }
+      },
+      "mean_fold_high_ap": 0.11134574838153616,
+      "high_hits": 4,
+      "strong_hits": 0,
+      "budget": 68,
+      "high_recall": 0.15384615384615385,
+      "high_precision": 0.058823529411764705,
+      "random_expected_hits": 2.6521638924455826,
+      "pooled_diagnostic": {
+        "n": 668,
+        "budget": 67,
+        "high": {
+          "positives": 26,
+          "prevalence": 0.038922155688622756,
+          "ap": 0.04855500392425171,
+          "hits": 3,
+          "recall": 0.11538461538461539,
+          "precision": 0.04477611940298507
+        },
+        "strong": {
+          "positives": 7,
+          "prevalence": 0.010479041916167664,
+          "ap": 0.007364946340366047,
+          "hits": 0,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "spearman": 0.06072086805070921
+      }
+    },
+    "floor_both": {
+      "by_fold": {
+        "pilot-0": {
+          "n": 275,
+          "budget": 28,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.025454545454545455,
+            "ap": 0.05827657616126357,
+            "hits": 1,
+            "recall": 0.14285714285714285,
+            "precision": 0.03571428571428571
+          },
+          "strong": {
+            "positives": 2,
+            "prevalence": 0.007272727272727273,
+            "ap": 0.02803379416282642,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": -0.027040766279103318
+        },
+        "pilot-1": {
+          "n": 180,
+          "budget": 18,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.03888888888888889,
+            "ap": 0.06823610491827717,
+            "hits": 1,
+            "recall": 0.14285714285714285,
+            "precision": 0.05555555555555555
+          },
+          "strong": {
+            "positives": 0,
+            "prevalence": 0.0,
+            "ap": null,
+            "hits": 0,
+            "recall": null,
+            "precision": 0.0
+          },
+          "spearman": 0.3718098295214873
+        },
+        "pilot-2": {
+          "n": 213,
+          "budget": 22,
+          "high": {
+            "positives": 12,
+            "prevalence": 0.056338028169014086,
+            "ap": 0.052016795442372595,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "strong": {
+            "positives": 5,
+            "prevalence": 0.023474178403755867,
+            "ap": 0.019052094151959957,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.07780007500478092
+        }
+      },
+      "mean_fold_high_ap": 0.05950982550730444,
+      "high_hits": 2,
+      "strong_hits": 0,
+      "budget": 68,
+      "high_recall": 0.07692307692307693,
+      "high_precision": 0.029411764705882353,
+      "random_expected_hits": 2.6521638924455826,
+      "pooled_diagnostic": {
+        "n": 668,
+        "budget": 67,
+        "high": {
+          "positives": 26,
+          "prevalence": 0.038922155688622756,
+          "ap": 0.04966999029942168,
+          "hits": 2,
+          "recall": 0.07692307692307693,
+          "precision": 0.029850746268656716
+        },
+        "strong": {
+          "positives": 7,
+          "prevalence": 0.010479041916167664,
+          "ap": 0.01255144681200106,
+          "hits": 0,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "spearman": 0.12583743304631886
+      }
+    },
+    "legacy_wt": {
+      "by_fold": {
+        "pilot-0": {
+          "n": 275,
+          "budget": 28,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.025454545454545455,
+            "ap": 0.07034081038681522,
+            "hits": 3,
+            "recall": 0.42857142857142855,
+            "precision": 0.10714285714285714
+          },
+          "strong": {
+            "positives": 2,
+            "prevalence": 0.007272727272727273,
+            "ap": 0.005636363636363636,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.1732967888981853
+        },
+        "pilot-1": {
+          "n": 180,
+          "budget": 18,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.03888888888888889,
+            "ap": 0.21505060704032644,
+            "hits": 1,
+            "recall": 0.14285714285714285,
+            "precision": 0.05555555555555555
+          },
+          "strong": {
+            "positives": 0,
+            "prevalence": 0.0,
+            "ap": null,
+            "hits": 0,
+            "recall": null,
+            "precision": 0.0
+          },
+          "spearman": 0.30713705155508914
+        },
+        "pilot-2": {
+          "n": 213,
+          "budget": 22,
+          "high": {
+            "positives": 12,
+            "prevalence": 0.056338028169014086,
+            "ap": 0.056665799056956165,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "strong": {
+            "positives": 5,
+            "prevalence": 0.023474178403755867,
+            "ap": 0.020741848694636803,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.10492597624186309
+        }
+      },
+      "mean_fold_high_ap": 0.11401907216136596,
+      "high_hits": 4,
+      "strong_hits": 0,
+      "budget": 68,
+      "high_recall": 0.15384615384615385,
+      "high_precision": 0.058823529411764705,
+      "random_expected_hits": 2.6521638924455826,
+      "pooled_diagnostic": {
+        "n": 668,
+        "budget": 67,
+        "high": {
+          "positives": 26,
+          "prevalence": 0.038922155688622756,
+          "ap": 0.05022056686270286,
+          "hits": 3,
+          "recall": 0.11538461538461539,
+          "precision": 0.04477611940298507
+        },
+        "strong": {
+          "positives": 7,
+          "prevalence": 0.010479041916167664,
+          "ap": 0.007777121433120914,
+          "hits": 0,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "spearman": 0.10283095878553032
+      }
+    },
+    "legacy_delta": {
+      "by_fold": {
+        "pilot-0": {
+          "n": 275,
+          "budget": 28,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.025454545454545455,
+            "ap": 0.06658151438300784,
+            "hits": 3,
+            "recall": 0.42857142857142855,
+            "precision": 0.10714285714285714
+          },
+          "strong": {
+            "positives": 2,
+            "prevalence": 0.007272727272727273,
+            "ap": 0.0055375043207742825,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.13819105046017138
+        },
+        "pilot-1": {
+          "n": 180,
+          "budget": 18,
+          "high": {
+            "positives": 7,
+            "prevalence": 0.03888888888888889,
+            "ap": 0.22128576346926732,
+            "hits": 2,
+            "recall": 0.2857142857142857,
+            "precision": 0.1111111111111111
+          },
+          "strong": {
+            "positives": 0,
+            "prevalence": 0.0,
+            "ap": null,
+            "hits": 0,
+            "recall": null,
+            "precision": 0.0
+          },
+          "spearman": 0.20810930378509623
+        },
+        "pilot-2": {
+          "n": 213,
+          "budget": 22,
+          "high": {
+            "positives": 12,
+            "prevalence": 0.056338028169014086,
+            "ap": 0.053431692530374164,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "strong": {
+            "positives": 5,
+            "prevalence": 0.023474178403755867,
+            "ap": 0.019652025997570724,
+            "hits": 0,
+            "recall": 0.0,
+            "precision": 0.0
+          },
+          "spearman": 0.1449219031345541
+        }
+      },
+      "mean_fold_high_ap": 0.11376632346088311,
+      "high_hits": 5,
+      "strong_hits": 0,
+      "budget": 68,
+      "high_recall": 0.19230769230769232,
+      "high_precision": 0.07352941176470588,
+      "random_expected_hits": 2.6521638924455826,
+      "pooled_diagnostic": {
+        "n": 668,
+        "budget": 67,
+        "high": {
+          "positives": 26,
+          "prevalence": 0.038922155688622756,
+          "ap": 0.0485698863233077,
+          "hits": 3,
+          "recall": 0.11538461538461539,
+          "precision": 0.04477611940298507
+        },
+        "strong": {
+          "positives": 7,
+          "prevalence": 0.010479041916167664,
+          "ap": 0.00742713844076482,
+          "hits": 0,
+          "recall": 0.0,
+          "precision": 0.0
+        },
+        "spearman": 0.05850208538758467
+      }
+    }
+  },
+  "gates": {
+    "stability": {
+      "status": "fail",
+      "checks": {
+        "mean_fold_ap_gain_at_least_001": false,
+        "no_fold_ap_loss": false,
+        "no_high_hit_loss": false,
+        "maximum_absolute_margin_reduced_tenfold": true
+      },
+      "mean_fold_ap_gain": -0.05183592287423172,
+      "high_hits_gain": -2,
+      "margin_max_before": 1084487.1128465498,
+      "margin_max_after": 20.129137691660976
+    },
+    "representation": {
+      "status": "diagnostic_only",
+      "default_changed": false,
+      "arms": [
+        "legacy_both",
+        "legacy_wt",
+        "legacy_delta"
+      ]
+    }
+  },
+  "fit_count": 12,
+  "protocol_sha256": "4f8a4ce378e449189e05f24d3e6c8b7615d541c7e131101ffa749ed9b7cdc0ad",
+  "baseline_reproduction": {
+    "probability": {
+      "n": 668,
+      "max_abs_difference": 0.0,
+      "tolerance": 1e-12
+    },
+    "margin": {
+      "n": 668,
+      "max_abs_difference": 0.0,
+      "tolerance": 1e-12
+    }
+  },
+  "integrity": {
+    "protected_files": 529,
+    "changed": []
+  },
+  "fitting_seconds": 0.9186818330017559,
+  "elapsed_seconds": 2.1328765409998596,
+  "failures": [],
+  "diagnostics": [
+    {
+      "arm": "legacy_both",
+      "fold": "pilot-0",
+      "n": 275,
+      "probability_unique": 140,
+      "probability_exact_one": 136,
+      "margin_abs_max": 1084487.1128465498,
+      "model": {
+        "arm": "esm_biology_logistic",
+        "training_n": 393,
+        "high_count": 19,
+        "feature_count": 298,
+        "biology_feature_count": 266,
+        "sequence_components": {
+          "wt": 16,
+          "delta": 16
+        },
+        "sequence_branches": "both",
+        "biology_scaling": {
+          "mode": "legacy",
+          "floor": 0.01,
+          "minimum_training_scale": 1.1710311486659349e-08,
+          "minimum_effective_scale": 1.1710311486659349e-08,
+          "below_floor_count": 10,
+          "floored_feature_names": []
+        },
+        "coefficient_norm": 1.7206047661107624,
+        "iterations": 88,
+        "convergence_warning": false
+      }
+    },
+    {
+      "arm": "legacy_both",
+      "fold": "pilot-1",
+      "n": 180,
+      "probability_unique": 180,
+      "probability_exact_one": 0,
+      "margin_abs_max": 35.658455487468174,
+      "model": {
+        "arm": "esm_biology_logistic",
+        "training_n": 488,
+        "high_count": 19,
+        "feature_count": 296,
+        "biology_feature_count": 264,
+        "sequence_components": {
+          "wt": 16,
+          "delta": 16
+        },
+        "sequence_branches": "both",
+        "biology_scaling": {
+          "mode": "legacy",
+          "floor": 0.01,
+          "minimum_training_scale": 0.0005909178432972817,
+          "minimum_effective_scale": 0.0005909178432972817,
+          "below_floor_count": 10,
+          "floored_feature_names": []
+        },
+        "coefficient_norm": 1.62002555432966,
+        "iterations": 91,
+        "convergence_warning": false
+      }
+    },
+    {
+      "arm": "legacy_both",
+      "fold": "pilot-2",
+      "n": 213,
+      "probability_unique": 213,
+      "probability_exact_one": 0,
+      "margin_abs_max": 16.66027484126748,
+      "model": {
+        "arm": "esm_biology_logistic",
+        "training_n": 455,
+        "high_count": 14,
+        "feature_count": 300,
+        "biology_feature_count": 268,
+        "sequence_components": {
+          "wt": 16,
+          "delta": 16
+        },
+        "sequence_branches": "both",
+        "biology_scaling": {
+          "mode": "legacy",
+          "floor": 0.01,
+          "minimum_training_scale": 0.006486929946702641,
+          "minimum_effective_scale": 0.006486929946702641,
+          "below_floor_count": 2,
+          "floored_feature_names": []
+        },
+        "coefficient_norm": 1.588817095345273,
+        "iterations": 71,
+        "convergence_warning": false
+      }
+    },
+    {
+      "arm": "floor_both",
+      "fold": "pilot-0",
+      "n": 275,
+      "probability_unique": 275,
+      "probability_exact_one": 0,
+      "margin_abs_max": 16.091611868229037,
+      "model": {
+        "arm": "esm_biology_logistic",
+        "training_n": 393,
+        "high_count": 19,
+        "feature_count": 298,
+        "biology_feature_count": 266,
+        "sequence_components": {
+          "wt": 16,
+          "delta": 16
+        },
+        "sequence_branches": "both",
+        "biology_scaling": {
+          "mode": "variance_floor",
+          "floor": 0.01,
+          "minimum_training_scale": 1.1710311486659349e-08,
+          "minimum_effective_scale": 0.01,
+          "below_floor_count": 10,
+          "floored_feature_names": [
+            "activation_activation_loop_y653_sequence_proximity_x_proline_delta",
+            "activation_activation_loop_y654_sequence_proximity_x_proline_delta",
+            "activation_brake_k638_sequence_proximity",
+            "activation_brake_k638_sequence_proximity_x_charge_delta",
+            "activation_brake_k638_sequence_proximity_x_hydropathy_delta",
+            "activation_brake_k638_sequence_proximity_x_proline_delta",
+            "activation_position_rbf_450",
+            "activation_position_rbf_470",
+            "activation_position_rbf_490",
+            "activation_position_rbf_510"
+          ]
+        },
+        "coefficient_norm": 1.7237866784042848,
+        "iterations": 83,
+        "convergence_warning": false
+      }
+    },
+    {
+      "arm": "floor_both",
+      "fold": "pilot-1",
+      "n": 180,
+      "probability_unique": 180,
+      "probability_exact_one": 0,
+      "margin_abs_max": 20.129137691660976,
+      "model": {
+        "arm": "esm_biology_logistic",
+        "training_n": 488,
+        "high_count": 19,
+        "feature_count": 296,
+        "biology_feature_count": 264,
+        "sequence_components": {
+          "wt": 16,
+          "delta": 16
+        },
+        "sequence_branches": "both",
+        "biology_scaling": {
+          "mode": "variance_floor",
+          "floor": 0.01,
+          "minimum_training_scale": 0.0005909178432972817,
+          "minimum_effective_scale": 0.01,
+          "below_floor_count": 10,
+          "floored_feature_names": [
+            "activation_activation_loop_y653_sequence_proximity_x_proline_delta",
+            "activation_activation_loop_y654_sequence_proximity_x_proline_delta",
+            "activation_brake_e562_sequence_proximity",
+            "activation_brake_e562_sequence_proximity_x_charge_delta",
+            "activation_brake_e562_sequence_proximity_x_hydropathy_delta",
+            "activation_brake_e562_sequence_proximity_x_proline_delta",
+            "activation_brake_n546_sequence_proximity_x_charge_delta",
+            "activation_brake_n546_sequence_proximity_x_hydropathy_delta",
+            "activation_brake_n546_sequence_proximity_x_proline_delta",
+            "activation_position_rbf_570"
+          ]
+        },
+        "coefficient_norm": 1.6192343981360837,
+        "iterations": 91,
+        "convergence_warning": false
+      }
+    },
+    {
+      "arm": "floor_both",
+      "fold": "pilot-2",
+      "n": 213,
+      "probability_unique": 213,
+      "probability_exact_one": 0,
+      "margin_abs_max": 16.616814337714594,
+      "model": {
+        "arm": "esm_biology_logistic",
+        "training_n": 455,
+        "high_count": 14,
+        "feature_count": 300,
+        "biology_feature_count": 268,
+        "sequence_components": {
+          "wt": 16,
+          "delta": 16
+        },
+        "sequence_branches": "both",
+        "biology_scaling": {
+          "mode": "variance_floor",
+          "floor": 0.01,
+          "minimum_training_scale": 0.006486929946702641,
+          "minimum_effective_scale": 0.01,
+          "below_floor_count": 2,
+          "floored_feature_names": [
+            "activation_activation_loop_y653_sequence_proximity_x_proline_delta",
+            "activation_activation_loop_y654_sequence_proximity_x_proline_delta"
+          ]
+        },
+        "coefficient_norm": 1.5901094493380545,
+        "iterations": 94,
+        "convergence_warning": false
+      }
+    },
+    {
+      "arm": "legacy_wt",
+      "fold": "pilot-0",
+      "n": 275,
+      "probability_unique": 142,
+      "probability_exact_one": 134,
+      "margin_abs_max": 909440.3474281974,
+      "model": {
+        "arm": "esm_biology_logistic",
+        "training_n": 393,
+        "high_count": 19,
+        "feature_count": 282,
+        "biology_feature_count": 266,
+        "sequence_components": {
+          "wt": 16
+        },
+        "sequence_branches": "wt",
+        "biology_scaling": {
+          "mode": "legacy",
+          "floor": 0.01,
+          "minimum_training_scale": 1.1710311486659349e-08,
+          "minimum_effective_scale": 1.1710311486659349e-08,
+          "below_floor_count": 10,
+          "floored_feature_names": []
+        },
+        "coefficient_norm": 1.79998669680671,
+        "iterations": 75,
+        "convergence_warning": false
+      }
+    },
+    {
+      "arm": "legacy_wt",
+      "fold": "pilot-1",
+      "n": 180,
+      "probability_unique": 180,
+      "probability_exact_one": 0,
+      "margin_abs_max": 33.027179104204016,
+      "model": {
+        "arm": "esm_biology_logistic",
+        "training_n": 488,
+        "high_count": 19,
+        "feature_count": 280,
+        "biology_feature_count": 264,
+        "sequence_components": {
+          "wt": 16
+        },
+        "sequence_branches": "wt",
+        "biology_scaling": {
+          "mode": "legacy",
+          "floor": 0.01,
+          "minimum_training_scale": 0.0005909178432972817,
+          "minimum_effective_scale": 0.0005909178432972817,
+          "below_floor_count": 10,
+          "floored_feature_names": []
+        },
+        "coefficient_norm": 1.807445024293583,
+        "iterations": 63,
+        "convergence_warning": false
+      }
+    },
+    {
+      "arm": "legacy_wt",
+      "fold": "pilot-2",
+      "n": 213,
+      "probability_unique": 213,
+      "probability_exact_one": 0,
+      "margin_abs_max": 11.57305100201506,
+      "model": {
+        "arm": "esm_biology_logistic",
+        "training_n": 455,
+        "high_count": 14,
+        "feature_count": 284,
+        "biology_feature_count": 268,
+        "sequence_components": {
+          "wt": 16
+        },
+        "sequence_branches": "wt",
+        "biology_scaling": {
+          "mode": "legacy",
+          "floor": 0.01,
+          "minimum_training_scale": 0.006486929946702641,
+          "minimum_effective_scale": 0.006486929946702641,
+          "below_floor_count": 2,
+          "floored_feature_names": []
+        },
+        "coefficient_norm": 1.7079421082870065,
+        "iterations": 53,
+        "convergence_warning": false
+      }
+    },
+    {
+      "arm": "legacy_delta",
+      "fold": "pilot-0",
+      "n": 275,
+      "probability_unique": 140,
+      "probability_exact_one": 136,
+      "margin_abs_max": 2197846.4711643206,
+      "model": {
+        "arm": "esm_biology_logistic",
+        "training_n": 393,
+        "high_count": 19,
+        "feature_count": 282,
+        "biology_feature_count": 266,
+        "sequence_components": {
+          "delta": 16
+        },
+        "sequence_branches": "delta",
+        "biology_scaling": {
+          "mode": "legacy",
+          "floor": 0.01,
+          "minimum_training_scale": 1.1710311486659349e-08,
+          "minimum_effective_scale": 1.1710311486659349e-08,
+          "below_floor_count": 10,
+          "floored_feature_names": []
+        },
+        "coefficient_norm": 1.838139084038958,
+        "iterations": 72,
+        "convergence_warning": false
+      }
+    },
+    {
+      "arm": "legacy_delta",
+      "fold": "pilot-1",
+      "n": 180,
+      "probability_unique": 180,
+      "probability_exact_one": 0,
+      "margin_abs_max": 43.688612990804046,
+      "model": {
+        "arm": "esm_biology_logistic",
+        "training_n": 488,
+        "high_count": 19,
+        "feature_count": 280,
+        "biology_feature_count": 264,
+        "sequence_components": {
+          "delta": 16
+        },
+        "sequence_branches": "delta",
+        "biology_scaling": {
+          "mode": "legacy",
+          "floor": 0.01,
+          "minimum_training_scale": 0.0005909178432972817,
+          "minimum_effective_scale": 0.0005909178432972817,
+          "below_floor_count": 10,
+          "floored_feature_names": []
+        },
+        "coefficient_norm": 1.7771107925104213,
+        "iterations": 74,
+        "convergence_warning": false
+      }
+    },
+    {
+      "arm": "legacy_delta",
+      "fold": "pilot-2",
+      "n": 213,
+      "probability_unique": 213,
+      "probability_exact_one": 0,
+      "margin_abs_max": 15.982698497732667,
+      "model": {
+        "arm": "esm_biology_logistic",
+        "training_n": 455,
+        "high_count": 14,
+        "feature_count": 284,
+        "biology_feature_count": 268,
+        "sequence_components": {
+          "delta": 16
+        },
+        "sequence_branches": "delta",
+        "biology_scaling": {
+          "mode": "legacy",
+          "floor": 0.01,
+          "minimum_training_scale": 0.006486929946702641,
+          "minimum_effective_scale": 0.006486929946702641,
+          "below_floor_count": 2,
+          "floored_feature_names": []
+        },
+        "coefficient_norm": 1.6479774484270464,
+        "iterations": 71,
+        "convergence_warning": false
+      }
+    }
+  ]
+}

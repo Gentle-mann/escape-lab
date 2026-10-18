@@ -1,0 +1,9 @@
+{
+  "parent_hash": "1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a",
+  "rules": [
+    "inspect_feature_shift_before_promotion",
+    "inspect_saturation_before_ranking"
+  ],
+  "source": "llm_proposed",
+  "version": 2
+}

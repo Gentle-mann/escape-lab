@@ -1,0 +1,13 @@
+{
+  "accepted": true,
+  "challenger_false_positive_rate": 0.0,
+  "challenger_hash": "6218a4efcf241c2508f04f12f3b593db92b065e8e1ed48e96f78dfe4aa63116c",
+  "challenger_success_rate": 1.0,
+  "heldout_cases": 48,
+  "parent_false_positive_rate": 0.0,
+  "parent_hash": "1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a",
+  "parent_success_rate": 0.25,
+  "referee_hash": "cc3440c175a3c2a853d6d07de2a5abcaf23f7a04ad5c976a5316b6563f34406e",
+  "scope": "synthetic_mechanism_test",
+  "suite_hash": "9cb3697ca9c84d09b7a3922a8a2e906023e3cb555e251dbeb43a69cd850f04c8"
+}

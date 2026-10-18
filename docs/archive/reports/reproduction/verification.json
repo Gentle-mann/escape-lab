@@ -1,0 +1,124 @@
+{
+  "attempts": [
+    {
+      "reason": "Source missing-score marker dot was rejected. Importer fixed and regression fixture added.",
+      "stage": "prepare-v1",
+      "status": "failed"
+    },
+    {
+      "fresh_downloads": true,
+      "stage": "prepare-v2",
+      "status": "passed"
+    },
+    {
+      "fits": 3,
+      "fresh_embeddings": true,
+      "stage": "headline-v1",
+      "status": "passed"
+    }
+  ],
+  "checkpoint_device": "mps",
+  "checkpoint_packages": {
+    "huggingface-hub": "0.36.2",
+    "numpy": "2.5.4",
+    "safetensors": "0.8.0",
+    "torch": "2.8.0",
+    "transformers": "4.57.1"
+  },
+  "comparison": {
+    "checks": {
+      "margin": {
+        "ap_matches_at_1e_8": true,
+        "budget_matches": true,
+        "high_hits_match": true
+      },
+      "probability": {
+        "ap_matches_at_1e_8": true,
+        "budget_matches": true,
+        "high_hits_match": true
+      }
+    },
+    "comparison_scope": "Published aggregate development metrics; no historical predictions read",
+    "expected": {
+      "margin": {
+        "budget": 68,
+        "high_hits": 4,
+        "mean_fold_high_ap": 0.11134574838153616,
+        "strong_hits": 0
+      },
+      "probability": {
+        "budget": 68,
+        "high_hits": 1,
+        "mean_fold_high_ap": 0.09732091648081248,
+        "strong_hits": 0
+      }
+    },
+    "matches_published_aggregate": true
+  },
+  "external_or_original_final_scored": false,
+  "feature_sha256": "87dc4739e719963b49d080869c25c8a1984ee8fd34e41c218ca5a9cdb9a38c41",
+  "head_packages": {
+    "biopython": "1.88",
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "historical_feature_bytes_match": true,
+  "input_sha256": {
+    "biology/feature-cache.json": "f59deba27e57c35320fc4940331d86bf7f146a9b7f95e0db733e075ac8763fa1",
+    "biology/manifest.json": "a2ada86000295a868b1522e91ca73641415a93453159ecc8c1b7e7370cd04d9c",
+    "biology/references.json": "ef984e1d939104d0fa06512d2b3da483cde4d5fe2e8644c405c66ae34ac7ef4f",
+    "metadata/FGFR1-fut.json": "bb95614cf91999a699294da91ee10624b860173754b4e84eea3782da590e192c",
+    "metadata/FGFR1-pem.json": "15068bae1391016f6efb7adf2bcd770d4103905a7dbb41f5afa2b1d705a72b00",
+    "metadata/FGFR2-fut.json": "03c282c43fce154dcfa73309e2a9cf84b4bab71bd851091aaa09900a1db193d4",
+    "metadata/FGFR2-pem.json": "52224a0820f1b84b028d4e9a2ea8e8b5f26eeca21ff6794ba1d3f0e4d2cc8a85",
+    "metadata/FGFR3-fut.json": "c62a4805cdc104bfe99cafa6e17decfabadeb9e0979126924be46850b05499de",
+    "metadata/FGFR3-pem.json": "1e82182297a13f9c6386c0dfb4f8ef2e170907e79db60131eb6140c49c5bf21d",
+    "metadata/FGFR4-fut.json": "8873cb65bf006cb226e522147e90d6956e272cea287755e530f715336fffe15e",
+    "metadata/FGFR4-pem.json": "9f81f862ec50e4be79ff03aa65e1394699d1627109ea26aa28d338f12c96618a",
+    "predictor-scores.csv": "a3557e0c444bfa55929a6c1a4fa806eb3167c3e9575be73032986fad7113e16b",
+    "structures/6MZW.cif": "25160cf4e7f75078847d03c4bb35bd45c9ab6bb257e514e611f399e569c11fdc",
+    "structures/7WCL.cif": "9887c1d0c387c6e54d22d459329e44fd9aa06021d2efd54649ead794d89618f2",
+    "supplement.xlsx": "ca1b5d5c7172d7f9ec55aa47ea2c69a516b9f1e2a08b10956f290c0a74f51e52"
+  },
+  "inputs": "Public sources freshly downloaded during this verification, then copied into that temporary workspace",
+  "metrics": {
+    "margin": {
+      "budget": 68,
+      "high_hits": 4,
+      "mean_fold_high_ap": 0.11134574838153616,
+      "strong_hits": 0
+    },
+    "probability": {
+      "budget": 68,
+      "high_hits": 1,
+      "mean_fold_high_ap": 0.09732091648081248,
+      "strong_hits": 0
+    }
+  },
+  "model_weights": "Pinned checkpoint files resolved through Hugging Face cache and verified by SHA-256; embeddings were freshly computed",
+  "python": "3.12.13",
+  "recipe_sha256": "bd91feb8b2f7ae9250e6c9fa6dbb0c60138c6098ab487534a43689531c16dbc5",
+  "schema_version": "public-rebuild-verification-v1",
+  "source_sha256": {
+    "activation_data.py": "a83c7e082c75c83ad23e41d3cb8f32d9cb493c48f1c7f5f2ae6f716c4264ebcc",
+    "activation_features.py": "d6d01727c8cf9452b4fed86c356e160bc2bbd17dc37ce934821dbecc38d076dc",
+    "biological_features.py": "52a045f206c98ac5e2c5cfc0b316e7d13f874980270353156c5cc73bf783e017",
+    "fgfr2_sequence_features.py": "45261c08d5403811c2a595243060e5423a0ed72952dd07865394b7949a42c886",
+    "fgfr2_sequence_models.py": "474895970f996bededd5d23546d966f29c836b2594d5c4ff5f293d21ebbb45b0",
+    "fgfr2_sequence_run.py": "2b62d45534a89ae693bf3d618e1ba9de1b6005ad5a80c94928293243667cc34e",
+    "reproduction.py": "53ae9eaaea04607ce51326196532ea42f511efe1785174af5e2c4ca490301886"
+  },
+  "status": "passed",
+  "timing": {
+    "dependency_installation_included": false,
+    "feature_extraction_seconds": 58.5797983750017,
+    "fresh_extraction_and_evaluation_seconds": 59.72760495900002,
+    "head_fitting_seconds": 0.3100947079983598,
+    "public_preparation_seconds": 40.822816625000996
+  },
+  "used_historical_embeddings": false,
+  "used_historical_predictions": false,
+  "verified_at": "2026-10-18T00:27:06.804624+00:00",
+  "workspace": "Fresh temporary workspace containing source and lock files, with no original data/reports/research directories"
+}

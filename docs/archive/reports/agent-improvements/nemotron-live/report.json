@@ -1,0 +1,218 @@
+{
+  "benchmark_version": "synthetic-diagnostic-transfer-v1",
+  "status": "completed",
+  "evidence_kind": "synthetic_mechanism_test",
+  "provider": "crusoe",
+  "live_model_calls": 5,
+  "training_case_hashes": [
+    "ef44150bcf2816d4c6dbb41e128c91a080812f67fde9c6c91935a6ef4092f785",
+    "99f7da282e1db079b5e2ccbce40f4aad56df8a4b2baf2408ba95f47a9764462d"
+  ],
+  "heldout_case_hashes": [
+    "1a302f02463bfca7d70086385ada29e46339971273846845804902032e3d2bbf",
+    "8c6cc9a522a1902f57aaa04f8c5bb0d43a2bf6601310ea3dc3e9dad06038e67a",
+    "443f3f8586c0146b13360240c53cd5728faf7a1d3cb37703de62e41dee0e7ad2",
+    "91dd931a21e4bf6e73b1efb9a6909bb4f00ba076dbfe43e7f74a6cfe74ea79dd",
+    "71ca88bf3b1ad28bd508945e4fe3255f66fbfad44e45a23243fa415c0c7df356",
+    "9570540c50714e5f392826b0bb7e768c0fbf85d1a8dc6cbcaad0bef8aeaa2f78",
+    "2790929aaaa2e360a9b53066223ab95fc5ea8629fb035b9d4881e0b6161e1984",
+    "c795fd386a222b7de9fbfa7c97279861b30cc0de4b41fff4630f8ff010b58c7f",
+    "e69bef27f707f5baed8e09acb39ef558c99e3c8425ae399b19c41a4c3d9a3d75",
+    "d174f5de3beaac08e5be48f9541e1af936bf032ba746e3cceff86fa399f24f6e",
+    "f316301942f6bc18c06c4858677343d8682f6a97d6efc243286dc8cff727ad20",
+    "37bef968fad95297e6201043c2641dfce9986fbe94f9a83896e107445155b932",
+    "1871bdc2d27c062171b9f6b2202d18e9c05cdad4ea3274baa3f568bd692f293a",
+    "8e0668c8c900943836e02a9fc6a23844e4e84aef48bb6ce889603fc6e50c41ab",
+    "b1440a9d21dd1545d356b4ee903e563caee26fa303a16c0d9ec450416d27938f",
+    "6a6a8ac192a9a20c8fd33fb3523c7a57860d4c2b815b797c72931d8150cd62b2",
+    "e8805a7a683941f16a8c91202c6f67c131f2617c94151aa27c1d098f6115af36",
+    "03c60c9d137a5dac11759b5cc293bb22daff15b6ea28bddd750ae0fe86439a47",
+    "3c024a9422226fb996d50a5521d9ef03391ea3e27acfa18f3408549993ec0dc0",
+    "94c8e37a0dd38a0b89dbb9802c77029e612db987111aa8d6aa7726f5ed374784",
+    "8172393851f41474917b4b1e8989916456b823a90967e3f55c0b087797928ff2",
+    "059d78d8f64f0a6b4c1a3b4ec521d43d71f09d2b75ce1cadaff89c95f9d7dc5c",
+    "cee8dcf80d6bd0960b5fa33d23399b6c6597101004c63cd1b46b84e63cce8193",
+    "70dadb7467e3d35319e8b34d692722cbe1ac05cbc8a55483f3778f5234d6ea36",
+    "a6b27cd0c1cd66bc87749f9bf1657f14b1022d94aa2c3ed779f4b1e57a0f9cbc",
+    "ef408e7be9b9ba3c51608f40f4b7b42211096d8752a3ad043bc35d6985b9bbcd",
+    "5112736d01feff2fab1195dda525a86c3f3ac5257a2b560523bf1ac5564183b7",
+    "19cb5fb70e4fb9677cdc0c66eed7103c17514642726edfec625b67029eee797b",
+    "d72f040ad3940f1538536315b5df1ecbdad30ab9ac4fb62415932808d225ff79",
+    "7fdc56ec5bc8d9ea929b13dc3f77c91a8523df3dbb2c93020b6f2f0323156a1e",
+    "62e0b124d1c9485d3d1d3e3b462b3014da80b9ea092442375588eb632499cd5c",
+    "350e2ec3fab8ae3f1d338c7dc4649616a74f9382ffed3ee8ff3113364403c151",
+    "dd514fd0142440986085fc05601d3eff8d10a76ded331c3e205a2cc572654a15",
+    "8e26e93b3779d2edead1db5a0f19507a0b7192cfbc9fc4b211429dfc00f2d0f1",
+    "16d0b4bf90e3a87b55be9d879da0d18b9b093f035acc32a884dd3689710cd9cc",
+    "849eaaf611c74b19dbee8488ad8619b89f1bb2b514c8e855ea8dcf0fb91b8d2a",
+    "03663609b859c21aed88a4230725511dfe63567eeb7895481bc1f245467e6498",
+    "8f7c0bfc2d3f9e224f5025282e2ce77fdd7d74233d05e53602399ffdbc925a44",
+    "386462045324563c8259e8aec5a63b0b4160adca560ee774a960a5865038620a",
+    "da5ebd0e6878afe8baffa169b90423f48d9b0943f49dd78b01e449056fb083d5",
+    "ba0d89b9ad1c4ad28f1f0ed5fb4e9ee75cafb3c2f12735160708b1a22a326c0f",
+    "a8d0c0da3977b380a1be90e87d63497f843c77bfc1ae3e3967cee3f7dda909fc",
+    "820f1f342bdff66e06b280c2446c1e5326f3c65d0e0d6e83ccb2c1afd5f122b7",
+    "2aebbe388a717827ea7a5da9b4bd7fdd6dae3c720472f5e6b9043d0072359a17",
+    "dcbe11b61ab000c4233c5aa514ca5e7dbd714480c3d98f70da22283a07201aa5",
+    "2917842fa6ab311d1a135b79af56deb03c1e0d859871ad7c32972b66fab51d5e",
+    "fd92c5a4e9309dc7f26c80a4cbcff9c9015e28c0a51c330b5fc0a6776fa5bb57",
+    "831a756f374b35645ddc1cd96ce4967b23b2b7b506d419ab3860d2721c7bce2f"
+  ],
+  "policy_frozen_before_heldout_generation": true,
+  "freeze_manifest_hash": "706b547a2700b049008c5880d29a4f8a7693d61a313cb3d2a083395616bf198c",
+  "frozen_referee_hash": "cc3440c175a3c2a853d6d07de2a5abcaf23f7a04ad5c976a5316b6563f34406e",
+  "training": {
+    "parent": {
+      "cases": 2,
+      "correct": 1,
+      "success_rate": 0.5,
+      "false_positive_rate": 0.0
+    },
+    "challenger": {
+      "cases": 2,
+      "correct": 2,
+      "success_rate": 1.0,
+      "false_positive_rate": 0.0
+    }
+  },
+  "heldout": {
+    "parent": {
+      "cases": 48,
+      "correct": 12,
+      "success_rate": 0.25,
+      "false_positive_rate": 0.0
+    },
+    "challenger": {
+      "cases": 48,
+      "correct": 48,
+      "success_rate": 1.0,
+      "false_positive_rate": 0.0
+    }
+  },
+  "training_run": {
+    "status": "stopped",
+    "error_category": null,
+    "calls": 5,
+    "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+    "prompt_version": "fgfr-activation-diagnostic-planner-v2",
+    "prompt_hash": "4f3c3bade0e3ee7d1b3a8bf604acb0720cf5be3e3b772845c929256ead8d0c41",
+    "tool_schema_template_hash": "b27b718da80867cd933da7631130ca53c7593c6d4f2d0766d18f75372f4271ff",
+    "input_policy_hash": "1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a",
+    "history": [
+      {
+        "action": "inspect_score_saturation",
+        "status": "ok",
+        "result": {
+          "nonfinite_score_fraction": 0.0,
+          "probability_saturated_fraction": 1.0,
+          "probability_unique_fraction": 0.012987012987012988,
+          "ranking_score_abs_max": 225.08135078965415,
+          "score_count": 77
+        }
+      },
+      {
+        "action": "compare_rankings",
+        "status": "ok",
+        "result": {
+          "probability_ap": 0.15584415584415584,
+          "ranking_ap": 1.0,
+          "delta_ap": 0.8441558441558441
+        }
+      },
+      {
+        "action": "inspect_feature_shift",
+        "status": "ok",
+        "result": {
+          "feature_shift_fraction": 0.02922077922077922,
+          "near_constant_feature_count": 1,
+          "scaled_feature_abs_max": 91.8704800544775
+        }
+      },
+      {
+        "action": "propose_policy_revision",
+        "status": "ok",
+        "result": {
+          "proposed_hash": "6218a4efcf241c2508f04f12f3b593db92b065e8e1ed48e96f78dfe4aa63116c",
+          "rules": [
+            "inspect_feature_shift_before_promotion",
+            "inspect_saturation_before_ranking"
+          ]
+        }
+      },
+      {
+        "action": "stop",
+        "status": "ok",
+        "result": {
+          "reason": "diagnostics_complete"
+        }
+      }
+    ],
+    "response_audit": [
+      {
+        "call_index": 1,
+        "finish_reason": "tool_calls",
+        "tool_call_count": 1,
+        "known_actions": [
+          "inspect_score_saturation"
+        ]
+      },
+      {
+        "call_index": 2,
+        "finish_reason": "tool_calls",
+        "tool_call_count": 1,
+        "known_actions": [
+          "compare_rankings"
+        ]
+      },
+      {
+        "call_index": 3,
+        "finish_reason": "tool_calls",
+        "tool_call_count": 1,
+        "known_actions": [
+          "inspect_feature_shift"
+        ]
+      },
+      {
+        "call_index": 4,
+        "finish_reason": "tool_calls",
+        "tool_call_count": 1,
+        "known_actions": [
+          "propose_policy_revision"
+        ]
+      },
+      {
+        "call_index": 5,
+        "finish_reason": "tool_calls",
+        "tool_call_count": 1,
+        "known_actions": [
+          "stop"
+        ]
+      }
+    ],
+    "parallel_tool_calls": false,
+    "policy_proposal": {
+      "version": 2,
+      "parent_hash": "1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a",
+      "rules": [
+        "inspect_feature_shift_before_promotion",
+        "inspect_saturation_before_ranking"
+      ],
+      "source": "llm_proposed"
+    },
+    "budget_charge_tokens": 7641
+  },
+  "promotion_receipt": {
+    "parent_hash": "1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a",
+    "challenger_hash": "6218a4efcf241c2508f04f12f3b593db92b065e8e1ed48e96f78dfe4aa63116c",
+    "referee_hash": "cc3440c175a3c2a853d6d07de2a5abcaf23f7a04ad5c976a5316b6563f34406e",
+    "suite_hash": "9cb3697ca9c84d09b7a3922a8a2e906023e3cb555e251dbeb43a69cd850f04c8",
+    "scope": "synthetic_mechanism_test",
+    "heldout_cases": 48,
+    "parent_success_rate": 0.25,
+    "challenger_success_rate": 1.0,
+    "parent_false_positive_rate": 0.0,
+    "challenger_false_positive_rate": 0.0,
+    "accepted": true
+  },
+  "interpretation": "Generated numerical failure cases test persistent diagnostic rules. They do not estimate biological prediction quality or clinical benefit. Heldout cases vary seeds, sizes and magnitudes within four predefined families. The proposal used the recorded Crusoe model; heldout execution uses the fixed rule interpreter."
+}

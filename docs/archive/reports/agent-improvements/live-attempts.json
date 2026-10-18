@@ -1,0 +1,45 @@
+{
+  "scope": "Operational synthetic verification; no biological fits or external outcomes",
+  "attempts": [
+    {
+      "source": "reports/agent-improvements/nemotron-synthetic-20261018T002539Z/report.json",
+      "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+      "status": "invalid_response",
+      "prompt_version": "fgfr-activation-diagnostic-planner-v1",
+      "calls": 1,
+      "reported_budget_charge_tokens": 840,
+      "error_category": null,
+      "explanation": "Strict argument validation failed before any tool executed. Original audit did not capture enough detail to identify the returned shape."
+    },
+    {
+      "source": "reports/agent-improvements/nemotron-serial-20261018T002725Z/report.json",
+      "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+      "status": "invalid_response",
+      "prompt_version": "fgfr-activation-diagnostic-planner-v1",
+      "calls": 1,
+      "reported_budget_charge_tokens": 1052,
+      "error_category": "invalid_tool_arguments",
+      "explanation": "One allowed tool call, but invalid arguments; serial mode did not resolve the failure."
+    },
+    {
+      "source": "reports/agent-improvements/schema-probe-20261018T002820Z/report.json",
+      "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+      "status": "invalid_response",
+      "prompt_version": "fgfr-activation-diagnostic-planner-v1",
+      "calls": 1,
+      "reported_budget_charge_tokens": 1020,
+      "error_category": "invalid_tool_arguments",
+      "explanation": "Synthetic schema probe observed an extra arguments wrapper around an empty object. This led to the explicit bound_partition schema and protocol v2."
+    },
+    {
+      "source": "reports/agent-improvements/nemotron-bound-schema-20261018T002925Z/report.json",
+      "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+      "status": "stopped",
+      "prompt_version": "fgfr-activation-diagnostic-planner-v2",
+      "calls": 5,
+      "reported_budget_charge_tokens": 7641,
+      "error_category": null,
+      "explanation": "Protocol v2 completed five calls, proposed two rules, and passed the frozen synthetic referee."
+    }
+  ]
+}
