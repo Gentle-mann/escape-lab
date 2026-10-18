@@ -1,0 +1,7 @@
+{
+  "case_metric": "exact_injected_failure_diagnosis",
+  "maximum_false_positive_rate_increase": 0.0,
+  "minimum_heldout_cases": 24,
+  "minimum_success_rate_gain": 0.1,
+  "version": "synthetic-referee-v1"
+}

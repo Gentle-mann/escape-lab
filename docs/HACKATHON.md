@@ -1,4 +1,17 @@
-# Hackathon delivery checklist
+# Escape Labs: hackathon submission
+
+**Submitted successfully on October 17, 2026.** Cerebral Valley confirmed the entry and displayed Escape Labs under Your Submission, with Khalifa Ibrahim (Ishaq on the event profile) as the solo participant.
+
+- Track: **Done Means Done**.
+- Sponsor category: **Best Use of Nemotron**.
+- [Submitted project](https://cerebralvalley.ai/e/crusoe-recursive-agents-hackathon/hackathon/projects).
+- [Interactive demonstration](https://escape-lab-three.vercel.app).
+- [Submitted Loom video](https://www.loom.com/share/7f7cd52a924a4626af662e5e756726e3).
+- [Public implementation and experiment record](https://github.com/Gentle-mann/escape-lab).
+
+Our ambition is an autonomous research lab that anticipates cancer's escape routes, tests its hypotheses, and improves through measured experiments. The submitted six-hour build establishes the research workflow and the matched activation-ranking improvement. Later development is identified separately in the results and commit history.
+
+## Event requirements
 
 Checked against the [official participant guide](https://cerebralvalley.ai/e/crusoe-recursive-agents-hackathon/details) on October 17, 2026.
 
@@ -18,13 +31,11 @@ Opening line: “An autonomous cancer-research agent that has to earn every clai
 
 Show one real trace: research evidence, proposed configuration, numerical evaluation, accept/reject decision, and recorded limitations. The AP repair can be a separate before/after inspection: the same classifier had many rounded scores tied at one, and using its raw decision margin recovered ranking information. Show the unsuccessful structure and LLM-swap experiments in the ledger rather than hiding them.
 
-## Remaining deliverables
+## Delivery record
 
-1. Build a presentation interface around the actual agent/evaluator workflow, with provenance and clear live versus recorded state.
-2. Rehearse one reliable run using development data, with a recorded fallback if inference is slow. No new scientific parameter sweep is needed for the demo.
-3. Prepare the one-minute video and a three-minute talk track; verify video access from a signed-out session.
-4. Add a concrete contribution statement listing what was built at the event and what is reused.
-5. Recheck public repository access, correct experiment claims, team members, and links; submit at the [official form](https://cerebralvalley.ai/e/crusoe-recursive-agents-hackathon/hackathon/submit).
+The interactive replay, architecture presentation, Loom video, public repository, and submission are complete. Public repository access and signed-out video playback were verified before submission. A three-minute pitch and judge Q&A are prepared. The submitted video displayed approximately 1:12 during review; the builder chose that link with the guide's one-minute request noted.
+
+The demonstration remains a replay of the submitted scientific experiments. Its optional live API check uses synthetic fixtures. The frontend and presentation are delivered separately from this repository; their source remains local under the existing publication arrangement.
 
 The guide prohibits medical-advice generation, basic RAG, Streamlit apps, and dashboard-led projects. Our research framing avoids medical-advice functionality, but this is an interpretation of the guide, not organizer preapproval. Do not add patient-input forms or treatment recommendations to the frontend.
 

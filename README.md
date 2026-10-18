@@ -1,10 +1,14 @@
-# Escape Lab
+# Escape Labs
 
-**An autonomous research workflow that proposes experiments, checks its predictions, and keeps a record of what failed.** Built for the Recursive Agents Hackathon on Crusoe Managed Inference.
+**Build the autonomous research lab that anticipates cancer's next move.**
 
-The long-term ambition is to anticipate cancer's escape routes before resistance emerges. This prototype tests a smaller, falsifiable question using published FGFR assays: can research agents improve numerical predictors under an independent evaluation contract?
+Our ambition is to map cancer's escape routes before resistance emerges: agents that turn biological evidence into hypotheses, run experiments, improve their research methods, and help scientists decide what to test next. The long-term destination is a continuous loop between computational models and real laboratory experiments.
 
-**Preclinical research only. No patients, medical advice, treatment recommendations, or demonstrated cancer cure.**
+Escape Labs starts with published FGFR assays, Nemotron on Crusoe, numerical prediction tools, and an independent evaluator. Every experiment contributes to a growing record of what works and what needs to change.
+
+[Explore the demo](https://escape-lab-three.vercel.app) · [Watch the submitted video](https://www.loom.com/share/7f7cd52a924a4626af662e5e756726e3) · [Read the results](docs/RESULTS.md)
+
+Submitted to the Recursive Agents Hackathon: **Done Means Done** and **Best Use of Nemotron**. The six-hour build and subsequent development are documented separately.
 
 ## Built in six hours
 
@@ -13,7 +17,7 @@ autonomous experiment proposals, numerical training, independent verification,
 and a complete experiment ledger. The prototype integrates Nemotron and GLM-5.3
 on Crusoe, reviewed evidence from You.com, and sequence and structural features.
 
-## Measured improvement
+## Measured improvement from the six-hour build
 
 On **668 FGFR2 variants** across three fixed development folds, a numerical
 ranking repair improved the same sequence classifier:
@@ -29,19 +33,15 @@ within the same budget.** We restored ranking information lost when probabilitie
 rounded to 1.0, preserving the fitted coefficients. Verification took **2.92
 seconds with cached features**.
 
-This is a development ranking result; its descriptive interval includes zero and
-external validation remains ahead. The separate drug-resistance experiments did
-not establish an LLM advantage over numerical controls. All experiments and their
-evaluation details are published below.
+The matched comparison uses development folds. [Evaluation details](docs/RESULTS.md#evaluation-notes-and-next-steps) include uncertainty, per-fold behavior, and the separate resistance-agent comparisons.
 
 - [Results and six-hour progress](docs/RESULTS.md)
 - [Complete experiment ledger](docs/EXPERIMENTS.md)
 - [Archived protocols, aggregate results and checksums](docs/archive/manifest.json)
 - [Reproduction and data prerequisites](docs/REPRODUCING.md)
-- [Hackathon demo and submission checklist](docs/HACKATHON.md)
+- [Hackathon submission and demo](docs/HACKATHON.md)
 
-Next: stronger biological representations and independent validation. Private
-specialized models may perform better; we have not evaluated them.
+The next milestone is a frozen model and research policy that earn an improvement on an independent biological assay, then help prioritize prospective laboratory experiments.
 
 ## How it works
 
@@ -63,7 +63,27 @@ These are alternative planners, not a chain in which GLM directs Nemotron.
 
 The agent proposes validated model configurations. Numerical tools perform fitting and prediction. The evaluator owns labels, split grouping, metrics, budgets and promotion rules. Commitments precede held-out scoring; rejected proposals and operational failures remain recorded. Raw outcomes do not enter proposal prompts. The separate replay vault enforces authenticated, budgeted measurement reveals.
 
-These are application-level controls. The prototype does not deploy NemoClaw/OpenShell or claim operating-system isolation from an adversary with filesystem access.
+The current implementation uses application-level controls. Deployment and evaluation boundaries are recorded in [the experiment ledger](docs/EXPERIMENTS.md).
+
+## Development after submission
+
+The research loop now has dedicated numerical diagnostic tools, typed policy revisions, and a separate promotion referee. Nemotron can inspect score saturation and feature shift, compare ranking scores, request a fixed sequence ablation, and stop when the evidence is sufficient. Retained policies are versioned by content hash and tested on new generated failure cases before promotion.
+
+```mermaid
+flowchart LR
+    A[Nemotron diagnostic planner] --> T[Bounded numerical tools]
+    T -->|aggregate findings| A
+    A --> P[Candidate research policy]
+    P --> F[Frozen synthetic referee]
+    F -->|passes promotion gate| V[Versioned retained rules]
+    V -->|next diagnostic task| A
+```
+
+Live Nemotron completed the new loop in five calls. Its proposed rules passed the frozen referee on **48/48 generated failure cases**, compared with **12/48** for the initial empty policy. This tests reuse within predefined numerical failure families, separately from biological AP. [Agent implementation and run records](docs/archive/reports/agent-improvements/README.md).
+
+The model API exposes probabilities and raw ranking scores separately. A fixed 12-fit development experiment reproduced the published scores exactly, then tested a variance floor and two sequence ablations. WT-only features reached **0.11402 AP**; mutation-delta-only features reached **0.11377 AP** with **five hits in 68 picks**. These are exploratory results on the same development folds. The variance floor stabilized scores but reduced AP to **0.05951**, so the selected model remains unchanged. [Experiment and decisions](docs/archive/reports/model-improvements/report.md).
+
+Public-source reproduction and CI checks make this work inspectable. A fresh source-only workspace downloaded the inputs, extracted new sequence features and reproduced the headline AP and hit counts exactly in **about 101 seconds**, excluding dependency installation. The sequence environment is locked, and CI verifies archived checksums, documentation links and headline metrics. [Run the reproduction workflow](docs/REPRODUCING.md).
 
 ## Run the code checks
 
@@ -73,6 +93,7 @@ cd escape-lab
 uv sync --frozen --python 3.12
 uv run --frozen pytest -q
 uv run --frozen ruff check src tests scripts
+uv run --frozen python -m escape_lab.publication_check
 uv run --frozen escape-lab --help
 ```
 
@@ -86,7 +107,7 @@ uv run --frozen escape-lab status
 cp .env.example .env
 ```
 
-Set `CRUSOE_API_KEY` and optional `YDC_API_KEY` locally. Never commit `.env` or private run traces. `prepare` downloads the original eight public MAVEdb score sets; it does **not** rebuild all later activation, sequence and structure experiments. See [reproduction limits and prerequisites](docs/REPRODUCING.md).
+Set `CRUSOE_API_KEY` and optional `YDC_API_KEY` locally. Keep `.env` and private run traces local. The original `escape-lab prepare` downloads the eight public MAVEdb score sets. The new `escape-lab-reproduce` commands rebuild the FGFR2 headline experiment from its frozen public-source recipe; see the [reproduction workflow](docs/REPRODUCING.md).
 
 Run the local vault service after preparing data:
 
@@ -106,6 +127,8 @@ Agent and research runs use paid/credited inference. Do not run final-evaluation
 Local data, workbooks, model weights, row-level predictions, databases and request logs are excluded. The publication manifest records hashes of the original records and sanitized copies. This repo exposes the implementation and aggregate evidence; it is not a complete redistribution of all experimental inputs.
 
 ## Attribution and licensing
+
+Current use: preclinical assay research and experiment prioritization. Patient-specific treatment decisions are outside this implementation.
 
 The primary FGFR source is [Tangermann and colleagues' study](https://doi.org/10.1038/s41588-025-02431-8), distributed through [MAVEdb](https://api.mavedb.org/api/v1/score-sets/urn:mavedb:00001256-a-9). See the [CAGI FGFR challenge](https://genomeinterpretation.org/cagi7-fgfr.html) for experimental criteria. Protein representations use frozen ESM2-35M; structure inputs and limitations are cited in the archived protocols.
 

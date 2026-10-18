@@ -399,6 +399,293 @@
       "public_path": "docs/archive/research/fgfr2-state-tree-pilot/protocol.md",
       "public_sha256": "b8f33689ad59432cf6479bd61cbd810c7b09655e7342e70348dfb90f5cf0b2d9",
       "transformation": "local root removed; private artifact links annotated; banner added"
+    },
+    {
+      "source": "reports/model-improvements/fgfr2-sequence-revision-v1/protocol.json",
+      "source_sha256": "4f8a4ce378e449189e05f24d3e6c8b7615d541c7e131101ffa749ed9b7cdc0ad",
+      "public_path": "docs/archive/reports/model-improvements/protocol.json",
+      "public_sha256": "ccfc081b9fd2b67bdb42a8273343d8d8d7d06979ed5e5251887e59e40c18f859",
+      "transformation": "Post-submission aggregate experiment; private identities and paths removed; interpretation added to report"
+    },
+    {
+      "source": "reports/model-improvements/fgfr2-sequence-revision-v1/results.json",
+      "source_sha256": "4671488a415c636c85f9eddf2f6f307ddee4f4eb89c0f197f86363e2f7c14fab",
+      "public_path": "docs/archive/reports/model-improvements/results.json",
+      "public_sha256": "4671488a415c636c85f9eddf2f6f307ddee4f4eb89c0f197f86363e2f7c14fab",
+      "transformation": "Post-submission aggregate experiment; private identities and paths removed; interpretation added to report"
+    },
+    {
+      "source": "reports/model-improvements/fgfr2-sequence-revision-v1/report.md",
+      "source_sha256": "28e73b4c83e0658470420d51571132cef39d4c0545dfdf619484bab0a7e00bf8",
+      "public_path": "docs/archive/reports/model-improvements/report.md",
+      "public_sha256": "9e9a86582c4bf0d52588412cf02a5ac9dba70df5226a613fb14df1b286ed90d5",
+      "transformation": "Post-submission aggregate experiment; private identities and paths removed; interpretation added to report"
+    },
+    {
+      "source": "docs/archive/reports/reproduction/verification.json",
+      "source_sha256": "fda427b45b48780afcf2144d68d2b87c9279a49af189b2d34f8a60bb0ab01de8",
+      "public_path": "docs/archive/reports/reproduction/verification.json",
+      "public_sha256": "fda427b45b48780afcf2144d68d2b87c9279a49af189b2d34f8a60bb0ab01de8",
+      "transformation": "Aggregate verification receipt assembled from fresh public-source preparation and reproduction; no per-variant rows"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/README.md",
+      "source_sha256": "24f2afbec28cf648d77d0d8a61cbd3eca21bfc27c33504668d69a1cc7e951eae",
+      "public_path": "docs/archive/reports/agent-improvements/README.md",
+      "public_sha256": "24f2afbec28cf648d77d0d8a61cbd3eca21bfc27c33504668d69a1cc7e951eae",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/development-replay/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "source_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "public_path": "docs/archive/reports/agent-improvements/development-replay/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "public_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/development-replay/proposals/d1d49ea7ebf48fb0ba0a7aa4916d98cceaa46471e405cfa2d8b341729613e4da.json",
+      "source_sha256": "6db7d2903411e39d545d27929f168be6daf7961217d7bac91f51c81502e4b4ee",
+      "public_path": "docs/archive/reports/agent-improvements/development-replay/proposals/d1d49ea7ebf48fb0ba0a7aa4916d98cceaa46471e405cfa2d8b341729613e4da.json",
+      "public_sha256": "6db7d2903411e39d545d27929f168be6daf7961217d7bac91f51c81502e4b4ee",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/development-replay/report.json",
+      "source_sha256": "ea8c52bc960694ca1442556ac0db76e131846fb6b8fcedf2c90db9dbc9040ad1",
+      "public_path": "docs/archive/reports/agent-improvements/development-replay/report.json",
+      "public_sha256": "ea8c52bc960694ca1442556ac0db76e131846fb6b8fcedf2c90db9dbc9040ad1",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/development-replay-v2/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "source_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "public_path": "docs/archive/reports/agent-improvements/development-replay-v2/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "public_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/development-replay-v2/proposals/d1d49ea7ebf48fb0ba0a7aa4916d98cceaa46471e405cfa2d8b341729613e4da.json",
+      "source_sha256": "6db7d2903411e39d545d27929f168be6daf7961217d7bac91f51c81502e4b4ee",
+      "public_path": "docs/archive/reports/agent-improvements/development-replay-v2/proposals/d1d49ea7ebf48fb0ba0a7aa4916d98cceaa46471e405cfa2d8b341729613e4da.json",
+      "public_sha256": "6db7d2903411e39d545d27929f168be6daf7961217d7bac91f51c81502e4b4ee",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/development-replay-v2/report.json",
+      "source_sha256": "9e20bc552e3946413f39e944d74962dde1502571388c0740e62da38859d40878",
+      "public_path": "docs/archive/reports/agent-improvements/development-replay-v2/report.json",
+      "public_sha256": "9e20bc552e3946413f39e944d74962dde1502571388c0740e62da38859d40878",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/development-replay-v3/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "source_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "public_path": "docs/archive/reports/agent-improvements/development-replay-v3/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "public_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/development-replay-v3/proposals/d1d49ea7ebf48fb0ba0a7aa4916d98cceaa46471e405cfa2d8b341729613e4da.json",
+      "source_sha256": "6db7d2903411e39d545d27929f168be6daf7961217d7bac91f51c81502e4b4ee",
+      "public_path": "docs/archive/reports/agent-improvements/development-replay-v3/proposals/d1d49ea7ebf48fb0ba0a7aa4916d98cceaa46471e405cfa2d8b341729613e4da.json",
+      "public_sha256": "6db7d2903411e39d545d27929f168be6daf7961217d7bac91f51c81502e4b4ee",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/development-replay-v3/report.json",
+      "source_sha256": "079900c340f01b94ffdb746466c08384e38f007d9e60944be7f4dac93e3cea8d",
+      "public_path": "docs/archive/reports/agent-improvements/development-replay-v3/report.json",
+      "public_sha256": "079900c340f01b94ffdb746466c08384e38f007d9e60944be7f4dac93e3cea8d",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/live-attempts.json",
+      "source_sha256": "47df288bea0b0c0049bc28167daa05bca9c01dcf8d8ff23c44752d8e51f77cb8",
+      "public_path": "docs/archive/reports/agent-improvements/live-attempts.json",
+      "public_sha256": "47df288bea0b0c0049bc28167daa05bca9c01dcf8d8ff23c44752d8e51f77cb8",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "reports/agent-improvements/nemotron-bound-schema-20261018T002925Z/freezes/706b547a2700b049008c5880d29a4f8a7693d61a313cb3d2a083395616bf198c.json",
+      "source_sha256": "2a1705d1f02bcf2e72ec96ed57ee7f8fe445109a1724d9f575dd9ec044efecef",
+      "public_path": "docs/archive/reports/agent-improvements/nemotron-live/freezes/706b547a2700b049008c5880d29a4f8a7693d61a313cb3d2a083395616bf198c.json",
+      "public_sha256": "2a1705d1f02bcf2e72ec96ed57ee7f8fe445109a1724d9f575dd9ec044efecef",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "reports/agent-improvements/nemotron-bound-schema-20261018T002925Z/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "source_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "public_path": "docs/archive/reports/agent-improvements/nemotron-live/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "public_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "reports/agent-improvements/nemotron-bound-schema-20261018T002925Z/policies/6218a4efcf241c2508f04f12f3b593db92b065e8e1ed48e96f78dfe4aa63116c.json",
+      "source_sha256": "d0a516f58b725dceb61eef5b179e66eaec4e76986af50d49262c177db4d1ddeb",
+      "public_path": "docs/archive/reports/agent-improvements/nemotron-live/policies/6218a4efcf241c2508f04f12f3b593db92b065e8e1ed48e96f78dfe4aa63116c.json",
+      "public_sha256": "d0a516f58b725dceb61eef5b179e66eaec4e76986af50d49262c177db4d1ddeb",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "reports/agent-improvements/nemotron-bound-schema-20261018T002925Z/receipts/c83489bb4a3625bedb94364e7c429115ca0b49afc06e007ef4aa61f945113a1c.json",
+      "source_sha256": "25cdb6c4fb1c40925af0c1efaf88a720065c674431b8dc806c66b5386521c857",
+      "public_path": "docs/archive/reports/agent-improvements/nemotron-live/receipts/c83489bb4a3625bedb94364e7c429115ca0b49afc06e007ef4aa61f945113a1c.json",
+      "public_sha256": "25cdb6c4fb1c40925af0c1efaf88a720065c674431b8dc806c66b5386521c857",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "reports/agent-improvements/nemotron-bound-schema-20261018T002925Z/referees/cc3440c175a3c2a853d6d07de2a5abcaf23f7a04ad5c976a5316b6563f34406e.json",
+      "source_sha256": "b77a1ab23ad278871dd15985f2161844cb9445f22f4926368694966e7140b3af",
+      "public_path": "docs/archive/reports/agent-improvements/nemotron-live/referees/cc3440c175a3c2a853d6d07de2a5abcaf23f7a04ad5c976a5316b6563f34406e.json",
+      "public_sha256": "b77a1ab23ad278871dd15985f2161844cb9445f22f4926368694966e7140b3af",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "reports/agent-improvements/nemotron-bound-schema-20261018T002925Z/report.json",
+      "source_sha256": "290029d35a7f6d7830160e3b81b66d088530439c5515740b5a8b95ce03e499b9",
+      "public_path": "docs/archive/reports/agent-improvements/nemotron-live/report.json",
+      "public_sha256": "290029d35a7f6d7830160e3b81b66d088530439c5515740b5a8b95ce03e499b9",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer/freezes/e03a98b433a48385b28da602ad7bd1bc16263dc4ab2e753829829d676e645526.json",
+      "source_sha256": "a40c1f90298bce5e1d48525c0b9e077ad0e8bd3798a3653dca783276beade510",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer/freezes/e03a98b433a48385b28da602ad7bd1bc16263dc4ab2e753829829d676e645526.json",
+      "public_sha256": "a40c1f90298bce5e1d48525c0b9e077ad0e8bd3798a3653dca783276beade510",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "source_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "public_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer/policies/7696230fff31c145a99f0ea44334042e1762230d73bd07d2774541991a875dd6.json",
+      "source_sha256": "7652038ca0bfa0028508acdf017b9d7c8de42863a52c018dff9ecd37d78cdefb",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer/policies/7696230fff31c145a99f0ea44334042e1762230d73bd07d2774541991a875dd6.json",
+      "public_sha256": "7652038ca0bfa0028508acdf017b9d7c8de42863a52c018dff9ecd37d78cdefb",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer/receipts/e215e2527a142e4b579b07b23d40b0cb77140800849a4134bb18f47e60267651.json",
+      "source_sha256": "e7d17671f5f85a371fa2b7f7914cc499f27b7e7b2a2f420dd5fcecbc4998f8f4",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer/receipts/e215e2527a142e4b579b07b23d40b0cb77140800849a4134bb18f47e60267651.json",
+      "public_sha256": "e7d17671f5f85a371fa2b7f7914cc499f27b7e7b2a2f420dd5fcecbc4998f8f4",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer/referees/cc3440c175a3c2a853d6d07de2a5abcaf23f7a04ad5c976a5316b6563f34406e.json",
+      "source_sha256": "b77a1ab23ad278871dd15985f2161844cb9445f22f4926368694966e7140b3af",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer/referees/cc3440c175a3c2a853d6d07de2a5abcaf23f7a04ad5c976a5316b6563f34406e.json",
+      "public_sha256": "b77a1ab23ad278871dd15985f2161844cb9445f22f4926368694966e7140b3af",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer/report.json",
+      "source_sha256": "0994f296bef965fd265611c3f99109c170599df34fb09e38e99ad554ee243d60",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer/report.json",
+      "public_sha256": "0994f296bef965fd265611c3f99109c170599df34fb09e38e99ad554ee243d60",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/freezes/e03a98b433a48385b28da602ad7bd1bc16263dc4ab2e753829829d676e645526.json",
+      "source_sha256": "a40c1f90298bce5e1d48525c0b9e077ad0e8bd3798a3653dca783276beade510",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/freezes/e03a98b433a48385b28da602ad7bd1bc16263dc4ab2e753829829d676e645526.json",
+      "public_sha256": "a40c1f90298bce5e1d48525c0b9e077ad0e8bd3798a3653dca783276beade510",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "source_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "public_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/policies/7696230fff31c145a99f0ea44334042e1762230d73bd07d2774541991a875dd6.json",
+      "source_sha256": "7652038ca0bfa0028508acdf017b9d7c8de42863a52c018dff9ecd37d78cdefb",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/policies/7696230fff31c145a99f0ea44334042e1762230d73bd07d2774541991a875dd6.json",
+      "public_sha256": "7652038ca0bfa0028508acdf017b9d7c8de42863a52c018dff9ecd37d78cdefb",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/receipts/e215e2527a142e4b579b07b23d40b0cb77140800849a4134bb18f47e60267651.json",
+      "source_sha256": "e7d17671f5f85a371fa2b7f7914cc499f27b7e7b2a2f420dd5fcecbc4998f8f4",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/receipts/e215e2527a142e4b579b07b23d40b0cb77140800849a4134bb18f47e60267651.json",
+      "public_sha256": "e7d17671f5f85a371fa2b7f7914cc499f27b7e7b2a2f420dd5fcecbc4998f8f4",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/referees/cc3440c175a3c2a853d6d07de2a5abcaf23f7a04ad5c976a5316b6563f34406e.json",
+      "source_sha256": "b77a1ab23ad278871dd15985f2161844cb9445f22f4926368694966e7140b3af",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/referees/cc3440c175a3c2a853d6d07de2a5abcaf23f7a04ad5c976a5316b6563f34406e.json",
+      "public_sha256": "b77a1ab23ad278871dd15985f2161844cb9445f22f4926368694966e7140b3af",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/report.json",
+      "source_sha256": "19ab344e46aae62c4aa8c0abbf96203986d9f8544758c834bb9d1b9243df77ec",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v2/report.json",
+      "public_sha256": "19ab344e46aae62c4aa8c0abbf96203986d9f8544758c834bb9d1b9243df77ec",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/freezes/e03a98b433a48385b28da602ad7bd1bc16263dc4ab2e753829829d676e645526.json",
+      "source_sha256": "a40c1f90298bce5e1d48525c0b9e077ad0e8bd3798a3653dca783276beade510",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/freezes/e03a98b433a48385b28da602ad7bd1bc16263dc4ab2e753829829d676e645526.json",
+      "public_sha256": "a40c1f90298bce5e1d48525c0b9e077ad0e8bd3798a3653dca783276beade510",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "source_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/policies/1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a.json",
+      "public_sha256": "51407f5648f1bc76d9337e20676360edb11856a029a80372766aabbeb7fd83d1",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/policies/7696230fff31c145a99f0ea44334042e1762230d73bd07d2774541991a875dd6.json",
+      "source_sha256": "7652038ca0bfa0028508acdf017b9d7c8de42863a52c018dff9ecd37d78cdefb",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/policies/7696230fff31c145a99f0ea44334042e1762230d73bd07d2774541991a875dd6.json",
+      "public_sha256": "7652038ca0bfa0028508acdf017b9d7c8de42863a52c018dff9ecd37d78cdefb",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/receipts/e215e2527a142e4b579b07b23d40b0cb77140800849a4134bb18f47e60267651.json",
+      "source_sha256": "e7d17671f5f85a371fa2b7f7914cc499f27b7e7b2a2f420dd5fcecbc4998f8f4",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/receipts/e215e2527a142e4b579b07b23d40b0cb77140800849a4134bb18f47e60267651.json",
+      "public_sha256": "e7d17671f5f85a371fa2b7f7914cc499f27b7e7b2a2f420dd5fcecbc4998f8f4",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/referees/cc3440c175a3c2a853d6d07de2a5abcaf23f7a04ad5c976a5316b6563f34406e.json",
+      "source_sha256": "b77a1ab23ad278871dd15985f2161844cb9445f22f4926368694966e7140b3af",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/referees/cc3440c175a3c2a853d6d07de2a5abcaf23f7a04ad5c976a5316b6563f34406e.json",
+      "public_sha256": "b77a1ab23ad278871dd15985f2161844cb9445f22f4926368694966e7140b3af",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/report.json",
+      "source_sha256": "2e4eae7c2217fcee9a7f015a405ae30e4ce984efd7dba92a671f9e8abd61dbe3",
+      "public_path": "docs/archive/reports/agent-improvements/synthetic-transfer-v3/report.json",
+      "public_sha256": "2e4eae7c2217fcee9a7f015a405ae30e4ce984efd7dba92a671f9e8abd61dbe3",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "reports/agent-improvements/nemotron-retained-replay-20261018T003004Z/policies/6218a4efcf241c2508f04f12f3b593db92b065e8e1ed48e96f78dfe4aa63116c.json",
+      "source_sha256": "d0a516f58b725dceb61eef5b179e66eaec4e76986af50d49262c177db4d1ddeb",
+      "public_path": "docs/archive/reports/agent-improvements/nemotron-retained-replay/policies/6218a4efcf241c2508f04f12f3b593db92b065e8e1ed48e96f78dfe4aa63116c.json",
+      "public_sha256": "d0a516f58b725dceb61eef5b179e66eaec4e76986af50d49262c177db4d1ddeb",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
+    },
+    {
+      "source": "reports/agent-improvements/nemotron-retained-replay-20261018T003004Z/report.json",
+      "source_sha256": "fb3988528a733be8e48cf899d5370481181dd338b09a11413ee49218567d4696",
+      "public_path": "docs/archive/reports/agent-improvements/nemotron-retained-replay/report.json",
+      "public_sha256": "fb3988528a733be8e48cf899d5370481181dd338b09a11413ee49218567d4696",
+      "transformation": "Post-submission aggregate diagnostic evidence and immutable policy artifacts; no biological row data or raw provider transcripts"
     }
   ]
 }

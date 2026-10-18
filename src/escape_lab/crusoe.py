@@ -75,6 +75,7 @@ class CrusoeClient:
         max_total_tokens: int = 100_000,
         timeout: float = 60,
         sleep: Callable[[float], None] = time.sleep,
+        parallel_tool_calls: bool | None = None,
     ):
         if not api_key.strip():
             raise ValueError("A nonempty Crusoe API key is required.")
@@ -82,6 +83,9 @@ class CrusoeClient:
             raise ValueError("max_tokens must be between 16 and 8192.")
         if not 0 <= max_retries <= 3 or max_total_tokens <= 0:
             raise ValueError("Invalid retry or token budget.")
+        if parallel_tool_calls is not None and type(parallel_tool_calls) is not bool:
+            raise ValueError("parallel_tool_calls must be boolean or omitted")
+        self.parallel_tool_calls = parallel_tool_calls
         self.model_id = model_id
         self.max_tokens = max_tokens
         self.max_retries = max_retries
@@ -181,6 +185,8 @@ class CrusoeClient:
             "max_tokens": self.max_tokens,
             "stream": False,
         }
+        if self.parallel_tool_calls is not None:
+            payload["parallel_tool_calls"] = self.parallel_tool_calls
         try:
             result = self._request("POST", "chat/completions", payload)
         except CrusoeError:

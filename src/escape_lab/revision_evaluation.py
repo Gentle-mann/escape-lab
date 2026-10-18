@@ -13,6 +13,7 @@ import numpy as np
 from escape_lab.benchmark import validate_partition
 from escape_lab.data import sha256
 from escape_lab.improvement import aggregate_metrics, write_json
+from escape_lab.planner_diagnostics import aggregate_fit_diagnostics, numerical_diagnostics
 from escape_lab.prediction import PredictionConfig, ResistancePredictor
 from escape_lab.revision_models import BiologyPredictor, catalog
 
@@ -129,9 +130,17 @@ def evaluate_cv(config_id, tasks, labels, store, seed, deadline=None):
             check_deadline(deadline)
             model = _fit(config_id, task["training"], labels, store, drug, seed)
             probabilities = model.predict(task["pool"])
+            numerical = numerical_diagnostics(probabilities)
+            # This is evaluator-owned work on the permitted inner prediction partition.
+            # The model transform is reused; no names, feature rows or outcomes enter feedback.
+            if isinstance(model, BiologyPredictor) and model.model is not None:
+                matrix = model.vectorizer.transform(model._features(task["pool"]))
+                matrix = model.scaler.transform(model.imputer.transform(matrix))
+                numerical = numerical_diagnostics(
+                    probabilities, scaled_features=matrix, training_variances=model.scaler.var_)
             diagnostics.append({"fold": task["task_id"], "drug": drug,
                                 "fallback_reason": model.fallback_reason,
-                                **getattr(model, "diagnostics", {})})
+                                **getattr(model, "diagnostics", {}), **numerical})
             for candidate, score in zip(task["pool"], probabilities, strict=True):
                 predictions.append({"candidate_id": candidate["candidate_id"],
                                     "group_id": candidate["group_id"], "gene": candidate["gene"],
@@ -166,10 +175,12 @@ def search_candidates(training, labels, store, planner, seed, deadline, output_d
     reference = evaluate(REFERENCE)
     incumbent, history, proposals = REFERENCE, [], []
     # Only own history goes into prompts. Random/grid scores never enter feedback.
-    history.append({"candidate_id": REFERENCE, "status": "baseline", "metrics": reference})
+    history.append({"candidate_id": REFERENCE, "status": "baseline", "metrics": reference,
+                    "fit_diagnostics": aggregate_fit_diagnostics(cache[REFERENCE].get("diagnostics", []))})
     for revision_index in range(3):
         check_deadline(deadline)
-        feedback = {"incumbent": {"candidate_id": incumbent, "metrics": evaluate(incumbent)},
+        feedback = {"incumbent": {"candidate_id": incumbent, "metrics": evaluate(incumbent),
+                    "fit_diagnostics": aggregate_fit_diagnostics(cache[incumbent].get("diagnostics", []))},
                     "history": history, "diagnostics": evaluate(incumbent), "seed": seed,
                     "revision_index": revision_index,
                     "remaining_seconds": max(0, deadline - time.monotonic())}
@@ -184,12 +195,17 @@ def search_candidates(training, labels, store, planner, seed, deadline, output_d
             record.update(metrics=metrics, accepted=accepted, rejection_reasons=reasons)
             history.append({"candidate_id": candidate_id, "parent_id": proposal.parent_id,
                             "status": "accepted" if accepted else "rejected",
-                            "accepted": accepted, "metrics": metrics})
+                            "accepted": accepted, "metrics": metrics,
+                            "rejection_reasons": reasons,
+                            "fit_diagnostics": aggregate_fit_diagnostics(
+                                cache[candidate_id].get("diagnostics", []))})
             if accepted:
                 incumbent = candidate_id
         proposals.append(record)
         write_json(output_dir / "agent-progress.json", {"proposals": proposals,
                    "attempts": planner.attempts, "selected": incumbent})
+        if proposal.status == "stopped":
+            break
     random_ids = random.Random(seed).sample([c for c in configs if c != REFERENCE], 3)
 
     def select(ids):
@@ -207,9 +223,13 @@ def search_candidates(training, labels, store, planner, seed, deadline, output_d
               "inner_groups": {t["task_id"]: sorted({c["group_id"] for c in t["pool"]})
                                for t in tasks}}
     successes = sum(p["status"] == "proposed" and "metrics" in p for p in proposals)
-    result.update(successful_proposals=successes, failed_opportunities=3-successes,
-                  agent_status="completed" if successes == 3 else "degraded" if successes else
-                  "unavailable")
+    stopped = any(p["status"] == "stopped" for p in proposals)
+    failures = sum(p["status"] not in ("proposed", "stopped") or
+                   (p["status"] == "proposed" and "metrics" not in p) for p in proposals)
+    result.update(successful_proposals=successes, failed_opportunities=failures,
+                  unused_opportunities=3 - len(proposals),
+                  agent_status="stopped" if stopped else "completed" if successes == 3 else
+                  "degraded" if successes else "unavailable")
     write_json(output_dir / "search.json", result)
     return result
 

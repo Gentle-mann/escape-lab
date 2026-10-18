@@ -12,11 +12,13 @@ import math
 import re
 from dataclasses import dataclass, field
 from time import monotonic
+from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
 
 from escape_lab.crusoe import CrusoeClient, CrusoeError
 from escape_lab.improvement_agent import _FINISH_REASONS, _safe_error_category
+from escape_lab.planner_diagnostics import rejection_codes, sanitize_diagnostics
 
 PROMPT_VERSION = "fgfr-catalog-experiment-planner-v2"
 SYSTEM_PROMPT = """Choose one remaining experiment from the fixed predictor catalog for
@@ -53,6 +55,16 @@ and a rejection condition. These are concise public experiment summaries, not pr
 Call propose_experiment exactly once. Do not emit code or new hyperparameter configurations.
 Existing baselines may remain best. Never claim a proposal was evaluated, accepted, independently
 validated, or discovered a cure. All failed or rejected experiments remain part of the record."""
+DIAGNOSTIC_PROMPT_VERSION = "fgfr-catalog-experiment-planner-v3"
+DIAGNOSTIC_SYSTEM_PROMPT = SYSTEM_PROMPT.replace(
+    "Call propose_experiment exactly once.",
+    "Call either propose_experiment or stop_search exactly once.",
+) + """
+The evaluator also supplies allowlisted rejection codes and numerical fit diagnostics.
+Use those to distinguish failed acceptance guards, saturated probabilities, feature shift,
+near-constant feature scaling, and convergence problems. They describe permitted inner data only.
+No diagnostic changes an acceptance rule. Stop explicitly when no remaining experiment is
+justified, the budget is insufficient, or the available diagnostics have been addressed."""
 PROMPT_HASH = hashlib.sha256(SYSTEM_PROMPT.encode()).hexdigest()
 SOURCE_FINGERPRINTS = {"prompt_version": PROMPT_VERSION, "prompt_hash": PROMPT_HASH}
 
@@ -116,6 +128,17 @@ class ExperimentArguments(BaseModel):
         if not value.strip():
             raise ValueError("A nonempty public experiment summary is required.")
         return value.strip()
+
+
+class StopArguments(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
+    reason: Literal["no_justified_experiment", "budget_insufficient", "diagnostics_complete"]
+
+
+STOP_TOOL = {"type": "function", "function": {
+    "name": "stop_search", "description": "Stop and retain the evaluator's incumbent.",
+    "parameters": StopArguments.model_json_schema(),
+}}
 
 
 TOOL_SCHEMA_TEMPLATE_HASH = hashlib.sha256(
@@ -195,7 +218,7 @@ def _metrics(value, depth=0):
     return result
 
 
-def _record(value, catalog):
+def _record(value, catalog, include_diagnostics=False):
     if not isinstance(value, dict):
         return None
     candidate_id = value.get("candidate_id")
@@ -209,10 +232,13 @@ def _record(value, catalog):
         result["status"] = value["status"]
     if type(value.get("accepted")) is bool:
         result["accepted"] = value["accepted"]
+    if include_diagnostics:
+        result["rejection_reasons"] = rejection_codes(value.get("rejection_reasons"))
+        result["fit_diagnostics"] = sanitize_diagnostics(value.get("fit_diagnostics"))
     return result
 
 
-def sanitize_feedback(feedback: dict, catalog: dict) -> dict:
+def sanitize_feedback(feedback: dict, catalog: dict, *, include_diagnostics=False) -> dict:
     """Retain only named aggregate numbers and IDs in the supplied catalog.
 
     Only the trusted evaluator can establish that these numbers really are
@@ -221,12 +247,12 @@ def sanitize_feedback(feedback: dict, catalog: dict) -> dict:
     if not isinstance(feedback, dict):
         raise TypeError("Feedback must be an aggregate object.")
     result = {}
-    incumbent = _record(feedback.get("incumbent"), catalog)
+    incumbent = _record(feedback.get("incumbent"), catalog, include_diagnostics)
     if incumbent is not None:
         result["incumbent"] = incumbent
     history = feedback.get("history")
     if isinstance(history, list):
-        records = [_record(record, catalog) for record in history[-24:]]
+        records = [_record(record, catalog, include_diagnostics) for record in history[-24:]]
         result["history"] = [record for record in records if record is not None]
     result["diagnostics"] = _metrics(feedback.get("diagnostics"))
     coverage = feedback.get("structural_coverage")
@@ -269,9 +295,17 @@ class ExperimentPlanner:
     remaining time by its HTTP timeout. Late responses are rejected here.
     """
 
-    def __init__(self, client: CrusoeClient, max_proposals=3):
+    def __init__(self, client: CrusoeClient, max_proposals=3, *, protocol="historical-v2"):
         if type(max_proposals) is not int or not 1 <= max_proposals <= 3:
             raise ValueError("max_proposals must be an integer between one and three.")
+        if protocol not in ("historical-v2", "diagnostics-v3"):
+            raise ValueError("Unknown planner protocol")
+        self.protocol = protocol
+        self.prompt_version = (DIAGNOSTIC_PROMPT_VERSION if protocol == "diagnostics-v3"
+                               else PROMPT_VERSION)
+        self.system_prompt = (DIAGNOSTIC_SYSTEM_PROMPT if protocol == "diagnostics-v3"
+                              else SYSTEM_PROMPT)
+        self.stopped = False
         self.client = client
         self.max_proposals = max_proposals
         self.proposals_made = 0
@@ -295,6 +329,7 @@ class ExperimentPlanner:
         return ExperimentProposal(
             **values,
             status=status,
+            prompt_version=self.prompt_version,
             error=error,
             calls=calls,
             model_id=self.client.model_id or "unconfigured",
@@ -317,12 +352,13 @@ class ExperimentPlanner:
             }
         )
 
-    @staticmethod
-    def _parse(message, remaining, parents):
+    def _parse(self, message, remaining, parents):
         calls = message.get("tool_calls")
         if not isinstance(calls, list) or len(calls) != 1:
             raise ValueError("Exactly one tool call is required.")
         call = calls[0]
+        if self.protocol == "diagnostics-v3" and call["function"]["name"] == "stop_search":
+            return StopArguments.model_validate_json(call["function"]["arguments"])
         if call["function"]["name"] != "propose_experiment":
             raise ValueError("Unknown tool.")
         arguments = ExperimentArguments.model_validate_json(call["function"]["arguments"])
@@ -380,6 +416,11 @@ class ExperimentPlanner:
     def propose(self, catalog: dict, feedback: dict) -> ExperimentProposal:
         start_tokens = getattr(self.client, "total_tokens", 0)
         fingerprints = dict(SOURCE_FINGERPRINTS)
+        if self.protocol == "diagnostics-v3":
+            fingerprints.update(prompt_version=self.prompt_version,
+                                prompt_hash=hashlib.sha256(self.system_prompt.encode()).hexdigest())
+        if self.stopped:
+            return self._result("stopped", 0, start_tokens, fingerprints, "Search already stopped.")
         if self.proposals_made >= self.max_proposals:
             return self._result(
                 "exhausted",
@@ -404,7 +445,8 @@ class ExperimentPlanner:
             json.dumps(safe_catalog, sort_keys=True, allow_nan=False).encode()
         ).hexdigest()
         try:
-            safe = sanitize_feedback(feedback, safe_catalog)
+            safe = sanitize_feedback(feedback, safe_catalog,
+                                     include_diagnostics=self.protocol == "diagnostics-v3")
         except (ValueError, TypeError):
             self._log("invalid_feedback", 0, fingerprints)
             return self._result(
@@ -436,8 +478,9 @@ class ExperimentPlanner:
                 "exhausted", 0, start_tokens, fingerprints, "No candidate or proposal time remains."
             )
         tool = _tool(remaining, parents)
+        tools = [tool, STOP_TOOL] if self.protocol == "diagnostics-v3" else [tool]
         fingerprints["tool_schema_hash"] = hashlib.sha256(
-            json.dumps(tool, sort_keys=True).encode()
+            json.dumps(tools if self.protocol == "diagnostics-v3" else tool, sort_keys=True).encode()
         ).hexdigest()
         safe.update(
             catalog=safe_catalog,
@@ -449,7 +492,7 @@ class ExperimentPlanner:
         fingerprints["feedback_hash"] = hashlib.sha256(content.encode()).hexdigest()
         deadline = monotonic() + safe["remaining_seconds"] if "remaining_seconds" in safe else None
         messages = [
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": self.system_prompt},
             {"role": "user", "content": content},
         ]
         calls = 0
@@ -474,7 +517,7 @@ class ExperimentPlanner:
                 )
             calls += 1
             try:
-                response = self.client.chat(messages, [tool], prompt_version=PROMPT_VERSION)
+                response = self.client.chat(messages, tools, prompt_version=self.prompt_version)
             except CrusoeError as error:
                 category = _safe_error_category(error)
                 self._log("failed", attempt, fingerprints, error_category=category)
@@ -512,6 +555,10 @@ class ExperimentPlanner:
                 if attempt == 1:
                     self._repair(messages, response.message)
                 continue
+            if isinstance(arguments, StopArguments):
+                self.stopped = True
+                self._log("stopped", attempt, fingerprints, stop_reason=arguments.reason)
+                return self._result("stopped", calls, start_tokens, fingerprints, arguments.reason)
             self._selected.add(arguments.candidate_id)
             self.hypotheses.append(arguments.model_dump())
             self._log(

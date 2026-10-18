@@ -1,0 +1,81 @@
+{
+  "arms": {
+    "floor_both": {
+      "sequence_branches": "both",
+      "stability": "variance_floor"
+    },
+    "legacy_both": {
+      "sequence_branches": "both",
+      "stability": "legacy"
+    },
+    "legacy_delta": {
+      "sequence_branches": "delta",
+      "stability": "legacy"
+    },
+    "legacy_wt": {
+      "sequence_branches": "wt",
+      "stability": "legacy"
+    }
+  },
+  "biology_scale_floor": 0.01,
+  "cohort": {
+    "folds": 3,
+    "n": 668,
+    "occupied_blocks": 10,
+    "scope": "Previously approved development cohort; original fold groups unchanged"
+  },
+  "created_at": "2026-10-18T00:20:40.896819+00:00",
+  "fit_budget": 12,
+  "historical_protocol_sha256": "d48ef92063ffa29b29990d8557fb40dc856263722750898919aa05d1512f2017",
+  "input_sha256": {
+    "data/fgfr2-sequence-pilot/esm2-35m-v1/features.npz": "87dc4739e719963b49d080869c25c8a1984ee8fd34e41c218ca5a9cdb9a38c41",
+    "data/fgfr2-sequence-pilot/esm2-35m-v1/manifest.json": "6a936db6900d36240d477c0cbf2d077730cd487d673304a1495ffdf4ec0a468e",
+    "src/escape_lab/fgfr2_sequence_models.py": "474895970f996bededd5d23546d966f29c836b2594d5c4ff5f293d21ebbb45b0",
+    "src/escape_lab/fgfr2_sequence_revision.py": "c5e7178b3431790cfe0afbf05829918f9d02daa10183829aeebf535a8d656a66"
+  },
+  "model_config": {
+    "logistic": {
+      "C": 0.1,
+      "class_weight": "balanced",
+      "l1_ratio": 0.0,
+      "max_iter": 2000,
+      "random_state": 17,
+      "solver": "lbfgs"
+    },
+    "primary": "esm_biology_logistic",
+    "ridge": {
+      "alpha": 100.0,
+      "solver": "svd"
+    },
+    "sequence": {
+      "branch_dimensions": 480,
+      "branches": [
+        "wt",
+        "mutant_minus_wt"
+      ],
+      "pca_components_per_branch": 16,
+      "pca_solver": "full",
+      "random_state": 17,
+      "train_only_scaling_and_pca": true
+    },
+    "target": {
+      "consistency_threshold_inclusive": 1.5,
+      "consistent_replicates": 3,
+      "high_median_threshold_strict": 5.0,
+      "strong_median_threshold_strict": 10.0
+    }
+  },
+  "private_protocol_sha256": "4f8a4ce378e449189e05f24d3e6c8b7615d541c7e131101ffa749ed9b7cdc0ad",
+  "ranking": "decision_function margin for every arm",
+  "representation_arms": "Diagnostic ablations only; both vs WT only vs mutation delta only. No post-score retuning or automatic promotion.",
+  "selection_budget": "ceil(0.1*n) in each saved fold; candidate ID tie breaking",
+  "stability_gate": {
+    "max_margin_ratio": 0.1,
+    "mean_fold_ap_gain": 0.01,
+    "no_fold_ap_loss": true,
+    "no_high_hit_loss": true
+  },
+  "supersedes_source_only": "The new model APIs and runner have new hashes. Historical protocols and their frozen data/report artifacts are preserved and verified.",
+  "target": "unchanged high activation: 3/4 replicates >=1.5 and median >5",
+  "version": "fgfr2-sequence-revision-v1"
+}

@@ -9,6 +9,7 @@ import math
 import warnings
 
 import numpy as np
+from scipy.special import expit
 from sklearn.decomposition import PCA
 from sklearn.exceptions import ConvergenceWarning
 from sklearn.feature_extraction import DictVectorizer
@@ -24,6 +25,9 @@ PRIMARY = "esm_biology_logistic"
 SEED = 17
 EMBEDDING_DIMENSION = 480
 PCA_COMPONENTS = 16
+BIOLOGY_SCALE_FLOOR = 0.01
+STABILITY_MODES = ("legacy", "variance_floor")
+SEQUENCE_BRANCHES = ("both", "wt", "delta")
 MODEL_CONFIG = {
     "primary": PRIMARY,
     "logistic": {"C": 0.1, "l1_ratio": 0.0, "class_weight": "balanced",
@@ -89,14 +93,21 @@ def _candidate_scope(candidates):
 class FGFR2SequenceModel:
     """One fixed supervised head; the caller supplies only approved candidates."""
 
-    def __init__(self, arm, store, augmenter, sequence_store=None):
+    def __init__(self, arm, store, augmenter, sequence_store=None, *, stability="legacy",
+                 sequence_branches="both"):
         if arm == "cached_v2_biology":
             raise ValueError("The cached reference arm is evaluator-owned")
         if arm not in TRAINABLE_ARMS:
             raise ValueError("Unknown FGFR2 sequence arm")
         if arm.startswith("esm_") and sequence_store is None:
             raise ValueError("Sequence arm requires frozen sequence features")
+        if stability not in STABILITY_MODES:
+            raise ValueError("Unknown biology scaling stability mode")
+        if sequence_branches not in SEQUENCE_BRANCHES:
+            raise ValueError("Unknown sequence branch selection")
         self.arm = arm
+        self.stability = stability
+        self.sequence_branches = sequence_branches
         self.store = store
         self.augmenter = augmenter
         self.sequence_store = sequence_store
@@ -113,6 +124,13 @@ class FGFR2SequenceModel:
         self.training_ids = set()
         self.training_groups = set()
         self.diagnostics = {}
+        self.biology_scaling = {}
+        self._prediction_diagnostics = {}
+
+    @property
+    def prediction_diagnostics(self):
+        """Identity-free aggregates for the last guarded prediction, returned by value."""
+        return dict(self._prediction_diagnostics)
 
     def _biology_features(self, candidates):
         rows = self.original.features(candidates)
@@ -134,14 +152,30 @@ class FGFR2SequenceModel:
     def _fit_matrix(self, candidates, ids):
         matrix = self.vectorizer.fit_transform(self._biology_features(candidates))
         matrix = self.imputer.fit_transform(matrix)
-        matrix = self.scaler.fit_transform(matrix)
+        self.scaler.fit(matrix)
+        original_scale = self.scaler.scale_.copy()
+        floored = original_scale < BIOLOGY_SCALE_FLOOR
+        if self.stability == "variance_floor":
+            self.scaler.scale_ = np.maximum(original_scale, BIOLOGY_SCALE_FLOOR)
+        self.biology_scaling = {
+            "mode": self.stability, "floor": BIOLOGY_SCALE_FLOOR,
+            "minimum_training_scale": float(original_scale.min()),
+            "minimum_effective_scale": float(self.scaler.scale_.min()),
+            "below_floor_count": int(floored.sum()),
+            "floored_feature_names": self.vectorizer.get_feature_names_out()[floored].tolist()
+            if self.stability == "variance_floor" else [],
+        }
+        matrix = self.scaler.transform(matrix)
         if self.arm.startswith("esm_"):
             if len(candidates) < PCA_COMPONENTS + 1:
                 raise ValueError("Sequence fitting requires at least 17 training variants")
             wt, delta = self._sequence_matrix(ids)
-            wt = self.wt_pca.fit_transform(self.wt_scaler.fit_transform(wt))
-            delta = self.delta_pca.fit_transform(self.delta_scaler.fit_transform(delta))
-            matrix = np.column_stack((matrix, wt, delta))
+            branches = [matrix]
+            if self.sequence_branches in ("both", "wt"):
+                branches.append(self.wt_pca.fit_transform(self.wt_scaler.fit_transform(wt)))
+            if self.sequence_branches in ("both", "delta"):
+                branches.append(self.delta_pca.fit_transform(self.delta_scaler.fit_transform(delta)))
+            matrix = np.column_stack(branches)
         if not np.isfinite(matrix).all():
             raise ValueError("Nonfinite fitted model features")
         return matrix
@@ -151,9 +185,12 @@ class FGFR2SequenceModel:
         matrix = self.scaler.transform(self.imputer.transform(matrix))
         if self.arm.startswith("esm_"):
             wt, delta = self._sequence_matrix(ids)
-            wt = self.wt_pca.transform(self.wt_scaler.transform(wt))
-            delta = self.delta_pca.transform(self.delta_scaler.transform(delta))
-            matrix = np.column_stack((matrix, wt, delta))
+            branches = [matrix]
+            if self.sequence_branches in ("both", "wt"):
+                branches.append(self.wt_pca.transform(self.wt_scaler.transform(wt)))
+            if self.sequence_branches in ("both", "delta"):
+                branches.append(self.delta_pca.transform(self.delta_scaler.transform(delta)))
+            matrix = np.column_stack(branches)
         if not np.isfinite(matrix).all():
             raise ValueError("Nonfinite prediction features")
         return matrix
@@ -161,6 +198,7 @@ class FGFR2SequenceModel:
     def fit(self, candidates, records):
         self.fitted = False
         self.diagnostics = {}
+        self._prediction_diagnostics = {}
         candidates, ids, groups = _candidate_scope(candidates)
         if set(records) != set(ids):
             raise ValueError("Activation records must exactly match training candidates")
@@ -182,8 +220,11 @@ class FGFR2SequenceModel:
             "arm": self.arm, "training_n": len(ids), "high_count": int(labels.sum()),
             "training_groups": sorted(groups), "feature_count": int(matrix.shape[1]),
             "biology_feature_count": len(self.vectorizer.get_feature_names_out()),
-            "sequence_components": {"wt": PCA_COMPONENTS, "delta": PCA_COMPONENTS}
+            "sequence_components": {branch: PCA_COMPONENTS for branch in ("wt", "delta")
+                                    if self.sequence_branches in ("both", branch)}
             if self.arm.startswith("esm_") else {},
+            "sequence_branches": self.sequence_branches,
+            "biology_scaling": self.biology_scaling,
             "coefficient_norm": float(np.linalg.norm(self.model.coef_)),
             "iterations": int(np.max(self.model.n_iter_))
             if hasattr(self.model, "n_iter_") and self.model.n_iter_ is not None else None,
@@ -192,19 +233,70 @@ class FGFR2SequenceModel:
         self.fitted = True
         return self
 
-    def predict(self, candidates):
+    def _guarded_prediction_matrix(self, candidates):
+        self._prediction_diagnostics = {}
         if not self.fitted:
             raise ValueError("Model must be successfully fitted before prediction")
         candidates, ids, groups = _candidate_scope(candidates)
         if set(ids) & self.training_ids or groups & self.training_groups:
             raise ValueError("Prediction candidates overlap the training partition")
         matrix = self._predict_matrix(candidates, ids)
-        if self.arm.endswith("ridge"):
-            scores = self.model.predict(matrix)
-        else:
-            positive_column = int(np.flatnonzero(self.model.classes_ == 1)[0])
-            scores = self.model.predict_proba(matrix)[:, positive_column]
+        # Biology columns are standardized. Appended PCA scores have a different
+        # scale and must not be mistaken for standardized feature-shift evidence.
+        biology = matrix[:, :len(self.scaler.scale_)]
+        self._prediction_diagnostics = {
+            "scaled_feature_abs_max": float(min(np.max(np.abs(biology)), 1e12)),
+            "feature_shift_fraction": float(np.mean(np.abs(biology) > 8.)),
+            "near_constant_feature_count": int(np.count_nonzero(self.scaler.var_ < 1e-12)),
+        }
+        return matrix
+
+    @staticmethod
+    def _validate_scores(scores, n):
         scores = np.asarray(scores, dtype=float)
-        if scores.shape != (len(candidates),) or not np.isfinite(scores).all():
+        if scores.shape != (n,) or not np.isfinite(scores).all():
             raise ValueError("Nonfinite or malformed prediction scores")
         return scores
+
+    def ranking_scores(self, candidates):
+        """Return continuous scores for AP and selection without sigmoid rounding."""
+        matrix = self._guarded_prediction_matrix(candidates)
+        scores = (self.model.predict(matrix) if self.arm.endswith("ridge")
+                  else self.model.decision_function(matrix))
+        scores = self._validate_scores(scores, len(matrix))
+        self._prediction_diagnostics.update({
+            "ranking_score_abs_max": float(min(np.max(np.abs(scores)), 1e12)),
+            "score_count": len(scores), "nonfinite_score_fraction": 0.,
+        })
+        return scores
+
+    def prediction_outputs(self, candidates):
+        """Produce a classifier's probabilities and margins from one guarded transform.
+
+        Class balancing means these probabilities are not calibration estimates.
+        The logistic transform exactly matches the historical binary sklearn head.
+        """
+        if self.arm.endswith("ridge"):
+            raise ValueError("Probability outputs require a classifier")
+        matrix = self._guarded_prediction_matrix(candidates)
+        if not np.array_equal(self.model.classes_, [0, 1]):
+            raise ValueError("Classifier must use the frozen binary activation labels")
+        margin = self._validate_scores(self.model.decision_function(matrix), len(matrix))
+        probability = self._validate_scores(expit(margin), len(matrix))
+        self._prediction_diagnostics.update({
+            "ranking_score_abs_max": float(min(np.max(np.abs(margin)), 1e12)),
+            "probability_saturated_fraction": float(np.mean((probability == 0) | (probability == 1))),
+            "probability_unique_fraction": float(len(np.unique(probability)) / len(probability)),
+            "score_count": len(probability), "nonfinite_score_fraction": 0.,
+        })
+        return {"probability": probability, "margin": margin}
+
+    def predict_probability(self, candidates):
+        """Return the historical sigmoid output; use ranking_scores for retrieval."""
+        return self.prediction_outputs(candidates)["probability"]
+
+    def predict(self, candidates):
+        """Backward-compatible probability output, or continuous ridge output."""
+        if self.arm.endswith("ridge"):
+            return self.ranking_scores(candidates)
+        return self.predict_probability(candidates)

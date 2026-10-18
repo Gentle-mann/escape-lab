@@ -1,0 +1,93 @@
+{
+  "evidence_kind": "fixed_development_aggregate_replay",
+  "provider": "scripted_offline",
+  "scope": "fixed-development-replay",
+  "metric": "mean_fold_high_activation_ap",
+  "source_hashes": {
+    "model_improvements": "4671488a415c636c85f9eddf2f6f307ddee4f4eb89c0f197f86363e2f7c14fab",
+    "ranking_repair": "6ac3e0ac3e64e37de459c9a4dadde41875c919d4998c9d668cc2ce04cdd05597"
+  },
+  "new_fits": 0,
+  "external_datasets_accessed": false,
+  "new_scientific_result": false,
+  "policy_promoted": false,
+  "run": {
+    "status": "stopped",
+    "error_category": null,
+    "calls": 6,
+    "model_id": "scripted/offline-diagnostic-fixture",
+    "prompt_version": "fgfr-activation-diagnostic-planner-v1",
+    "prompt_hash": "983339a701e66c94ad93223113c72df0b92a6b811f51f4f625aed16196b78109",
+    "input_policy_hash": "1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a",
+    "history": [
+      {
+        "action": "inspect_score_saturation",
+        "status": "ok",
+        "result": {
+          "convergence_warning_fraction": 0.0,
+          "fallback_fraction": 0.0,
+          "fit_count": 3,
+          "probability_exact_one_fraction": 0.16484848484848486,
+          "probability_unique_fraction": 0.8363636363636363,
+          "ranking_score_abs_max": 1084487.1128465498,
+          "score_count": 668
+        }
+      },
+      {
+        "action": "compare_rankings",
+        "status": "ok",
+        "result": {
+          "probability_ap": 0.09732091648081248,
+          "ranking_ap": 0.11134574838153616,
+          "delta_ap": 0.014024831900723678
+        }
+      },
+      {
+        "action": "inspect_feature_shift",
+        "status": "ok",
+        "result": {
+          "below_floor_feature_count": 10,
+          "convergence_warning_fraction": 0.0,
+          "fallback_fraction": 0.0,
+          "fit_count": 3,
+          "minimum_training_scale": 1.1710311486659349e-08
+        }
+      },
+      {
+        "action": "request_sequence_ablation",
+        "status": "ok",
+        "result": {
+          "combined_ap": 0.11134574838153616,
+          "wt_only_ap": 0.11401907216136596,
+          "delta_only_ap": 0.11376632346088311
+        }
+      },
+      {
+        "action": "propose_policy_revision",
+        "status": "ok",
+        "result": {
+          "proposed_hash": "d1d49ea7ebf48fb0ba0a7aa4916d98cceaa46471e405cfa2d8b341729613e4da",
+          "rules": [
+            "inspect_saturation_before_ranking"
+          ]
+        }
+      },
+      {
+        "action": "stop",
+        "status": "ok",
+        "result": {
+          "reason": "diagnostics_complete"
+        }
+      }
+    ],
+    "policy_proposal": {
+      "version": 2,
+      "parent_hash": "1c9ca4f7e944132f36edf28a64115910759db6378d029d15a94fafded4f0614a",
+      "rules": [
+        "inspect_saturation_before_ranking"
+      ],
+      "source": "scripted"
+    },
+    "budget_charge_tokens": 0
+  }
+}

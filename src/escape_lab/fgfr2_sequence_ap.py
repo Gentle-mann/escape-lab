@@ -30,15 +30,13 @@ def ranking_outputs(model, candidates):
     """Keep parent prediction guards, then expose the same head's raw margin."""
     if model.arm != "esm_biology_logistic":
         raise ValueError("Only the frozen sequence classifier is permitted")
-    probability = model.predict(candidates)
-    ids = [c["candidate_id"] for c in candidates]
-    matrix = model._predict_matrix(candidates, ids)
-    margin = np.asarray(model.model.decision_function(matrix), dtype=float)
+    outputs = model.prediction_outputs(candidates)
+    probability, margin = outputs["probability"], outputs["margin"]
     if margin.shape != (len(candidates),) or not np.isfinite(margin).all():
         raise ValueError("Finite one-dimensional classifier margins required")
     if not np.allclose(expit(margin), probability, rtol=1e-12, atol=1e-14):
         raise ValueError("Margin and cached probability head disagree")
-    return {"probability": probability, "margin": margin}
+    return outputs
 
 
 def screening_gate(baseline, proposed):

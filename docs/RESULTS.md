@@ -1,4 +1,6 @@
-# Escape Lab: six hours of building and experiments
+# Escape Labs: progress toward an autonomous cancer-research lab
+
+Our ambition is to anticipate cancer's next move through agents that propose hypotheses, test them against biology, and improve how they conduct research. This page records the measurements behind that ambition, starting with the six-hour hackathon build.
 
 In approximately six hours, we built a research pipeline around real FGFR data: autonomous experiment proposals, numerical models, independent verification, and an auditable record of every revision. We integrated Nemotron and GLM-5.3 on Crusoe, added reviewed evidence from You.com, and tested sequence and structural representations.
 
@@ -17,6 +19,23 @@ On **668 FGFR2 variants** across three fixed development folds, we improved high
 The improvement came from a numerical repair we implemented: 136 probabilities in the first fold had rounded to exactly 1.0. Ranking by the classifier's raw decision margin restored their ordering. The other two folds were unchanged.
 
 The verification run took **2.92 seconds with cached features**, reproduced the original probabilities exactly, and preserved all **594 protected artifacts**. [Implementation](../src/escape_lab/fgfr2_sequence_ap.py) · [Measured results](archive/reports/mechanistic-pilot/fgfr2-sequence-ap-v1/report.md).
+
+## Development after submission
+
+A fixed 12-fit experiment used the same 668 variants and three saved development folds to test stability and sequence content. The canonical model API reproduced all historical probabilities and raw margins exactly.
+
+| Configuration | Mean-fold AP ↑ | High-activation hits in 68 picks | Decision |
+|---|---:|---:|---|
+| Selected classifier, both sequence branches | 0.11135 | 4 | Reference retained |
+| Variance floor, both branches | 0.05951 | 2 | Rejected by the predeclared improvement gate |
+| WT context only | 0.11402 | 4 | Diagnostic ablation |
+| Mutation delta only | 0.11377 | 5 | Diagnostic ablation |
+
+The variance floor reduced the largest absolute margin from **1,084,487 to 20.13** and removed saturation, but also removed useful ranking signal. The sequence ablations identify a promising next direction: retaining mutation-specific information without unstable feature scaling. Their small AP differences are exploratory, and the selected model is unchanged. Fitting and scoring took **0.92 seconds** using cached features; all 529 protected artifacts stayed unchanged. [Protocol, measurements and decisions](archive/reports/model-improvements/report.md).
+
+The headline comparison also reproduced exactly in a separate source-only workspace using fresh public downloads, fresh ESM features and three new classifier fits: **40.82 seconds** to rebuild inputs plus **59.73 seconds** to extract features and evaluate, excluding dependency installation. [Reproduction commands and verification](REPRODUCING.md).
+
+The new Nemotron diagnostic loop completed five live calls on Crusoe and proposed two reusable rules. A frozen evaluator accepted them after **48/48 generated numerical failure cases** were diagnosed correctly, versus **12/48** for the empty initial policy, with zero false positives. Nemotron then reloaded the promoted policy and inspected the archived FGFR ranking and ablation results in five further calls, with no new fits. This is policy-mechanism evidence within four predefined synthetic families and an integration replay, separate from biological prediction performance. [Live runs, preserved failures and implementation](archive/reports/agent-improvements/README.md).
 
 ## Agent experiments
 
@@ -51,6 +70,6 @@ These are resistance reference scores; our latest 0.11135 measures activation. T
 
 The activation gain is a development result from a scoring repair, with a descriptive paired interval of approximately **[0, 0.03261]**. Feature extrapolation remains unresolved; earlier ridge models had higher AP but unstable continuous predictions. Details are in the [experiment ledger](EXPERIMENTS.md#5-fgfr2-sequence-and-high-activation-ranking).
 
-The original resistance final set and S13 panel have been evaluated. RLY and MANO remain reserved for an independent, assay-compatible test. Next steps are stronger biological representations and external validation. Private specialized models may perform better; they have not been evaluated here.
+The original resistance final set and S13 panel have been evaluated. RLY and MANO remain reserved for an independent, assay-compatible test. Our next milestone is a frozen model and research policy that earn a measurable gain on a compatible independent assay, followed by prospective laboratory experiments.
 
-Preclinical research prototype. No patient-level or treatment recommendations.
+Current scope: preclinical assay prediction and experiment prioritization.
