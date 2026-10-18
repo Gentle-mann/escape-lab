@@ -25,11 +25,11 @@ Checked against the [official participant guide](https://cerebralvalley.ai/e/cru
 
 Lead with **Done Means Done**: an agent proposes a bounded experiment, an independent evaluator measures it, rejects unsupported claims, and records the outcome. Crusoe inference, the numerical tool and the verification process should be visible in the demo. A progress/result interface supports this workflow; a dashboard must not be the main feature.
 
-Treat Version N+1 as an implemented mechanism, not proven unseen-task improvement. The current AP repair was developed during analysis, not discovered by Nemotron or GLM. Reused development gains cannot satisfy the track's unseen-task evidence by themselves.
+Show the two measured advances with their respective tests: the six-hour numerical ranking improvement on fixed FGFR2 development folds, and the post-submission Nemotron policy loop that improved diagnostic success from 12/48 to 48/48 on generated numerical cases. Nemotron plans investigations and proposes reusable rules; numerical tools produce predictions; the independent evaluator measures each result. An independent biological assay is the next milestone.
 
 Opening line: “An autonomous cancer-research agent that has to earn every claim with a measurement.” Immediately label the project **preclinical research; no patients or treatment recommendations**.
 
-Show one real trace: research evidence, proposed configuration, numerical evaluation, accept/reject decision, and recorded limitations. The AP repair can be a separate before/after inspection: the same classifier had many rounded scores tied at one, and using its raw decision margin recovered ranking information. Show the unsuccessful structure and LLM-swap experiments in the ledger rather than hiding them.
+Show one real trace: research evidence, proposed configuration, numerical evaluation, and an accept/reject decision. The AP before/after explains the measured gain: the same classifier had many rounded scores tied at one, and using its raw decision margin recovered ranking information. The complete experiment ledger includes the structure and alternative-planner comparisons.
 
 ## Delivery record
 

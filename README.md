@@ -6,7 +6,7 @@ Our ambition is to map cancer's escape routes before resistance emerges: agents 
 
 Escape Labs starts with published FGFR assays, Nemotron on Crusoe, numerical prediction tools, and an independent evaluator. Every experiment contributes to a growing record of what works and what needs to change.
 
-[Explore the demo](https://escape-lab-three.vercel.app) · [Watch the submitted video](https://www.loom.com/share/7f7cd52a924a4626af662e5e756726e3) · [Read the results](docs/RESULTS.md)
+[Explore the demo](https://escape-lab-three.vercel.app) · [Open the presentation](https://escape-lab-three.vercel.app/presentation) · [Watch the submitted video](https://www.loom.com/share/7f7cd52a924a4626af662e5e756726e3) · [Read the results](docs/RESULTS.md)
 
 Submitted to the Recursive Agents Hackathon: **Done Means Done** and **Best Use of Nemotron**. The six-hour build and subsequent development are documented separately.
 
@@ -57,9 +57,10 @@ flowchart LR
     D[Private assay outcomes] --> E
 ```
 
-Nemotron powered the original v1 and v2 experiment-planning runs. GLM-5.3 was
-tested in the same planner role, then used in the You.com research experiments.
-These are alternative planners, not a chain in which GLM directs Nemotron.
+Nemotron is the experiment planner and now also drives the diagnostic policy loop.
+GLM-5.3 is the tested alternative planner and powered the You.com research
+comparisons. Each planner calls the numerical engine through the same bounded
+experiment interface.
 
 The agent proposes validated model configurations. Numerical tools perform fitting and prediction. The evaluator owns labels, split grouping, metrics, budgets and promotion rules. Commitments precede held-out scoring; rejected proposals and operational failures remain recorded. Raw outcomes do not enter proposal prompts. The separate replay vault enforces authenticated, budgeted measurement reveals.
 
